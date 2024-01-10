@@ -11,7 +11,7 @@
 
 
 
-<title>about.knit</title>
+<title>agua.knit</title>
 
 <script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -361,7 +361,61 @@ $(document).ready(function () {
 </div>
 
 
+<html>
+<style>
+body {
+  background-color: coral;
+  }
+</style>
+<head>
+<center>
+<style type="text/css"> 
 
+#round { width: 400px; height:390px; 
+         background-color: rgb(255,228,181); 
+         border: 1px solid Moccasin; 
+         border-radius: 1em;} 
+</style>
+</head>
+<FONT FACE="times new roman">
+<body>
+<div id="round">
+<H5>
+<center>
+<b>Calcular humedad aprovechable</b>
+</CENTER>
+<br><br>
+</H5>
+<body>
+<form name="MyForm1">
+<P ALIGN = LEFT>
+Ingrese capacidad de
+campo:<input type="text" name="numero5" size="20"><br><br> Ingrese punto
+de marchitez permanente
+:<input type="text" name="numero6" size="20"><br><br> Ingrese densidad
+aparente:<input type="text" name="numero7" size="20"><br><br> Ingrese
+profundidad:<input type="text" name="numero8" size="20"><br><br>
+Resultado en Lm2: <input type="text" name="resultado" size="20"><br><br>
+<center>
+<input type="button" value="Calcular" onclick="agua1()">
+</center>
+<p><input type="reset" value="Eliminar"></p>
+</form>
+<script>
+     function agua1() {
+     var n5 = parseFloat(document.MyForm1.numero5.value);
+     var n6 = parseFloat(document.MyForm1.numero6.value);
+     var n7 = parseFloat(document.MyForm1.numero7.value);
+     var n8 = parseFloat(document.MyForm1.numero8.value);
+     document.MyForm1.resultado.value=((((n5-n6)*n7*n8)/100)*10);
+     }
+    </script>
+</body>
+</div>
+</body>
+</FONT>
+</center>
+</html>
 
 
 

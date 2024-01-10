@@ -11,7 +11,7 @@
 
 
 
-<title>about.knit</title>
+<title>page-c.knit</title>
 
 <script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -361,7 +361,57 @@ $(document).ready(function () {
 </div>
 
 
+<html>
+<div>
+<style>
+body {
+  background-color: coral;
+  }
+</style>
+<head>
+<center>
+<style type="text/css"> 
 
+#coca { width: 400px; height: 280px; 
+         background-color: rgb(255,228,181); 
+         border: 1px solid Moccasin; 
+         border-radius: 1em;} 
+</style>
+</head>
+<FONT FACE="times new roman">
+<body>
+<div id="coca">
+<body>
+<H5>
+<center>
+<b>Calcular porosidad</b>
+</CENTER>
+<br>
+</H5>
+<body>
+<form name="MyForm">
+<P ALIGN = LEFT>
+Densidad aparente :<input type="text" name="numero1" size="20"><br><br>
+Densidad real :<input type="text" name="numero2" size="20"><br><br>
+Resultado porosidad :
+<input type="text" name="resultado" size="20"><br><br>
+<center>
+<input type="button" value="Calcular" onclick="porosidad()">
+</center>
+<p><input type="reset" value="Eliminar"></p>
+</form>
+<script>
+     function porosidad() {
+     var n1 = parseFloat(document.MyForm.numero1.value);
+     var n2 = parseFloat(document.MyForm.numero2.value);
+     document.MyForm.resultado.value=100-((n1/n2)*100);
+     }
+    </script>
+</body>
+</FONT>
+</center>
+</div>
+</html>
 
 
 

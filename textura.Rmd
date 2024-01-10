@@ -1,0 +1,118 @@
+---
+output:
+  html_document: default
+  pdf_document: default
+---
+
+
+<html>
+<style>
+body {
+  background-color: coral;
+  }
+</style>
+
+<head>
+<center>
+<style type="text/css"> 
+
+#round { width: 500px; height: 1180px; 
+         background-color: rgb(255,228,181); 
+         border: 1px solid Moccasin; 
+         border-radius: 1em;} 
+</style> 
+
+</head>
+<FONT FACE="times new roman">
+<body> 
+<div id="round"> 
+<H5><center><b>Calcular textura</b></CENTER><br><br> </H5>
+   </body>
+
+  <body>
+    <form name="MyForm"><p align="left">
+     La40s(lectura en g L-1 de muestra a los 40 s.):<input type="text" name="numero1" size="20"><br><br>
+     Lb40s( lectura en g L-1 del blanco a los 40 s. ):<input type="text" name="numero2" size="20"><br><br>
+      ta40s( temperatura en °C de la muestra a los 40 s.):<input type="text" name="numero3" size="20"><br><br>
+      tb40s( temperatura en °C del blanco a los 40s.) :<input type="text" name="numero4" size="20"><br><br>
+       masa en g de muestra:<input type="text" name="numero5" size="20"><br><br>
+     Resultado del contenido de limo + arcilla, en %:        <input type="text" name="resultado" size="20"><br><br>
+     <center><input type="button" value="Calcular" onclick="real()"></center>
+     <input type="reset" value="Eliminar">
+   </p>    
+
+  </form>
+    <form name="MyForm2"><p align="left">
+     La2h(lectura en g L-1de muestra a las 2h.):<input type="text" name="numero6" size="20"><br><br>
+     Lb2h(lectura en g L-1 del blanco a las 2h.):<input type="text" name="numero7" size="20"><br><br>
+      ta2h( temperatura en °C de la muestra a las 2h.):<input type="text" name="numero8" size="20"><br><br>
+      tb2h( temperatura en °C del blanco a las 2h.):<input type="text" name="numero9" size="20"><br><br>
+       masa en g de muestra:<input type="text" name="numero10" size="20"><br><br>
+     Resultado del contenido de arcilla, en %:        <input type="text" name="resultado" size="20"><br><br>
+     <center><input type="button" value="Calcular" onclick="segu()"></center>
+     <input type="reset" value="Eliminar">
+         </p>
+
+  </form>
+     <form name="MyForm3"><p align="left">
+   (Limo + arcilla)%:<input type="text" name="numero11" size="20"><br><br>
+  arcilla :<input type="text" name="numero12" size="20"><br><br>
+    Resultado del  contenido de limo, en %:        <input type="text" name="resultado" size="20"><br><br>
+     <center><input type="button" value="Calcular" onclick="terce()"></center><input type="reset" value="Eliminar">
+         
+
+  </form>
+  
+  
+<form name="MyForm4"><p align="left">
+    (Limo + arcilla) :<input type="text" name="numero13" size="20"><br><br>
+     Resultado del contenido de arena, en %:<input type="text" name="resultado" size="20"><br><br>
+       <center><input type="button" value="Calcular" onclick="cuarta()"></center>
+     <input type="reset" value="Eliminar">
+  </p>
+</form>
+  
+  
+  <script>
+     function real() {
+     var n1 = parseFloat(document.MyForm.numero1.value);
+     var n2 = parseFloat(document.MyForm.numero2.value);
+     var n3 = parseFloat(document.MyForm.numero3.value);
+     var n4 = parseFloat(document.MyForm.numero4.value);
+     var n5 = parseFloat(document.MyForm.numero5.value);
+     document.MyForm.resultado.value=(((n1-((20-n3)*0.35))-(n2-((20-n4)*0.35)))/n5)*100;
+     }
+    </script>
+  <script>
+     function segu() {
+     var n6 = parseFloat(document.MyForm2.numero6.value);
+     var n7 = parseFloat(document.MyForm2.numero7.value);
+     var n8 = parseFloat(document.MyForm2.numero8.value);
+     var n9 = parseFloat(document.MyForm2.numero9.value);
+     var n10 = parseFloat(document.MyForm2.numero10.value);
+     document.MyForm2.resultado.value=(((n6-((20-n8)*0.35))-(n7-((20-n9)*0.35)))/n10)*100;
+     }
+    </script>
+
+
+  <script>
+     function terce() {
+     var n11 = parseFloat(document.MyForm3.numero11.value);
+     var n12 = parseFloat(document.MyForm3.numero12.value);
+     document.MyForm3.resultado.value=(n11-n12);
+     }
+    </script>
+   
+
+   <script>
+     function cuarta() {
+     var n13 = parseFloat(document.MyForm4.numero13.value);
+     document.MyForm4.resultado.value=(100-n13);
+     }
+    </script>
+  </body>
+ </div> 
+   </body>
+   </FONT>
+  </center>
+</html>

@@ -1,9 +1,63 @@
 name: "my-website"
-output_dir: "." 
+output_dir: "."
 navbar:
-  title: "My Website"
+  title: <b> CalSoil </b>
+  icon: fa fa-leaf
+  href: home2.html
   left:
-    - text: "Home"
+    - text: "Cálculo de textura "
+      icon: fa-caret-square-o-up
+      menu:
+        - text: "Determinar textura"
+          href: textura.html
+        - text: "Determinar clase textural"
+          href: texcla.html
+        - text: "Clase textural método manual"
+          href: manual.html
+    - text: "Ecuaciones "
+      icon: fa-caret-square-o-up
+      href: home1.html
+      menu:
+        - text: "Regla de tres"
+          href: regla.html
+        - text: "Humedad aprovechable"
+          href: agua.html          
+    - text: "Cálculos  de Laboratorio"
+      icon: fa fa-leaf
       href: index.html
-    - text: "About"
-      href: about.html
+      menu:
+        - text: "Cálcular densidad real𝒈/𝒄𝒎𝟑"
+          href: page-a.html
+        - text: "Determinar densidad Aparente 𝒈/𝒄𝒎𝟑, método del cilindro"
+          href: page-b.html
+        - text: "Cálcular porosidad %"
+          href: page-c.html
+        - text: "Humedad volumétrica %"
+          href: page-d.html
+        - text: "Carbono orgánico y Materia orgánica % por el método de Ignición"
+          href: page-e.html
+        - text: "Determinar densidad Aparente 𝒈/𝒄𝒎𝟑,método de la parafina"
+          href: para.html
+    - text: "Nutrición "
+      icon: fa-thin fa-sliders
+      href: home22.html
+      menu:
+        - text: "Masa del suelo"
+          href: masa.html
+        - text: "Calculo suministro"
+          href: sumi.html     
+        - text: "Calculo bases(Ca,K,Na,Mg)"
+          href: bases.html 
+    - text: "Guía practica o campo "
+      icon: fa-thin fa-file
+      href: home22.html
+      menu:
+        - text: "Guía"
+          href: guia.html
+    - text: "Erick Fernando Cuenca Saquicaray "
+      
+output:
+  html_document:
+    theme: united
+    highlight: textmate
+

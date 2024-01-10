@@ -1,0 +1,144 @@
+
+<html>
+<style>
+body {
+  background-color: coral;
+  }
+</style>
+
+<head>
+<center>
+<style type="text/css"> 
+
+#coca { width: 400px; height: 315px; 
+         background-color: rgb(255,228,181); 
+         border: 1px solid Moccasin; 
+         border-radius: 1em;} 
+</style> 
+
+</head>
+<FONT FACE="times new roman">
+<body> 
+<div id="coca"> 
+   <body>  <H5><center><b>Calculo suministro </b></CENTER><br> </H5>
+  <body>
+    <form name="MyForm"><P ALIGN = LEFT>
+      Ingrese elemento total (mg):<input type="text" name="numero1" size="20"><br><br>
+      Ingrese (1kg):<input type="text" name="numero2" size="20"><br><br>
+      Ingrese masa del suelo (kg):<input type="text" name="numero3" size="20"><br><br>
+     Resultado en (mg)elemento:        <input type="text" name="resultado" size="20"><br><br>
+     <center><input type="button" value="Calcular" onclick="sumi()"></center><input type="reset" value="Eliminar">
+         
+  </form>
+
+  <script>
+     function sumi() {
+     var n1 = parseFloat(document.MyForm.numero1.value);
+     var n2 = parseFloat(document.MyForm.numero2.value);
+     var n3 = parseFloat(document.MyForm.numero3.value);
+     document.MyForm.resultado.value=((n1*n3)/n2);
+     }
+    </script>
+  </body>
+ </div> 
+   </body>
+   </FONT>
+  </center>
+</html>
+############
+
+<html>
+<style>
+body {
+  background-color: coral;
+  }
+</style>
+
+<head>
+<center>
+<style type="text/css"> 
+
+#coca1 { width: 400px; height: 320px; 
+         background-color: rgb(255,228,181); 
+         border: 1px solid Moccasin; 
+         border-radius: 1em;} 
+</style> 
+
+</head>
+<FONT FACE="times new roman">
+<body> 
+<div id="coca1"> 
+   <body><br>  <H5><center><b>Convertir de mg(Elemento) a (Kg)/Ha </b></CENTER><br> </H5>
+
+  <body>
+    <form name="MyForm2"><P ALIGN = LEFT>
+      Ingrese elemento(mg):<input type="text" name="numero4" size="20"><br><br>
+      Ingrese 1(kg):<input type="text" name="numero5" size="20"><br><br>
+      Ingrese 1000000(mg):<input type="text" name="numero6" size="20"><br><br>
+     Resultado en (Kg)elemento/Ha:        <input type="text" name="resultado" size="20"><br><br>
+     <center><input type="button" value="Calcular" onclick="tra()"></center><input type="reset" value="Eliminar">
+         
+  </form>
+
+  <script>
+     function tra() {
+     var n4 = parseFloat(document.MyForm2.numero4.value);
+     var n5 = parseFloat(document.MyForm2.numero5.value);
+     var n6 = parseFloat(document.MyForm2.numero6.value);
+     document.MyForm2.resultado.value=((n4*n5)/n6);
+     }
+    </script>
+  </body>
+ </div> 
+   </body>
+   </FONT>
+  </center>
+</html>
+
+#############
+
+<html>
+<style>
+body {
+  background-color: coral;
+  }
+</style>
+
+<head>
+<center>
+<style type="text/css"> 
+
+#coca11 { width: 400px; height: 300px; 
+         background-color: rgb(255,228,181); 
+         border: 1px solid Moccasin; 
+         border-radius: 1em;} 
+</style> 
+
+</head>
+<FONT FACE="times new roman">
+<body> 
+<div id="coca11"> 
+   <body><br>  <H5><center><b>Convertir de mg/Kg a Kg(elemento/Ha)</b></CENTER><br> </H5>
+
+  <body>
+    <form name="MyForm6"><P ALIGN = LEFT>
+      Ingrese elemento(mg/Kg):<input type="text" name="numero8" size="20"><br><br>
+      Ingrese factor :<input type="text" name="numero9" size="20"><br><br>
+     Resultado en Kg(elemento/Ha):        <input type="text" name="resultado" size="20"><br><br>
+     <center><input type="button" value="Calcular" onclick="ha()"></center><input type="reset" value="Eliminar">
+         
+  </form>
+
+  <script>
+     function ha() {
+     var n8 = parseFloat(document.MyForm6.numero8.value);
+     var n9 = parseFloat(document.MyForm6.numero9.value);
+     document.MyForm6.resultado.value=(n8*n9);
+     }
+    </script>
+  </body>
+</div> 
+   </body>
+   </FONT>
+  </center>
+</html>

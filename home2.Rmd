@@ -1,0 +1,10 @@
+<html>
+<style>
+body {
+  background-color: coral;
+  }
+  </style>
+   <center>
+  ![](s.png){height=300px} </center>
+  
+</html>

@@ -1,0 +1,37 @@
+
+<html>
+<style>
+body {
+  background-color: coral;
+  }
+</style>
+<FONT FACE="times new roman">
+ <center><table border="4" ></center>
+ <tr>
+  <td bgcolor="moccasin">
+   <body>
+     <center><b>Clase textural</b></CENTER><br><br>
+   </body>
+
+  <body>
+      Arena :<input id="arena" type="text"  size="20"><br><br>
+      Arcilla :<input  id="arcilla"type="text"  size="20"><br><br>
+      Limo:<input id="limo" type="text"  size="20"><br><br>
+     Resultado Clase textural :        <input type="text" name="resultado" size="20"><br><br>
+     <center><input type="button" value="Cálcular" onclick="clase()"></center>
+     <p id="mensaje"></p><input type="reset" value="Eliminar">
+         
+</body>
+
+  <script>
+     function clase() {
+        if (document.getElementById("arena").value="123456"}{
+       document.getElementById("mensaje").innerHTML="Es Arenosa" ;
+        }
+    </script>
+ </td>
+ </tr>
+</table>
+</FONT>
+
+</html>       

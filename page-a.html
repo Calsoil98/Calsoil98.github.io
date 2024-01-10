@@ -11,7 +11,7 @@
 
 
 
-<title>about.knit</title>
+<title>page-a.knit</title>
 
 <script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -361,7 +361,64 @@ $(document).ready(function () {
 </div>
 
 
+<html>
+<div>
+<style>
+body {
+  background-color: coral;
+  }
+</style>
+<head>
+<center>
+<style type="text/css"> 
 
+#coca { width: 400px; height: 360px; 
+         background-color: rgb(255,228,181); 
+         border: 1px solid Moccasin; 
+         border-radius: 1em;} 
+</style>
+</head>
+<FONT FACE="times new roman">
+<body>
+<div id="coca">
+<body>
+<H5>
+<center>
+<b>Calcular densidad real </b>
+</CENTER>
+<br>
+</H5>
+</body>
+<body>
+<form name="MyForm">
+<P ALIGN = LEFT>
+Peso del balón vacío
+:<input type="text" name="numero1" size="20"><br><br> Peso del balón +
+muestra del suelo :<input type="text" name="numero2" size="20"><br><br>
+Peso del balón + suelo + agua
+:<input type="text" name="numero3" size="20"><br><br> Peso del balón
+aforado con agua :<input type="text" name="numero4" size="20"><br><br>
+Resultado Densidad Real :
+<input type="text" name="resultado" size="20"><br><br>
+<center>
+<input type="button" value="Calcular" onclick="real()">
+</center>
+<p><input type="reset" value="Eliminar"></p>
+</form>
+<script>
+     function real() {
+     var n1 = parseFloat(document.MyForm.numero1.value);
+     var n2 = parseFloat(document.MyForm.numero2.value);
+     var n3 = parseFloat(document.MyForm.numero3.value);
+     var n4 = parseFloat(document.MyForm.numero4.value);
+     document.MyForm.resultado.value=((n2-n1)/((n4-n1)-(n3-n2)));
+     }
+    </script>
+</body>
+</FONT>
+</center>
+</div>
+</html>
 
 
 

@@ -1,0 +1,53 @@
+
+
+<html>
+<style>
+body {
+  background-color: coral;
+  }
+</style>
+
+<head>
+<center>
+<style type="text/css"> 
+
+#round { width: 400px; height: 380px; 
+         background-color: rgb(255,228,181); 
+         border: 1px solid Moccasin; 
+         border-radius: 1em;} 
+</style> 
+
+</head>
+<FONT FACE="times new roman">
+   <body>
+   <div id="round">
+  
+<H5><center><b>Calcular regla de tres simple</b></CENTER><br> </H5>
+
+  <body>
+  <center>
+  ![](A.png){height=80px} </center>
+    <form name="MyForm">
+      Ingrese A:<input type="text" name="numero1" size="20"><br><br>
+      Ingrese B:<input type="text" name="numero2" size="20"><br><br>
+      Ingrese c:<input type="text" name="numero3" size="20"><br><br>
+     Resultado x :        <input type="text" name="resultado" size="20"><br><br>
+     <center><input type="button" value="Calcular" onclick="real()"></center><input type="reset" value="Eliminar">
+         
+
+  </form>
+
+  <script>
+     function real() {
+     var n1 = parseFloat(document.MyForm.numero1.value);
+     var n2 = parseFloat(document.MyForm.numero2.value);
+     var n3 = parseFloat(document.MyForm.numero3.value);
+     document.MyForm.resultado.value=((n2*n3)/n1);
+     }
+    </script>
+  </body>
+ </div> 
+   </body>
+   </FONT>
+  </center>
+</html>

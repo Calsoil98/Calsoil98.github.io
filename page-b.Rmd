@@ -1,0 +1,73 @@
+
+
+<html>
+<div>
+<style>
+body {
+  background-color: coral;
+  }
+</style>
+
+<head>
+<center>
+<style type="text/css"> 
+
+#coca { width: 400px; height: 620px; 
+         background-color: rgb(255,228,181); 
+         border: 1px solid Moccasin; 
+         border-radius: 1em;} 
+</style> 
+
+</head>
+<FONT FACE="times new roman">
+<body> 
+<div id="coca"> 
+   <body>  <H5><center><b>Determinar densidad Aparente 𝒈/𝒄𝒎𝟑</b></CENTER><br> </H5>
+   </body>
+
+  <body>
+    <form name="MyForm"><P ALIGN = LEFT>
+      Ingrese el  diámetro :<input type="text" name="numero1" size="20"><br><br>
+       Resultado  de radio :        <input type="text" name="resultado" size="20"><br><br>
+     <center><input type="button" value="Calcular  radio" onclick="radio()"></center>
+       <center><input type="reset" value="Eliminar"></center>
+       </form>
+       <form name="MyForma"><P ALIGN = LEFT>
+      Ingrese el radio :<input type="text" name="numero2" size="20"><br><br>
+       Ingrese la altura :<input type="text" name="numero3" size="20"><br><br>
+       Resultado  de volumen :        <input type="text" name="resultado" size="20"><br><br>
+     <center><input type="button" value="Calcular volumen" onclick="volumen()"></center>
+         <center><input type="reset" value="Eliminar"></center>
+       </form>
+       <form name="MyFormas"><P ALIGN = LEFT>
+      Ingrese la masa :<input type="text" name="numero4" size="20"><br><br>
+       Ingrese el volumen :<input type="text" name="numero5" size="20"><br><br>
+       Resultado  de densidad aparente :        <input type="text" name="resultado" size="20"><br><br>
+     <center><input type="button" value="Calcular densidad aparente" onclick="densidad()"></center>
+         <center><input type="reset" value="Eliminar"></center>
+       </form>
+    <script>
+     function radio() {
+     var n1 = parseFloat(document.MyForm.numero1.value);
+     document.MyForm.resultado.value=(n1/2);
+     }
+    </script>
+    <script>
+     function volumen() {
+     var n2 = parseFloat(document.MyForma.numero2.value);
+     var n3 = parseFloat(document.MyForma.numero3.value);
+     document.MyForma.resultado.value=(3.1416*((n2)**2)*n3);
+     }
+    </script>
+    <script>
+     function densidad() {
+     var n4 = parseFloat(document.MyFormas.numero4.value);
+     var n5 = parseFloat(document.MyFormas.numero5.value);
+     document.MyFormas.resultado.value=(n4/n5);
+     }
+    </script>
+  </body>
+  </FONT>
+  </center>
+  </div>
+</html>

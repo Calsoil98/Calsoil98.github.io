@@ -1,0 +1,62 @@
+
+
+<html>
+<div>
+<style>
+body {
+  background-color: coral;
+  }
+</style>
+
+<head>
+<center>
+<style type="text/css"> 
+
+#coca { width: 400px; height: 440px; 
+         background-color: rgb(255,228,181); 
+         border: 1px solid Moccasin; 
+         border-radius: 1em;} 
+</style> 
+
+</head>
+<FONT FACE="times new roman">
+<body> 
+<div id="coca"> 
+   <body>  <H5><center><b>Carbono orgánico y Materia orgánica</b></CENTER><br> </H5>
+
+  <body>
+    <form name="MyForm"><P ALIGN = LEFT>
+      Peso total mufla :<input type="text" name="numero1" size="20"><br><br>
+      Peso en seco mufla :<input type="text" name="numero2" size="20"><br><br>
+      Resultado carbono orgánico:        <input type="text" name="resultado" size="20"><br><br>
+     <center><input type="button" value="Calcular" onclick="carbono()"></center><input type="reset" value="Eliminar">
+
+  </form>
+  
+  <body>
+    <form name="MyForma"><P ALIGN = LEFT>
+     % carbono orgánico:<input type="text" name="numero3" size="20"><br><br>
+     Materia orgánica:        <input type="text" name="resultado" size="20"><br><br>
+     <center><input type="button" value="Calcular" onclick="materia()"></center><input type="reset" value="Eliminar">
+         
+
+  </form>
+
+  <script>
+     function carbono() {
+     var n1 = parseFloat(document.MyForm.numero1.value);
+     var n2 = parseFloat(document.MyForm.numero2.value);
+     document.MyForm.resultado.value=(n1-n2);
+     }
+    </script>
+      <script>
+     function materia() {
+     var n3 = parseFloat(document.MyForma.numero3.value);
+     document.MyForma.resultado.value=(n3*1.724);
+     }
+    </script>
+  </body>
+  </FONT>
+  </center>
+  </div>
+</html>
