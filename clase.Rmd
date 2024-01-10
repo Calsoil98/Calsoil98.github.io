@@ -2,7 +2,7 @@
 <html>
 <style>
 body {
-  background-color: coral;
+  background-color: #1A5276;
   }
 </style>
 <FONT FACE="times new roman">

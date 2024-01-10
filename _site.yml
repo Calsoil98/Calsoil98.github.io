@@ -58,6 +58,6 @@ navbar:
       
 output:
   html_document:
-    theme: united
+    theme: yeti
     highlight: textmate
 
