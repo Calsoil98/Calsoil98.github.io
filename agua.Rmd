@@ -29,7 +29,7 @@ body {
       <font color="#424949"><strong>Ingrese densidad aparente:</strong><input type="text" name="numero7" size="20"><br><br>
       <font color="#424949"><strong>Ingrese  profundidad:</strong><input type="text" name="numero8" size="20"><br><br>
      <font color="#424949"><strong>Resultado en Lm2:</strong>        <input type="text" name="resultado" size="20"><br><br>
-     <center><input type="button" value="Calcular" onclick="agua1()"></center><input type="reset" value="Eliminar">
+     <div><input type="button" value="Calcular" onclick="agua1()"><input type="reset" value="Eliminar"></div>
       
   </form>
 

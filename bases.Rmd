@@ -9,7 +9,7 @@ body {
 <center>
 <style type="text/css"> 
 
-#coca12 { width: 400px; height: 1300px; 
+#coca12 { width: 400px; height: 1200px; 
          background-color: rgb(209, 242, 235 , 0.66); 
          border: 1px solid #148F77; 
          border-radius: 1em;} 
@@ -29,8 +29,9 @@ body {
       Ingrese calcio (mq):<input type="text" name="numero1" size="20"><br><br>
       Ingrese calcio(mg/Kg):<input type="text" name="numero2" size="20"><br><br>
      Resultado en (mg/Kg)Ca:        <input type="text" name="resultado" size="20"><br><br>
-     <center><input type="button" value="Calcular" onclick="ca()"></center><input type="reset" value="Eliminar">
-         
+     <div><input type="button" value="Calcular" onclick="ca()"><input type="reset" value="Eliminar">
+        </div> 
+        <br>
   </form>
 
   <script>
@@ -40,14 +41,16 @@ body {
      document.MyForm.resultado.value=(n1*n2);
      }
     </script>
-    <body>
+
+  <body>
     <form name="MyForm2"><P>
       Ingrese magnesio (mq):<input type="text" name="numero3" size="20"><br><br>
       Ingrese magnesio(mg/Kg):<input type="text" name="numero4" size="20"><br><br>
      Resultado en (mg/Kg)Mg:        <input type="text" name="resultado" size="20"><br><br>
-     <center><input type="button" value="Calcular" onclick="Mg()"></center><input type="reset" value="Eliminar">
-        <br><br> 
+     <div><input type="button" value="Calcular" onclick="Mg()"><input type="reset" value="Eliminar"></div>
+         
   </form>
+  <br>
   <script>
      function Mg() {
      var n3 = parseFloat(document.MyForm2.numero3.value);
@@ -60,10 +63,10 @@ body {
       Ingrese sodio (mq):<input type="text" name="numero5" size="20"><br><br>
       Ingrese sodio (mg/Kg):<input type="text" name="numero6" size="20"><br><br>
      Resultado en (mg/Kg)Na:        <input type="text" name="resultado" size="20"><br><br>
-     <center><input type="button" value="Calcular" onclick="so()"></center><input type="reset" value="Eliminar">
-         
+     <div><input type="button" value="Calcular" onclick="so()"><input type="reset" value="Eliminar">
+      </div>   
   </form>
-
+<br>
   <script>
      function so() {
      var n5 = parseFloat(document.MyForm3.numero5.value);
@@ -76,10 +79,10 @@ body {
       Ingrese potasio (mq):<input type="text" name="numero7" size="20"><br><br>
       Ingrese potasio (mg/Kg):<input type="text" name="numero8" size="20"><br><br>
      Resultado en (mg/Kg)K:        <input type="text" name="resultado" size="20"><br><br>
-     <center><input type="button" value="Calcular" onclick="POTA()"></center><input type="reset" value="Eliminar">
-         
+     <div><input type="button" value="Calcular" onclick="POTA()"><input type="reset" value="Eliminar">
+         </div>
   </form>
-
+<br>
   <script>
      function POTA() {
      var n7 = parseFloat(document.MyForm4.numero7.value);
@@ -125,8 +128,8 @@ body {
       Ingrese base(mg/Kg):<input type="text" name="numero4" size="20"><br><br>
       Ingrese factor :<input type="text" name="numero5" size="20"><br><br>
      Resultado en Kg(/Ha):        <input type="text" name="resultado" size="20"><br><br>
-     <center><input type="button" value="Calcular" onclick="fa()"></center><input type="reset" value="Eliminar">
-         
+     <div><input type="button" value="Calcular" onclick="fa()"><input type="reset" value="Eliminar">
+         </div>
   </form>
 
   <script>

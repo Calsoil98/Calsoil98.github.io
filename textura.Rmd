@@ -16,7 +16,7 @@ body {
 <center>
 <style type="text/css"> 
 
-#round { width: 600px; height: 1130px; 
+#round { width: 650px; height: 1130px; 
          background-color: rgb(209, 242, 235 , 0.66); 
          border: 1px solid #148F77; 
          border-radius: 1em;} 
@@ -37,8 +37,8 @@ body {
       tb40s( temperatura en °C del blanco a los 40s.) :<input type="text" name="numero4" size="20"><br><br>
        masa en g de muestra:<input type="text" name="numero5" size="20"><br><br>
      Resultado del contenido de limo + arcilla, en %:        <input type="text" name="resultado" size="20"><br><br>
-     <center><input type="button" value="Calcular" onclick="real()"></center>
-     <input type="reset" value="Eliminar">
+     <div><input type="button" value="Calcular" onclick="real()">
+     <input type="reset" value="Eliminar"></div>
    </p>    
 
   </form>
@@ -49,17 +49,17 @@ body {
       tb2h( temperatura en °C del blanco a las 2h.):<input type="text" name="numero9" size="20"><br><br>
        masa en g de muestra:<input type="text" name="numero10" size="20"><br><br>
      Resultado del contenido de arcilla, en %:        <input type="text" name="resultado" size="20"><br><br>
-     <center><input type="button" value="Calcular" onclick="segu()"></center>
-     <input type="reset" value="Eliminar">
-         </p>
+     <div><input type="button" value="Calcular" onclick="segu()">
+     <input type="reset" value="Eliminar"></div>
+ <br>        
 
   </form>
      <form name="MyForm3"><p >
    (Limo + arcilla)%:<input type="text" name="numero11" size="20"><br><br>
   arcilla :<input type="text" name="numero12" size="20"><br><br>
     Resultado del  contenido de limo, en %:        <input type="text" name="resultado" size="20"><br><br>
-     <center><input type="button" value="Calcular" onclick="terce()"></center><input type="reset" value="Eliminar">
-         
+     <div><input type="button" value="Calcular" onclick="terce()"><input type="reset" value="Eliminar"></div>
+ <br>         
 
   </form>
   
@@ -67,8 +67,8 @@ body {
 <form name="MyForm4"><p >
     (Limo + arcilla) :<input type="text" name="numero13" size="20"><br><br>
      Resultado del contenido de arena, en %:<input type="text" name="resultado" size="20"><br><br>
-       <center><input type="button" value="Calcular" onclick="cuarta()"></center>
-     <input type="reset" value="Eliminar">
+       <div> <input type="button" value="Calcular" onclick="cuarta()">
+     <input type="reset" value="Eliminar"></div>
   </p>
 </form>
   

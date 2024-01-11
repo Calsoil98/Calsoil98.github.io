@@ -29,7 +29,7 @@ body {
      <font color="#424949"><strong> Densidad aparente :</strong><input type="text" name="numero1" size="20"><br><br>
      <font color="#424949"><strong> Densidad real :</strong><input type="text" name="numero2" size="20"><br><br>
      <font color="#424949"><strong> Resultado porosidad :</strong>        <input type="text" name="resultado" size="20"><br><br>
-     <center><input type="button" value="Calcular" onclick="porosidad()"></center><input type="reset" value="Eliminar">
+    <div> <input type="button" value="Calcular" onclick="porosidad()"> <input type="reset" value="Eliminar"> </div>
          
 
   </form>
