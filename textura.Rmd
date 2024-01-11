@@ -8,7 +8,7 @@ output:
 <html>
 <style>
 body {
-  background-color: #1A5276;
+  background-color: #148F77;
   }
 </style>
 
@@ -16,9 +16,9 @@ body {
 <center>
 <style type="text/css"> 
 
-#round { width: 500px; height: 1180px; 
-         background-color: rgb(255,228,181); 
-         border: 1px solid Moccasin; 
+#round { width: 600px; height: 1130px; 
+         background-color: rgb(209, 242, 235 , 0.66); 
+         border: 1px solid #148F77; 
          border-radius: 1em;} 
 </style> 
 
@@ -30,7 +30,7 @@ body {
    </body>
 
   <body>
-    <form name="MyForm"><p align="left">
+    <form name="MyForm"><p>
      La40s(lectura en g L-1 de muestra a los 40 s.):<input type="text" name="numero1" size="20"><br><br>
      Lb40s( lectura en g L-1 del blanco a los 40 s. ):<input type="text" name="numero2" size="20"><br><br>
       ta40s( temperatura en °C de la muestra a los 40 s.):<input type="text" name="numero3" size="20"><br><br>
@@ -42,7 +42,7 @@ body {
    </p>    
 
   </form>
-    <form name="MyForm2"><p align="left">
+    <form name="MyForm2"><p>
      La2h(lectura en g L-1de muestra a las 2h.):<input type="text" name="numero6" size="20"><br><br>
      Lb2h(lectura en g L-1 del blanco a las 2h.):<input type="text" name="numero7" size="20"><br><br>
       ta2h( temperatura en °C de la muestra a las 2h.):<input type="text" name="numero8" size="20"><br><br>
@@ -54,7 +54,7 @@ body {
          </p>
 
   </form>
-     <form name="MyForm3"><p align="left">
+     <form name="MyForm3"><p >
    (Limo + arcilla)%:<input type="text" name="numero11" size="20"><br><br>
   arcilla :<input type="text" name="numero12" size="20"><br><br>
     Resultado del  contenido de limo, en %:        <input type="text" name="resultado" size="20"><br><br>
@@ -64,7 +64,7 @@ body {
   </form>
   
   
-<form name="MyForm4"><p align="left">
+<form name="MyForm4"><p >
     (Limo + arcilla) :<input type="text" name="numero13" size="20"><br><br>
      Resultado del contenido de arena, en %:<input type="text" name="resultado" size="20"><br><br>
        <center><input type="button" value="Calcular" onclick="cuarta()"></center>

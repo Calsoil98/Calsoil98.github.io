@@ -4,7 +4,7 @@
 <div>
 <style>
 body {
-  background-color: #1A5276;
+  background-color: #148F77;
   }
 </style>
 
@@ -12,9 +12,9 @@ body {
 <center>
 <style type="text/css"> 
 
-#coca { width: 400px; height: 440px; 
-         background-color: rgb(255,228,181); 
-         border: 1px solid Moccasin; 
+#coca { width: 600px; height: 525px; 
+         background-color: rgb(209, 242, 235 , 0.66); 
+         border: 1px solid #148F77; 
          border-radius: 1em;} 
 </style> 
 
@@ -22,25 +22,23 @@ body {
 <FONT FACE="times new roman">
 <body> 
 <div id="coca"> 
-   <body>  <H5><center><b>Carbono orgánico y Materia orgánica</b></CENTER><br> </H5>
-
+   <body>  <H5><center><b><font color="#424949">Carbono orgánico y Materia orgánica</b></CENTER><br> </H5></font>
   <body>
-    <form name="MyForm"><P ALIGN = LEFT>
-      Peso total mufla :<input type="text" name="numero1" size="20"><br><br>
-      Peso en seco mufla :<input type="text" name="numero2" size="20"><br><br>
-      Resultado carbono orgánico:        <input type="text" name="resultado" size="20"><br><br>
+    <form name="MyForm"><P ><font color="#424949"><strong>
+      Peso total mufla </strong>:<input type="text" name="numero1" size="25"><br><br></font> <font color="#424949"><strong>
+      Peso en seco mufla</strong> :<input type="text" name="numero2" size="25"><br><br> </font> <font color="#424949"><strong>
+      Resultado carbono orgánico</strong>:        <input type="text" name="resultado" size="25"><br><br></font>
      <center><input type="button" value="Calcular" onclick="carbono()"></center><input type="reset" value="Eliminar">
 
   </form>
   
-  <body>
-    <form name="MyForma"><P ALIGN = LEFT>
-     % carbono orgánico:<input type="text" name="numero3" size="20"><br><br>
-     Materia orgánica:        <input type="text" name="resultado" size="20"><br><br>
+  <body><font color="#424949"><strong>
+    <form name="MyForma"><P>
+     % carbono orgánico</strong>:<input type="text" name="numero3" size="25"><br><br></font><font color="#424949"><strong> 
+     Materia orgánica</strong>:        <input type="text" name="resultado" size="25"><br><br></font>
      <center><input type="button" value="Calcular" onclick="materia()"></center><input type="reset" value="Eliminar">
-         
+       
 
-  </form>
 
   <script>
      function carbono() {

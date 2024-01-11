@@ -4,7 +4,7 @@
 <div>
 <style>
 body {
-  background-color: #1A5276;
+  background-color: #148F77;
   }
 </style>
 
@@ -12,9 +12,9 @@ body {
 <center>
 <style type="text/css"> 
 
-#coca { width: 400px; height: 280px; 
-         background-color: rgb(255,228,181); 
-         border: 1px solid Moccasin; 
+#coca { width: 410px; height: 310px; 
+         background-color: rgb(209, 242, 235 , 0.66); 
+         border: 1px solid #148F77; 
          border-radius: 1em;} 
 </style> 
 
@@ -25,10 +25,10 @@ body {
    <body>  <H5><center><b>Calcular porosidad</b></CENTER><br> </H5>
 
   <body>
-    <form name="MyForm"><P ALIGN = LEFT>
-      Densidad aparente :<input type="text" name="numero1" size="20"><br><br>
-      Densidad real :<input type="text" name="numero2" size="20"><br><br>
-      Resultado porosidad :        <input type="text" name="resultado" size="20"><br><br>
+    <form name="MyForm"><P >
+     <font color="#424949"><strong> Densidad aparente :</strong><input type="text" name="numero1" size="20"><br><br>
+     <font color="#424949"><strong> Densidad real :</strong><input type="text" name="numero2" size="20"><br><br>
+     <font color="#424949"><strong> Resultado porosidad :</strong>        <input type="text" name="resultado" size="20"><br><br>
      <center><input type="button" value="Calcular" onclick="porosidad()"></center><input type="reset" value="Eliminar">
          
 

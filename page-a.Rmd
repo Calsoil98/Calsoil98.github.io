@@ -4,7 +4,7 @@
 <div>
 <style>
 body {
-  background-color: #1A5276;
+  background-color: #148F77;
   }
 </style>
 
@@ -12,9 +12,9 @@ body {
 <center>
 <style type="text/css"> 
 
-#coca { width: 400px; height: 360px; 
-         background-color: rgb(255,228,181); 
-         border: 1px solid Moccasin; 
+#coca { width: 430px; height: 410px; 
+         background-color: rgb(209, 242, 235 , 0.66); 
+         border: 1px solid #148F77; 
          border-radius: 1em;} 
 </style> 
 
@@ -26,12 +26,12 @@ body {
    </body>
 
   <body>
-    <form name="MyForm"><P ALIGN = LEFT>
-      Peso del balón vacío :<input type="text" name="numero1" size="20"><br><br>
-      Peso del balón + muestra del suelo :<input type="text" name="numero2" size="20"><br><br>
-      Peso del balón + suelo + agua :<input type="text" name="numero3" size="20"><br><br>
-      Peso del balón aforado con agua :<input type="text" name="numero4" size="20"><br><br>
-     Resultado Densidad Real :        <input type="text" name="resultado" size="20"><br><br>
+    <form name="MyForm"><P><font color="#424949"><strong>
+      Peso del balón vacío :</strong><input type="text" name="numero1" size="20"><br><br>
+      <font color="#424949"><strong>Peso del balón + muestra del suelo :</strong><input type="text" name="numero2" size="20"><br><br>
+      <font color="#424949"><strong>Peso del balón + suelo + agua :</strong><input type="text" name="numero3" size="20"><br><br>
+     <font color="#424949"><strong> Peso del balón aforado con agua :</strong><input type="text" name="numero4" size="20"><br><br>
+    <font color="#424949"><strong> Resultado Densidad Real :</strong>        <input type="text" name="resultado" size="20"><br><br>
      <center><input type="button" value="Calcular" onclick="real()"></center><input type="reset" value="Eliminar">
          
 

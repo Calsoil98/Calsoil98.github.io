@@ -3,7 +3,7 @@
 <html>
 <style>
 body {
-  background-color: #1A5276;
+  background-color: #148F77;
   }
 </style>
 
@@ -11,9 +11,9 @@ body {
 <center>
 <style type="text/css"> 
 
-#round { width: 400px; height: 380px; 
-         background-color: rgb(255,228,181); 
-         border: 1px solid Moccasin; 
+#round { width: 470px; height: 460px; 
+         background-color: rgb(209, 242, 235 , 0.66); 
+         border: 1px solid #148F77; 
          border-radius: 1em;} 
 </style> 
 
@@ -26,12 +26,13 @@ body {
 
   <body>
   <center>
-  ![](A.png){height=80px} </center>
-    <form name="MyForm">
-      Ingrese A:<input type="text" name="numero1" size="20"><br><br>
-      Ingrese B:<input type="text" name="numero2" size="20"><br><br>
-      Ingrese c:<input type="text" name="numero3" size="20"><br><br>
-     Resultado x :        <input type="text" name="resultado" size="20"><br><br>
+  ![](A.png){height=75px}  </center><br>
+  
+   <form name="MyForm"><font color="#424949">
+      <strong>Ingrese A:</strong><input type="text" name="numero1" size="20"><br><br>
+     <strong> Ingrese B:</strong><input type="text" name="numero2" size="20"><br><br>
+      <strong>Ingrese c:</strong><input type="text" name="numero3" size="20"><br><br>
+     <strong>Resultado x :</strong>        <input type="text" name="resultado" size="20"><br><br></font>
      <center><input type="button" value="Calcular" onclick="real()"></center><input type="reset" value="Eliminar">
          
 

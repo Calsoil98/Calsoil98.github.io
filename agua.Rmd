@@ -3,7 +3,7 @@
 <html>
 <style>
 body {
-  background-color: #1A5276;
+  background-color: #148F77;
   }
 </style>
 
@@ -11,9 +11,9 @@ body {
 <center>
 <style type="text/css"> 
 
-#round { width: 400px; height:390px; 
-         background-color: rgb(255,228,181); 
-         border: 1px solid Moccasin; 
+#round { width: 520px; height:450px; 
+         background-color: rgb(209, 242, 235 , 0.66); 
+         border: 1px solid #148F77; 
          border-radius: 1em;} 
 </style> 
 
@@ -23,12 +23,12 @@ body {
 <div id="round"> 
 <H5><center><b>Calcular humedad aprovechable</b></CENTER><br><br> </H5>
 <body>
-    <form name="MyForm1"> <P ALIGN = LEFT>
-      Ingrese capacidad de campo:<input type="text" name="numero5" size="20"><br><br> 
-      Ingrese punto de marchitez permanente :<input type="text" name="numero6" size="20"><br><br>
-      Ingrese densidad aparente:<input type="text" name="numero7" size="20"><br><br>
-      Ingrese  profundidad:<input type="text" name="numero8" size="20"><br><br>
-     Resultado en Lm2:        <input type="text" name="resultado" size="20"><br><br>
+    <form name="MyForm1"> <P><font color="#424949"><strong>
+      Ingrese capacidad de campo:</strong><input type="text" name="numero5" size="20"><br><br> 
+      <font color="#424949"><strong>Ingrese punto de marchitez permanente :</strong><input type="text" name="numero6" size="20"><br><br>
+      <font color="#424949"><strong>Ingrese densidad aparente:</strong><input type="text" name="numero7" size="20"><br><br>
+      <font color="#424949"><strong>Ingrese  profundidad:</strong><input type="text" name="numero8" size="20"><br><br>
+     <font color="#424949"><strong>Resultado en Lm2:</strong>        <input type="text" name="resultado" size="20"><br><br>
      <center><input type="button" value="Calcular" onclick="agua1()"></center><input type="reset" value="Eliminar">
       
   </form>

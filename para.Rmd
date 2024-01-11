@@ -4,7 +4,7 @@
 <div>
 <style>
 body {
-  background-color: #1A5276;
+  background-color: #148F77;
   }
 </style>
 
@@ -12,9 +12,9 @@ body {
 <center>
 <style type="text/css"> 
 
-#coca { width: 400px; height: 1200px; 
-         background-color: rgb(255,228,181); 
-         border: 1px solid Moccasin; 
+#coca { width: 400px; height: 1350px; 
+         background-color: rgb(209, 242, 235 , 0.66); 
+         border: 1px solid #148F77; 
          border-radius: 1em;} 
 </style> 
 
@@ -25,7 +25,7 @@ body {
    <body>  <H5><center><b>Calcular densidad aparente</b></CENTER><br> </H5>
 
   <body>
-    <form name="MyForm"><P ALIGN = LEFT>
+    <form name="MyForm"><P>
      4to Terrón Húmedo:<input type="text" name="numero1" size="20"><br><br>
      4toTerrón Seco 105°C:<input type="text" name="numero2" size="20"><br><br>
      Resultado paso 1:        <input type="text" name="resultado" size="20"><br><br>
@@ -34,7 +34,7 @@ body {
    </p>    
 
   </form>
-    <form name="MyForm2"><P ALIGN = LEFT>
+    <form name="MyForm2"><P >
      TerrónParafina:<input type="text" name="numero6" size="20"><br><br>
      TerrónHúmedo:<input type="text" name="numero7" size="20"><br><br>
      Densidad parafina:<input type="text" name="numero8" size="20"><br><br>
@@ -44,7 +44,7 @@ body {
          </p>
 
   </form>
-     <form name="MyForm3"><P ALIGN = LEFT>
+     <form name="MyForm3"><P >
    VolúmenDesplazado:<input type="text" name="numero11" size="20"><br><br>
  Resultado paso 2:<input type="text" name="numero12" size="20"><br><br>
     Resultado paso 3:        <input type="text" name="resultado" size="20"><br><br>
@@ -54,7 +54,7 @@ body {
   </form>
   
   
-  <form name="MyForm4"><P ALIGN = LEFT>
+  <form name="MyForm4"><P>
     TerrónHúmedo:<input type="text" name="numero13" size="20"><br><br>
    Resultado paso 1:<input type="text" name="numero14" size="20"><br><br>
     Resultado paso 4:<input type="text" name="resultado" size="20"><br><br>
@@ -64,7 +64,7 @@ body {
    </form>
   
   
-  <form name="MyForm5"><P ALIGN = LEFT>
+  <form name="MyForm5"><P >
     Paso 4:<input type="text" name="numero15" size="20"><br><br>
    Paso 3 :<input type="text" name="numero16" size="20"><br><br>
     Resultado paso 5:<input type="text" name="resultado" size="20"><br><br>

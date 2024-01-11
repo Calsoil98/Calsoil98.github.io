@@ -2,7 +2,7 @@
 <html>
 <style>
 body {
-  background-color: #1A5276;
+  background-color: #148F77;
   }
 </style>
 
@@ -10,9 +10,9 @@ body {
 <center>
 <style type="text/css"> 
 
-#coca { width: 400px; height: 315px; 
-         background-color: rgb(255,228,181); 
-         border: 1px solid Moccasin; 
+#coca { width: 500px; height: 355px; 
+         background-color: rgb(209, 242, 235 , 0.66); 
+         border: 1px solid #148F77; 
          border-radius: 1em;} 
 </style> 
 
@@ -22,7 +22,7 @@ body {
 <div id="coca"> 
    <body>  <H5><center><b>Calculo suministro </b></CENTER><br> </H5>
   <body>
-    <form name="MyForm"><P ALIGN = LEFT>
+    <form name="MyForm"><P >
       Ingrese elemento total (mg):<input type="text" name="numero1" size="20"><br><br>
       Ingrese (1kg):<input type="text" name="numero2" size="20"><br><br>
       Ingrese masa del suelo (kg):<input type="text" name="numero3" size="20"><br><br>
@@ -46,11 +46,11 @@ body {
   </center>
 </html>
 ############
-
+<br> <br> 
 <html>
 <style>
 body {
-  background-color: #1A5276;
+  background-color: #148F77;
   }
 </style>
 
@@ -58,9 +58,9 @@ body {
 <center>
 <style type="text/css"> 
 
-#coca1 { width: 400px; height: 320px; 
-         background-color: rgb(255,228,181); 
-         border: 1px solid Moccasin; 
+#coca1 { width: 500px; height: 365px; 
+         background-color: rgb(209, 242, 235 , 0.66); 
+         border: 1px solid #148F77; 
          border-radius: 1em;} 
 </style> 
 
@@ -71,7 +71,7 @@ body {
    <body><br>  <H5><center><b>Convertir de mg(Elemento) a (Kg)/Ha </b></CENTER><br> </H5>
 
   <body>
-    <form name="MyForm2"><P ALIGN = LEFT>
+    <form name="MyForm2"><P >
       Ingrese elemento(mg):<input type="text" name="numero4" size="20"><br><br>
       Ingrese 1(kg):<input type="text" name="numero5" size="20"><br><br>
       Ingrese 1000000(mg):<input type="text" name="numero6" size="20"><br><br>
@@ -96,11 +96,11 @@ body {
 </html>
 
 #############
-
+<br> <br> 
 <html>
 <style>
 body {
-  background-color: #1A5276;
+  background-color: #148F77;
   }
 </style>
 
@@ -108,9 +108,9 @@ body {
 <center>
 <style type="text/css"> 
 
-#coca11 { width: 400px; height: 300px; 
-         background-color: rgb(255,228,181); 
-         border: 1px solid Moccasin; 
+#coca11 { width: 500px; height: 330px; 
+         background-color: rgb(209, 242, 235 , 0.66); 
+         border: 1px solid #148F77; 
          border-radius: 1em;} 
 </style> 
 
@@ -121,7 +121,7 @@ body {
    <body><br>  <H5><center><b>Convertir de mg/Kg a Kg(elemento/Ha)</b></CENTER><br> </H5>
 
   <body>
-    <form name="MyForm6"><P ALIGN = LEFT>
+    <form name="MyForm6"><P>
       Ingrese elemento(mg/Kg):<input type="text" name="numero8" size="20"><br><br>
       Ingrese factor :<input type="text" name="numero9" size="20"><br><br>
      Resultado en Kg(elemento/Ha):        <input type="text" name="resultado" size="20"><br><br>

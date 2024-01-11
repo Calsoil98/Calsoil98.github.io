@@ -4,7 +4,7 @@
 <div>
 <style>
 body {
-  background-color: #1A5276;
+  background-color: #148F77;
   }
 </style>
 
@@ -12,9 +12,9 @@ body {
 <center>
 <style type="text/css"> 
 
-#coca { width: 400px; height: 620px; 
-         background-color: rgb(255,228,181); 
-         border: 1px solid Moccasin; 
+#coca { width: 460px; height: 710px; 
+         background-color: rgb(209, 242, 235 , 0.66); 
+         border: 1px solid #148F77; 
          border-radius: 1em;} 
 </style> 
 
@@ -26,20 +26,20 @@ body {
    </body>
 
   <body>
-    <form name="MyForm"><P ALIGN = LEFT>
+    <form name="MyForm"><P >
       Ingrese el  diámetro :<input type="text" name="numero1" size="20"><br><br>
        Resultado  de radio :        <input type="text" name="resultado" size="20"><br><br>
      <center><input type="button" value="Calcular  radio" onclick="radio()"></center>
        <center><input type="reset" value="Eliminar"></center>
        </form>
-       <form name="MyForma"><P ALIGN = LEFT>
+       <form name="MyForma"><P >
       Ingrese el radio :<input type="text" name="numero2" size="20"><br><br>
        Ingrese la altura :<input type="text" name="numero3" size="20"><br><br>
        Resultado  de volumen :        <input type="text" name="resultado" size="20"><br><br>
      <center><input type="button" value="Calcular volumen" onclick="volumen()"></center>
          <center><input type="reset" value="Eliminar"></center>
        </form>
-       <form name="MyFormas"><P ALIGN = LEFT>
+       <form name="MyFormas"><P >
       Ingrese la masa :<input type="text" name="numero4" size="20"><br><br>
        Ingrese el volumen :<input type="text" name="numero5" size="20"><br><br>
        Resultado  de densidad aparente :        <input type="text" name="resultado" size="20"><br><br>
