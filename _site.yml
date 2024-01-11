@@ -14,6 +14,8 @@ navbar:
           href: texcla.html
         - text: "Clase textural método manual"
           href: manual.html
+        - text: "Guía"
+          href: guia.html
     - text: "Ecuaciones "
       icon: fa-caret-square-o-up
       href: home1.html
@@ -49,15 +51,11 @@ navbar:
         - text: "Demanda del cultivar de banano"
           href: demanda.html 
         - text: "Demanda de cuclo corto y frutales"
-          href: demanda2.html 
+          href: demanda2.html
+        - text: "Dosis"
+          href: dosis.html
         - text: "Conversión de bases(Ca,K,Na,Mg)"
           href: bases.html 
-    - text: "Guía practica o campo "
-      icon: fa-thin fa-file
-      href: home22.html
-      menu:
-        - text: "Guía"
-          href: guia.html
     - text: "Banano "
       icon: fa-thin fa-banana
       href: home32.html

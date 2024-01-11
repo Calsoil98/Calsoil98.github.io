@@ -11,7 +11,7 @@
 
 
 
-<title>home.knit</title>
+<title>dosis.knit</title>
 
 <script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -373,7 +373,65 @@ $(document).ready(function () {
 </div>
 
 
+<html>
+<style>
+body {
+  background-color: #148F77;
+  }
+</style>
+<head>
+<center>
+<style type="text/css"> 
 
+#round { width: 800px; height: 510px; 
+         background-color: rgb(209, 242, 235 , 0.66); 
+         border: 1px solid #148F77; 
+         border-radius: 1em;} 
+</style>
+</head>
+<FONT FACE="times new roman">
+<body>
+<div id="round">
+<H5>
+<center>
+<b>Dosis a aplicar</b>
+</CENTER>
+<br>
+</H5>
+<body>
+<center>
+<img src="efi.PNG" height="130" />
+</center>
+<center>
+Fuente: Ivan Vidal P.
+</center>
+<p><br></p>
+<form name="MyForm">
+<font color="#424949"> <strong>Demanda del
+cultivo:</strong><input type="text" name="numero1" size="20"><br><br>
+<strong> Suministro del
+suelo:</strong><input type="text" name="numero2" size="20"><br><br>
+<strong>Eficiencia:</strong><input type="text" name="numero3" size="20"><br><br>
+<strong>Resultado:</strong>
+<input type="text" name="resultado" size="20"><br><br></font>
+<div>
+<input type="button" value="Calcular" onclick="real()"><input type="reset" value="Eliminar">
+</div>
+</form>
+<script>
+     function real() {
+     var n1 = parseFloat(document.MyForm.numero1.value);
+     var n2 = parseFloat(document.MyForm.numero2.value);
+     var n3 = parseFloat(document.MyForm.numero3.value);
+     document.MyForm.resultado.value=((n1-n2)/n3);
+     }
+    </script>
+</body>
+</div>
+</body>
+</FONT>
+</center>
+</html>
 
 
 

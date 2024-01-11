@@ -10,7 +10,7 @@ body {
 <center>
 <style type="text/css"> 
 
-#coca { width: 500px; height: 355px; 
+#coca { width: 500px; height: 310px; 
          background-color: rgb(209, 242, 235 , 0.66); 
          border: 1px solid #148F77; 
          border-radius: 1em;} 
@@ -94,7 +94,7 @@ body {
 </html>
 
 #############
-<br> <br> 
+ <br> 
 <html>
 <style>
 body {
@@ -106,7 +106,7 @@ body {
 <center>
 <style type="text/css"> 
 
-#coca11 { width: 500px; height: 330px; 
+#coca11 { width: 500px; height: 430px; 
          background-color: rgb(209, 242, 235 , 0.66); 
          border: 1px solid #148F77; 
          border-radius: 1em;} 
@@ -134,8 +134,17 @@ body {
      document.MyForm6.resultado.value=(n8*n9);
      }
     </script>
+    <br>
+    <H5><center><b>Factor de conversión</b></CENTER> </H5>
+    <center><b>P=2.29 P2O5</b></CENTER> 
+        <center><b>K=1.2 K2O</b></CENTER> 
+    <center><b>Mg=1.66 MgO</b></CENTER> 
+    <center><b>Ca=1.4 CaO</b></CENTER> 
+
+
   </body>
 </div> 
+  <body>
    </body>
    </FONT>
   </center>
