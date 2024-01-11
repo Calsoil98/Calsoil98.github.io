@@ -29,7 +29,7 @@ body {
        <font color="#424949"><strong> Peso humedo :</strong><input type="text" name="numero1" size="20"><br><br>
        <font color="#424949"><strong> Peso seco :</strong><input type="text" name="numero2" size="20"><br><br>
        <font color="#424949"><strong> Resultado humedad volumétrica :</strong>        <input type="text" name="resultado" size="20"><br><br>
-     <center><input type="button" value="Calcular" onclick="humedad()"></center><input type="reset" value="Eliminar">
+     <div><input type="button" value="Calcular" onclick="humedad()"><input type="reset" value="Eliminar"></div>
          
 
   </form>

@@ -32,8 +32,8 @@ body {
       <font color="#424949"><strong>Peso del balón + suelo + agua :</strong><input type="text" name="numero3" size="20"><br><br>
      <font color="#424949"><strong> Peso del balón aforado con agua :</strong><input type="text" name="numero4" size="20"><br><br>
     <font color="#424949"><strong> Resultado Densidad Real :</strong>        <input type="text" name="resultado" size="20"><br><br>
-     <center><input type="button" value="Calcular" onclick="real()"></center><input type="reset" value="Eliminar">
-         
+     <div><input type="button" value="Calcular" onclick="real()"><input type="reset" value="Eliminar">
+         </div>
 
   </form>
 

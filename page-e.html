@@ -398,10 +398,10 @@ body {
 :<input type="text" name="numero2" size="25"><br><br> </font>
 <font color="#424949"><strong> Resultado carbono orgánico</strong>:
 <input type="text" name="resultado" size="25"><br><br></font>
-<center>
-<input type="button" value="Calcular" onclick="carbono()">
-</center>
-<p><input type="reset" value="Eliminar"></p>
+<div>
+<input type="button" value="Calcular" onclick="carbono()"><input type="reset" value="Eliminar">
+</div>
+<p><br></p>
 </form>
 <body>
 <font color="#424949"><strong>
@@ -411,10 +411,9 @@ body {
 orgánico</strong>:<input type="text" name="numero3" size="25"><br><br></font><font color="#424949"><strong>
 Materia orgánica</strong>:
 <input type="text" name="resultado" size="25"><br><br></font>
-<center>
-<input type="button" value="Calcular" onclick="materia()">
-</center>
-<p><input type="reset" value="Eliminar"></p>
+<div>
+<input type="button" value="Calcular" onclick="materia()"><input type="reset" value="Eliminar">
+</div>
 <script>
      function carbono() {
      var n1 = parseFloat(document.MyForm.numero1.value);

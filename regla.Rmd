@@ -33,8 +33,8 @@ body {
      <strong> Ingrese B:</strong><input type="text" name="numero2" size="20"><br><br>
       <strong>Ingrese c:</strong><input type="text" name="numero3" size="20"><br><br>
      <strong>Resultado x :</strong>        <input type="text" name="resultado" size="20"><br><br></font>
-     <center><input type="button" value="Calcular" onclick="real()"></center><input type="reset" value="Eliminar">
-         
+     <div><input type="button" value="Calcular" onclick="real()"><input type="reset" value="Eliminar">
+       </div>  
 
   </form>
 

@@ -29,8 +29,8 @@ body {
       Ingrese densidad aparente(T/m3) :<input type="text" name="numero2" size="20"><br><br>
       Ingrese profundidad(m):<input type="text" name="numero3" size="20"><br><br>
      Resultado en T:        <input type="text" name="resultado" size="20"><br><br>
-     <center><input type="button" value="Calcular" onclick="masa()"></center><input type="reset" value="Eliminar">
-         
+     <div><input type="button" value="Calcular" onclick="masa()"><input type="reset" value="Eliminar">
+         </div>
   </form>
 
   <script>
@@ -82,8 +82,8 @@ body {
       Ingrese T:<input type="text" name="numero4" size="20"><br><br>
       Ingrese 1000 kG :<input type="text" name="numero5" size="20"><br><br>
      Resultado en Kg:        <input type="text" name="resultado" size="20"><br><br>
-     <center><input type="button" value="Calcular" onclick="tone()"></center><input type="reset" value="Eliminar">
-         
+     <div><input type="button" value="Calcular" onclick="tone()"><input type="reset" value="Eliminar">
+         </div>
   </form>
 
   <script>
