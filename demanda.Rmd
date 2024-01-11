@@ -11,7 +11,7 @@ body {
 <center>
 <style type="text/css"> 
 
-#round { width: 600px; height: 1800px; 
+#round { width: 900px; height: 2000px; 
          background-color: rgb(209, 242, 235 , 0.66); 
          border: 1px solid #148F77; 
          border-radius: 1em;} 
@@ -26,9 +26,9 @@ body {
 
   <body>
   <center>
-  ![](requeri.png){height=300px}  </center><br>
+  ![](requeri.png){height=400px}  </center><br>
   <center>Fuente: Antonio López M., José Espinoza M. </center>
- 
+ <br>
 
  <body>
     <form name="MyForm"><P >
