@@ -26,7 +26,7 @@ body {
 
   <body>
   <center>
-  ![](banan.PNG){height=400px}  </center>
+  ![](ban.png){height=400px}  </center>
   <center>Fuente: Antonio López M., José Espinoza M. </center>
  <br>
 
