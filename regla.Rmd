@@ -27,7 +27,7 @@ body {
   <body>
   <center>
   ![](A.png){height=75px}  </center><br>
-  
+ 
    <form name="MyForm"><font color="#424949">
       <strong>Ingrese A:</strong><input type="text" name="numero1" size="20"><br><br>
      <strong> Ingrese B:</strong><input type="text" name="numero2" size="20"><br><br>

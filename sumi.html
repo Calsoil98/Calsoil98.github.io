@@ -326,7 +326,13 @@ $(document).ready(function () {
       <a href="sumi.html">Calculo suministro</a>
     </li>
     <li>
-      <a href="bases.html">Calculo bases(Ca,K,Na,Mg)</a>
+      <a href="demanda.html">Demanda del cultivar de banano</a>
+    </li>
+    <li>
+      <a href="demanda2.html">Demanda de cuclo corto y frutales</a>
+    </li>
+    <li>
+      <a href="bases.html">Conversión de bases(Ca,K,Na,Mg)</a>
     </li>
   </ul>
 </li>
@@ -341,6 +347,20 @@ $(document).ready(function () {
   <ul class="dropdown-menu" role="menu">
     <li>
       <a href="guia.html">Guía</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="fa fa-thin fa-banana"></span>
+     
+    Banano 
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="ratio.html">Ratio</a>
     </li>
   </ul>
 </li>
@@ -391,9 +411,8 @@ body {
 <form name="MyForm">
 <P >
 Ingrese elemento total
-(mg):<input type="text" name="numero1" size="20"><br><br> Ingrese
-(1kg):<input type="text" name="numero2" size="20"><br><br> Ingrese masa
-del suelo (kg):<input type="text" name="numero3" size="20"><br><br>
+(mg/kg):<input type="text" name="numero1" size="20"><br><br> Ingrese
+masa del suelo (kg):<input type="text" name="numero3" size="20"><br><br>
 Resultado en (mg)elemento:
 <input type="text" name="resultado" size="20"><br><br>
 <div>
@@ -403,9 +422,8 @@ Resultado en (mg)elemento:
 <script>
      function sumi() {
      var n1 = parseFloat(document.MyForm.numero1.value);
-     var n2 = parseFloat(document.MyForm.numero2.value);
      var n3 = parseFloat(document.MyForm.numero3.value);
-     document.MyForm.resultado.value=((n1*n3)/n2);
+     document.MyForm.resultado.value=((n1*n3));
      }
     </script>
 </body>
@@ -416,7 +434,6 @@ Resultado en (mg)elemento:
 </html>
 <div id="section" class="section level12">
 <p class="heading"></p>
-<br> <br>
 <html>
 <style>
 body {
@@ -497,7 +514,7 @@ body {
 <br>
 <H5>
 <center>
-<b>Convertir de mg/Kg a Kg(elemento/Ha)</b>
+<b>Calcular suministro con el factor</b>
 </CENTER>
 <br>
 </H5>

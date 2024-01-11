@@ -11,7 +11,7 @@
 
 
 
-<title>about.knit</title>
+<title>demanda2.knit</title>
 
 <script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -381,7 +381,67 @@ $(document).ready(function () {
 </div>
 
 
+<html>
+<style>
+body {
+  background-color: #148F77;
+  }
+</style>
+<head>
+<center>
+<style type="text/css"> 
 
+#round { width: 1200px; height: 1800px; 
+         background-color: rgb(209, 242, 235 , 0.66); 
+         border: 1px solid #148F77; 
+         border-radius: 1em;} 
+</style>
+</head>
+<FONT FACE="times new roman">
+<body>
+<div id="round">
+<H5>
+<center>
+<b>Demanda del cultivo</b>
+</CENTER>
+<br>
+</H5>
+<body>
+<center>
+<img src="ciclo.png" height="1100" />
+</center>
+<br>
+<center>
+Fuente: Ivan Vidal P.
+</center>
+<br>
+<body>
+<form name="MyForm">
+<P >
+Ingrese Nutriente :<input type="text" name="numero1" size="20"><br><br>
+Ingrese
+Rendimiento:<input type="text" name="numero2"  size="20"><br><br>
+Resultado : <input type="text" name="resultado" size="20"><br><br>
+<div>
+<input type="button" value="Calcular " onclick="ciclo()">
+<input type="reset" value="Eliminar">
+</div>
+<br>
+</form>
+</form>
+<script>
+     function ciclo() {
+     var n1 = parseFloat(document.MyForm.numero1.value);
+     var n2 = parseFloat(document.MyForm.numero2.value);
+     document.MyForm.resultado.value= n1*n2 ;
+     }
+    </script>
+</body>
+</div>
+</body>
+</FONT>
+</center>
+</html>
 
 
 

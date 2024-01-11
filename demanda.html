@@ -11,7 +11,7 @@
 
 
 
-<title>about.knit</title>
+<title>demanda.knit</title>
 
 <script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -381,7 +381,157 @@ $(document).ready(function () {
 </div>
 
 
+<html>
+<style>
+body {
+  background-color: #148F77;
+  }
+</style>
+<head>
+<center>
+<style type="text/css"> 
 
+#round { width: 600px; height: 1800px; 
+         background-color: rgb(209, 242, 235 , 0.66); 
+         border: 1px solid #148F77; 
+         border-radius: 1em;} 
+</style>
+</head>
+<FONT FACE="times new roman">
+<body>
+<div id="round">
+
+<H5>
+<center>
+<b>Demanda del cultivo</b>
+</CENTER>
+<br>
+</H5>
+<body>
+<center>
+<img src="requeri.png" height="300" />
+</center>
+<br>
+<center>
+Fuente: Antonio López M., José Espinoza M.
+</center>
+<body>
+<form name="MyForm">
+<P >
+Ingrese Nitrogeno (N)
+:<input type="text" name="numero1" size="20"><br><br> Ingrese Niveles
+Óptimos:<input type="text" name="numero2" value = "47.5" size="20"><br><br>
+Resultado : <input type="text" name="resultado" size="20"><br><br>
+<div>
+<input type="button" value="Calcular " onclick="Nitrogeno()">
+<input type="reset" value="Eliminar">
+</div>
+<br>
+</form>
+<form name="MyForma">
+<P >
+Ingrese
+Fósforo(P2O5):<input type="text" name="numero1" size="20"><br><br>
+Ingrese Niveles
+Óptimos:<input type="text" name="numero2" value = "32.5" size="20"><br><br>
+Resultado : <input type="text" name="resultado" size="20"><br><br>
+<div>
+<input type="button" value="Calcular " onclick="Fósforo()">
+<input type="reset" value="Eliminar">
+</div>
+<br>
+</form>
+<form name="MyFormas">
+<P >
+Ingrese Potasio(K2O)
+:<input type="text" name="numero1" size="20"><br><br> Ingrese Niveles
+Óptimos:<input type="text" name="numero2" value = "230" size="20"><br><br>
+Resultado : <input type="text" name="resultado" size="20"><br><br>
+<div>
+<input type="button" value="Calcular " onclick="Potasio()"><input type="reset" value="Eliminar">
+</div>
+</form>
+<br>
+<form name="Mycalcio">
+<P >
+Ingrese Calcio(CaO)
+:<input type="text" name="numero1" size="20"><br><br> Ingrese Niveles
+Óptimos:<input type="text" name="numero2" value = "900" size="20"><br><br>
+Resultado : <input type="text" name="resultado" size="20"><br><br>
+<div>
+<input type="button" value="Calcular " onclick="Calcio()"><input type="reset" value="Eliminar">
+</div>
+</form>
+<br>
+<form name="Mymagnesio">
+<P >
+Ingrese Magnesio(MgO)
+:<input type="text" name="numero1" size="20"><br><br> Ingrese Niveles
+Óptimos:<input type="text" name="numero2" value = "97.5" size="20"><br><br>
+Resultado : <input type="text" name="resultado" size="20"><br><br>
+<div>
+<input type="button" value="Calcular " onclick="Magnesio()"><input type="reset" value="Eliminar">
+</div>
+</form>
+<br>
+<form name="Myazufre">
+<P >
+Ingrese Azufre(S) :<input type="text" name="numero1" size="20"><br><br>
+Ingrese Niveles
+Óptimos:<input type="text" name="numero2" value = "20.0" size="20"><br><br>
+Resultado : <input type="text" name="resultado" size="20"><br><br>
+<div>
+<input type="button" value="Calcular " onclick="Azufre()"><input type="reset" value="Eliminar">
+</div>
+</form>
+<script>
+     function Nitrogeno() {
+     var n1 = parseFloat(document.MyForm.numero1.value);
+     var n2 = parseFloat(document.MyForm.numero2.value);
+     document.MyForm.resultado.value= n1>47.5 ;
+     }
+    </script>
+<script>
+     function Fósforo() {
+     var n1 = parseFloat(document.MyForma.numero1.value);
+     var n2 = parseFloat(document.MyForma.numero2.value);
+     document.MyForma.resultado.value= n1>32.5;
+     }
+    </script>
+<script>
+     function Potasio() {
+     var n1 = parseFloat(document.MyFormas.numero1.value);
+     var n2 = parseFloat(document.MyFormas.numero2.value);
+     document.MyFormas.resultado.value= n1>230;
+     }
+    </script>
+<script>
+     function Calcio() {
+     var n1 = parseFloat(document.Mycalcio.numero1.value);
+     var n2 = parseFloat(document.Mycalcio.numero2.value);
+     document.Mycalcio.resultado.value= n1>900;
+     }
+    </script>
+<script>
+     function Magnesio() {
+     var n1 = parseFloat(document.Mymagnesio.numero1.value);
+     var n2 = parseFloat(document.Mymagnesio.numero2.value);
+     document.Mymagnesio.resultado.value= n1>97.5;
+     }
+    </script>
+<script>
+     function Azufre() {
+     var n1 = parseFloat(document.Myazufre.numero1.value);
+     var n2 = parseFloat(document.Myazufre.numero2.value);
+     document.Myazufre.resultado.value= n1>20.0;
+     }
+    </script>
+</body>
+</div>
+</body>
+</FONT>
+</center>
+</html>
 
 
 

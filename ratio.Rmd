@@ -1,0 +1,48 @@
+
+
+<html>
+<div>
+<style>
+body {
+  background-color: #148F77;
+  }
+</style>
+
+<head>
+<center>
+<style type="text/css"> 
+
+#coca { width: 410px; height: 310px; 
+         background-color: rgb(209, 242, 235 , 0.66); 
+         border: 1px solid #148F77; 
+         border-radius: 1em;} 
+</style> 
+
+</head>
+<FONT FACE="times new roman">
+<body> 
+<div id="coca"> 
+   <body>  <H5><center><b>Calcular ratio</b></CENTER><br> </H5>
+
+  <body>
+    <form name="MyForm"><P >
+     <font color="#424949"><strong> N° de cajas :</strong><input type="text" name="numero1" size="20"><br><br>
+     <font color="#424949"><strong> Racimos cosechados :</strong><input type="text" name="numero2" size="20"><br><br>
+     <font color="#424949"><strong> Ratio :</strong>        <input type="text" name="resultado" size="20"><br><br>
+    <div> <input type="button" value="Calcular" onclick="ratio()"> <input type="reset" value="Eliminar"> </div>
+         
+
+  </form>
+
+  <script>
+     function ratio() {
+     var n1 = parseFloat(document.MyForm.numero1.value);
+     var n2 = parseFloat(document.MyForm.numero2.value);
+     document.MyForm.resultado.value=((n1/n2));
+     }
+    </script>
+  </body>
+ </FONT>
+  </center>
+  </div>
+</html>

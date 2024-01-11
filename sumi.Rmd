@@ -23,8 +23,7 @@ body {
    <body>  <H5><center><b>Calculo suministro </b></CENTER><br> </H5>
   <body>
     <form name="MyForm"><P >
-      Ingrese elemento total (mg):<input type="text" name="numero1" size="20"><br><br>
-      Ingrese (1kg):<input type="text" name="numero2" size="20"><br><br>
+      Ingrese elemento total (mg/kg):<input type="text" name="numero1" size="20"><br><br>
       Ingrese masa del suelo (kg):<input type="text" name="numero3" size="20"><br><br>
      Resultado en (mg)elemento:        <input type="text" name="resultado" size="20"><br><br>
      <div><input type="button" value="Calcular" onclick="sumi()"><input type="reset" value="Eliminar">
@@ -34,9 +33,8 @@ body {
   <script>
      function sumi() {
      var n1 = parseFloat(document.MyForm.numero1.value);
-     var n2 = parseFloat(document.MyForm.numero2.value);
      var n3 = parseFloat(document.MyForm.numero3.value);
-     document.MyForm.resultado.value=((n1*n3)/n2);
+     document.MyForm.resultado.value=((n1*n3));
      }
     </script>
   </body>
@@ -46,7 +44,7 @@ body {
   </center>
 </html>
 ############
-<br> <br> 
+
 <html>
 <style>
 body {
@@ -118,7 +116,7 @@ body {
 <FONT FACE="times new roman">
 <body> 
 <div id="coca11"> 
-   <body><br>  <H5><center><b>Convertir de mg/Kg a Kg(elemento/Ha)</b></CENTER><br> </H5>
+   <body><br>  <H5><center><b>Calcular suministro con el factor</b></CENTER><br> </H5>
 
   <body>
     <form name="MyForm6"><P>
