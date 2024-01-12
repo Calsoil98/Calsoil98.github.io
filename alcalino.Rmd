@@ -1,0 +1,56 @@
+
+<html>
+<style>
+body {
+  background-color: #148F77;
+  }
+</style>
+
+<head>
+<center>
+<style type="text/css"> 
+
+#round { width: 800px; height: 500px; 
+         background-color: rgb(209, 242, 235 , 0.66); 
+         border: 1px solid #148F77; 
+         border-radius: 1em;} 
+</style> 
+
+</head>
+<FONT FACE="times new roman">
+   <body>
+   <div id="round">
+  
+<H5><center><b>Cálculo de dosis de Yeso Agrícola para suelos sódicos</b></CENTER><br> </H5>
+<H5><center><b>Sulfato de calcio (CaSO4 2H2O)</b></CENTER><br> </H5>
+  <body>
+  <center>
+ 
+   <form name="MyForma"><font color="#424949">
+      <strong>Porcentaje de saturación de sodio actual:</strong><input type="text" name="numero1" size="20"><br><br>
+     <strong> Porcentaje de saturación de sodio deseado:</strong><input type="text" name="numero2" size="20"><br><br>
+      <strong>Capacidad de Intercambio catiónico(meq/100g):</strong><input type="text" name="numero3" size="20"><br><br>
+      <strong>Densidad aparente del suelo (T/m3):</strong><input type="text" name="numero4" size="20"><br><br>
+      <strong>Profundidad (m):</strong><input type="text" name="numero5" size="20"><br><br>
+     <strong>Dosis Yeso Agrícola (Kg/ha):</strong>        <input type="text" name="resultado" size="20"><br><br></font>
+     <div><input type="button" value="Calcular" onclick="yeso()"><input type="reset" value="Eliminar">
+       </div>  
+  </form>
+  <br>
+
+  <script>
+     function yeso() {
+     var n1 = parseFloat(document.MyForma.numero1.value);
+     var n2 = parseFloat(document.MyForma.numero2.value);
+     var n3 = parseFloat(document.MyForma.numero3.value);
+     var n4 = parseFloat(document.MyForma.numero4.value);
+     var n5 = parseFloat(document.MyForma.numero5.value);
+     document.MyForma.resultado.value=((n1-n2)*n3*n4*n5*87);
+     }
+    </script>
+  </body>
+ </div> 
+   </body>
+   </FONT>
+  </center>
+</html>
