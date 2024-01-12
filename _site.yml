@@ -67,7 +67,7 @@ navbar:
       href: home32.html
       menu:
         - text: "Ratio"
-          href: kuman.html
+          href: ratio.html
         - text: "El método del ‘nuevo factor’"
           href: kuman.html
     - text: "Enmiendas "
