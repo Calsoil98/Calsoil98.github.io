@@ -11,7 +11,7 @@
 
 
 
-<title>page-e.knit</title>
+<title>tres.knit</title>
 
 <script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -402,77 +402,7 @@ $(document).ready(function () {
 </div>
 
 
-<html>
-<div>
-<style>
-body {
-  background-color: #148F77;
-  }
-</style>
-<head>
-<center>
-<style type="text/css"> 
 
-#coca { width: 600px; height: 525px; 
-         background-color: rgb(209, 242, 235 , 0.66); 
-         border: 1px solid #148F77; 
-         border-radius: 1em;} 
-</style>
-</head>
-<FONT FACE="times new roman">
-<body>
-<div id="coca">
-<body>
-<H5>
-<center>
-<b><font color="#424949">Carbono orgánico y Materia orgánica</b>
-</CENTER>
-<br>
-</H5>
-</font>
-<body>
-<form name="MyForm">
-<P >
-<font color="#424949"><strong> Peso total mufla
-</strong>:<input type="text" name="numero1" size="25"><br><br></font>
-<font color="#424949"><strong> Peso en seco mufla</strong>
-:<input type="text" name="numero2" size="25"><br><br> </font>
-<font color="#424949"><strong> Resultado carbono orgánico</strong>:
-<input type="text" name="resultado" size="25"><br><br></font>
-<div>
-<input type="button" value="Calcular" onclick="carbono()"><input type="reset" value="Eliminar">
-</div>
-<p><br></p>
-</form>
-<body>
-<font color="#424949"><strong>
-<form name="MyForma">
-<P>
-% carbono
-orgánico</strong>:<input type="text" name="numero3" size="25"><br><br></font><font color="#424949"><strong>
-Materia orgánica</strong>:
-<input type="text" name="resultado" size="25"><br><br></font>
-<div>
-<input type="button" value="Calcular" onclick="materia()"><input type="reset" value="Eliminar">
-</div>
-<script>
-     function carbono() {
-     var n1 = parseFloat(document.MyForm.numero1.value);
-     var n2 = parseFloat(document.MyForm.numero2.value);
-     document.MyForm.resultado.value=(n1-n2);
-     }
-    </script>
-<script>
-     function materia() {
-     var n3 = parseFloat(document.MyForma.numero3.value);
-     document.MyForma.resultado.value=(n3*1.724);
-     }
-    </script>
-</body>
-</FONT>
-</center>
-</div>
-</html>
 
 
 

@@ -23,7 +23,13 @@ navbar:
         - text: "Regla de tres"
           href: regla.html
         - text: "Humedad aprovechable"
-          href: agua.html          
+          href: agua.html  
+        - text: "Densidad de siembra cuadrado real"
+          href: real.html 
+        - text: "Densidad de siembra rectangulo"
+          href: rectangulo.html 
+        - text: "Densidad de siembra tres bolillos"
+          href: tres.html 
     - text: "Cálculos  de Laboratorio"
       icon: fa fa-leaf
       href: index.html
@@ -61,7 +67,9 @@ navbar:
       href: home32.html
       menu:
         - text: "Ratio"
-          href: ratio.html
+          href: kuman.html
+        - text: "El método del ‘nuevo factor’"
+          href: kuman.html
     - text: "Enmiendas "
       icon: fa-thin fa-banana
       href: home34.html

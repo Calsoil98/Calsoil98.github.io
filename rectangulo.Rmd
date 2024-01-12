@@ -1,0 +1,48 @@
+<html>
+<div>
+<style>
+body {
+  background-color: #148F77;
+  }
+</style>
+
+<head>
+<center>
+<style type="text/css"> 
+
+#coca { width: 410px; height: 330px; 
+         background-color: rgb(209, 242, 235 , 0.66); 
+         border: 1px solid #148F77; 
+         border-radius: 1em;} 
+</style> 
+
+</head>
+<FONT FACE="times new roman">
+<body> 
+<div id="coca"> 
+   <body>  <H5><center><b>Calcular rectangulo</b></CENTER><br> </H5>
+
+  <body>
+    <form name="MyForme"><P >
+     <font color="#424949"><strong> Superficie a sembrar(m2) :</strong><input type="text" name="numero1" size="20"><br><br>
+     <font color="#424949"><strong> Base(m):<input type="text" name="numero2" size="20"><br><br>
+     <font color="#424949"><strong> Aktura(m):<input type="text" name="numero3" size="20"><br><br>
+     <font color="#424949"><strong> Número de (Plantas/ha) :</strong>    <input type="text" name="resultado" size="20"><br><br>
+    <div> <input type="button" value="Calcular" onclick="rec()"> <input type="reset" value="Eliminar"> </div>
+         
+
+  </form>
+
+  <script>
+     function rec() {
+     var n1 = parseFloat(document.MyForme.numero1.value);
+     var n2 = parseFloat(document.MyForme.numero2.value);
+     var n3 = parseFloat(document.MyForme.numero3.value);
+     document.MyForme.resultado.value=(n1/(n2*n3));
+     }
+    </script>
+  </body>
+ </FONT>
+  </center>
+  </div>
+</html>
