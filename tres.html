@@ -291,6 +291,9 @@ $(document).ready(function () {
     <li>
       <a href="tres.html">Densidad de siembra tres bolillos</a>
     </li>
+    <li>
+      <a href="triangulo.html">Densidad de siembra triángulo</a>
+    </li>
   </ul>
 </li>
 <li class="dropdown">
@@ -402,7 +405,59 @@ $(document).ready(function () {
 </div>
 
 
+<html>
+<div>
+<style>
+body {
+  background-color: #148F77;
+  }
+</style>
+<head>
+<center>
+<style type="text/css"> 
 
+#coca { width: 460px; height: 330px; 
+         background-color: rgb(209, 242, 235 , 0.66); 
+         border: 1px solid #148F77; 
+         border-radius: 1em;} 
+</style>
+</head>
+<FONT FACE="times new roman">
+<body>
+<div id="coca">
+<body>
+<H5>
+<center>
+<b>Calcular tres bolillos hilera sencilla</b>
+</CENTER>
+<br>
+</H5>
+<body>
+<form name="MyForm">
+<P >
+<font color="#424949"><strong> Superficie a sembrar(m2)
+:</strong><input type="text" name="numero1" size="20"><br><br>
+<font color="#424949"><strong> Distancia entre
+plantas(m):</strong><input type="text" name="numero2" size="20"><br><br>
+<font color="#424949"><strong> Número de (Plantas/ha) :</strong>
+<input type="text" name="resultado" size="20"><br><br>
+<div>
+<input type="button" value="Calcular" onclick="real()">
+<input type="reset" value="Eliminar">
+</div>
+</form>
+<script>
+     function real() {
+     var n1 = parseFloat(document.MyForm.numero1.value);
+     var n2 = parseFloat(document.MyForm.numero2.value);
+     document.MyForm.resultado.value=((n1 / (Math.pow(n2, 2))) * 1.154);
+     }
+    </script>
+</body>
+</FONT>
+</center>
+</div>
+</html>
 
 
 

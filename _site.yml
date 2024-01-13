@@ -30,6 +30,8 @@ navbar:
           href: rectangulo.html 
         - text: "Densidad de siembra tres bolillos"
           href: tres.html 
+        - text: "Densidad de siembra triángulo"
+          href: triangulo.html 
     - text: "Cálculos  de Laboratorio"
       icon: fa fa-leaf
       href: index.html

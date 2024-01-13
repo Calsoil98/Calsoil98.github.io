@@ -25,8 +25,8 @@ body {
   <body>
     <form name="MyForme"><P >
      <font color="#424949"><strong> Superficie a sembrar(m2) :</strong><input type="text" name="numero1" size="20"><br><br>
-     <font color="#424949"><strong> Base(m):<input type="text" name="numero2" size="20"><br><br>
-     <font color="#424949"><strong> Aktura(m):<input type="text" name="numero3" size="20"><br><br>
+     <font color="#424949"><strong> Distancia por plantas(m):<input type="text" name="numero2" size="20"><br><br>
+     <font color="#424949"><strong> Distancia entre hileras de plantas(m):<input type="text" name="numero3" size="20"><br><br>
      <font color="#424949"><strong> Número de (Plantas/ha) :</strong>    <input type="text" name="resultado" size="20"><br><br>
     <div> <input type="button" value="Calcular" onclick="rec()"> <input type="reset" value="Eliminar"> </div>
          
