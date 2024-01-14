@@ -405,15 +405,103 @@ $(document).ready(function () {
 </div>
 
 
-<html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-body {
-  background-color: #148F77;
-  }
+    body {
+      background-color: #148F77;
+      font-family: "Times New Roman", Times, serif;
+      }
+    #coca {
+      width: 500px;
+      height: 640px;
+      background-color: rgba(209, 242, 235, 0.66);
+      border: 1px solid #148F77;
+      border-radius: 1em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      margin-top: 50px;
+    }
   </style>
+</head>
+<body>
+<div id="coca">
+<body>
+<div style="text-align:center;">
+<br>
 <center>
-<img src="ar.png" height="550" />
+<h2>
+<font color="#17202A">Clase textural</font>
+</h2>
 </center>
+</div>
+<img src="text.png" height="325" />
+</center>
+<p><br></p>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+Calculadora con HTML
+</title>
+</head>
+<body>
+<p><label for="valor1">Arena:</label>
+<input type="number" id="valor1" placeholder=""></p>
+<p><label for="valor2">Limo:</label>
+<input type="number" id="valor2" placeholder=""></p>
+<p><label for="valor3">Arcilla:</label>
+<input type="number" id="valor3" placeholder=""></p>
+<button onclick="calcular()">
+Calcular
+</button>
+<p>
+Textura: <span id="resultado"></span>
+</p>
+<script>
+    function calcular() {
+      // Obtener los valores de los campos de entrada
+      var arena = parseFloat(document.getElementById('valor1').value);
+      var limo = parseFloat(document.getElementById('valor2').value);
+      var arcilla = parseFloat(document.getElementById('valor3').value);
+      // Realizar las condiciones
+      if (0 < arena && arena <= 20 && 85 <= limo && limo <= 100 && 0 < arcilla && arcilla <= 10) {
+        document.getElementById('resultado').innerHTML = 'Liomosa';
+      } else if (20 <= arena && arena <= 50 && 70 <= limo && limo <= 84 && 0 <= arcilla && arcilla <= 26) {
+        document.getElementById('resultado').innerHTML = 'Franca Limosa';
+      } else if (22 <= arena && arena <= 52 && 28 <= limo && limo <= 50&& 8 <= arcilla && arcilla <= 27) {
+        document.getElementById('resultado').innerHTML = 'Franca';
+      } else if (52 <= arena && arena <= 90 && 0 <= limo && limo <= 50 && 0 <= arcilla && arcilla <= 20) {
+        document.getElementById('resultado').innerHTML = 'Franca arenosa';
+      } else if (70 <= arena && arena <= 90 && 0 <= limo && limo <= 30 && 0 <= arcilla && arcilla <= 15) {
+        document.getElementById('resultado').innerHTML = 'Areno francosa';
+      } else if (90 <= arena && arena <= 100 && 0 <= limo && limo <= 15 && 0 <= arcilla && arcilla <= 10) {
+        document.getElementById('resultado').innerHTML = 'Arenosa';
+      } else if (0 <= arena && arena <= 20 && 40 <= limo && limo <= 70 && 27 <= arcilla && arcilla <= 40) {
+        document.getElementById('resultado').innerHTML = 'Franco arcillo limosa';
+      } else if (20 <= arena && arena <= 45 && 15 <= limo && limo <= 50 && 27 <= arcilla && arcilla <= 40) {
+        document.getElementById('resultado').innerHTML = 'Franco arcillosa';
+      } else if (45 <= arena && arena <= 80 && 0 <= limo && limo <= 28 && 20 <= arcilla && arcilla <= 35) {
+        document.getElementById('resultado').innerHTML = 'Franco arcilloso arenoso';  
+      } else if (0 <= arena && arena <= 20 && 40 <= limo && limo <= 60 && 40 <= arcilla && arcilla <= 60) {
+        document.getElementById('resultado').innerHTML = 'Arcillo limosa'; 
+      } else if (0 <= arena && arena <= 45 && 0 <= limo && limo <= 40 && 40 <= arcilla && arcilla <= 100) {
+        document.getElementById('resultado').innerHTML = 'Arcilloso'; 
+      } else if (45 <= arena && arena <= 65 && 0 <= limo && limo <= 20 && 35 <= arcilla && arcilla <= 55) {
+        document.getElementById('resultado').innerHTML = 'Arcillo arenosa'; 
+      } else {
+        document.getElementById('resultado').innerHTML = 'Datos incorrectos';
+      }
+    }
+  </script>
+</body>
+</html>
 
 
 
