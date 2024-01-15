@@ -43,7 +43,7 @@ body {
      var n1 = parseFloat(document.MyForm.numero1.value);
      var n2 = parseFloat(document.MyForm.numero2.value);
      var n3 = parseFloat(document.MyForm.numero3.value);
-     document.MyForm.resultado.value=((n2*n3)/n1);
+     document.MyForm.resultado.value=((n2*n3)/n1).toFixed(3);
      }
     </script>
   </body>

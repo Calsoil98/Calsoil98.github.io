@@ -44,13 +44,13 @@ body {
      function carbono() {
      var n1 = parseFloat(document.MyForm.numero1.value);
      var n2 = parseFloat(document.MyForm.numero2.value);
-     document.MyForm.resultado.value=(n1-n2);
+     document.MyForm.resultado.value=(n1-n2).toFixed(3);
      }
     </script>
       <script>
      function materia() {
      var n3 = parseFloat(document.MyForma.numero3.value);
-     document.MyForma.resultado.value=(n3*1.724);
+     document.MyForma.resultado.value=(n3*1.724).toFixed(3);
      }
     </script>
   </body>

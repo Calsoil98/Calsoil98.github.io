@@ -38,7 +38,7 @@ body {
      function ca() {
      var n1 = parseFloat(document.MyForm.numero1.value);
      var n2 = parseFloat(document.MyForm.numero2.value);
-     document.MyForm.resultado.value=(n1*n2);
+     document.MyForm.resultado.value=(n1*n2).toFixed(3);
      }
     </script>
 
@@ -55,7 +55,7 @@ body {
      function Mg() {
      var n3 = parseFloat(document.MyForm2.numero3.value);
      var n4 = parseFloat(document.MyForm2.numero4.value);
-     document.MyForm2.resultado.value=(n3*n4);
+     document.MyForm2.resultado.value=(n3*n4).toFixed(3);
      }
     </script>
     <body>
@@ -71,7 +71,7 @@ body {
      function so() {
      var n5 = parseFloat(document.MyForm3.numero5.value);
      var n6 = parseFloat(document.MyForm3.numero6.value);
-     document.MyForm3.resultado.value=(n5*n6);
+     document.MyForm3.resultado.value=(n5*n6).toFixed(3);
      }
     </script>
     <body>
@@ -87,7 +87,7 @@ body {
      function POTA() {
      var n7 = parseFloat(document.MyForm4.numero7.value);
      var n8 = parseFloat(document.MyForm4.numero8.value);
-     document.MyForm4.resultado.value=(n7*n8);
+     document.MyForm4.resultado.value=(n7*n8).toFixed(3);
      }
     </script>
     
@@ -136,7 +136,7 @@ body {
      function fa() {
      var n4 = parseFloat(document.MyForm5.numero4.value);
      var n5 = parseFloat(document.MyForm5.numero5.value);
-     document.MyForm5.resultado.value=(n4*n5);
+     document.MyForm5.resultado.value=(n4*n5).toFixed(3);
      }
     </script>
   </body>

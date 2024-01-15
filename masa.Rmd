@@ -90,7 +90,7 @@ body {
      function tone() {
      var n4 = parseFloat(document.MyForm2.numero4.value);
      var n5 = parseFloat(document.MyForm2.numero5.value);
-     document.MyForm2.resultado.value=(n4*n5);
+     document.MyForm2.resultado.value=(n4*n5).toFixed(3);
      }
     </script>
   </body>

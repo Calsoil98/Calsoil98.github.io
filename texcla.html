@@ -369,6 +369,9 @@ $(document).ready(function () {
     <li>
       <a href="kuman.html">El método del ‘nuevo factor’</a>
     </li>
+    <li>
+      <a href="emision.html">Emisión Foliar</a>
+    </li>
   </ul>
 </li>
 <li class="dropdown">
@@ -471,21 +474,21 @@ Textura: <span id="resultado"></span>
       var limo = parseFloat(document.getElementById('valor2').value);
       var arcilla = parseFloat(document.getElementById('valor3').value);
       // Realizar las condiciones
-      if (0 < arena && arena <= 20 && 85 <= limo && limo <= 100 && 0 < arcilla && arcilla <= 10) {
+      if (0 < arena && arena <= 20 && 80 <= limo && limo <= 100 && 0 < arcilla && arcilla <= 12) {
         document.getElementById('resultado').innerHTML = 'Liomosa';
-      } else if (20 <= arena && arena <= 50 && 70 <= limo && limo <= 84 && 0 <= arcilla && arcilla <= 26) {
+      } else if (0 <= arena && arena <= 50 && 50 <= limo && limo <= 87 && 0 <= arcilla && arcilla <= 27) {
         document.getElementById('resultado').innerHTML = 'Franca Limosa';
-      } else if (22 <= arena && arena <= 52 && 28 <= limo && limo <= 50&& 8 <= arcilla && arcilla <= 27) {
+      } else if (23 <= arena && arena <= 52 && 32 <= limo && limo <= 52&& 7 <= arcilla && arcilla <= 27) {
         document.getElementById('resultado').innerHTML = 'Franca';
-      } else if (52 <= arena && arena <= 90 && 0 <= limo && limo <= 50 && 0 <= arcilla && arcilla <= 20) {
+      } else if (43 <= arena && arena <= 85 && 0 <= limo && limo <= 50 && 0 <= arcilla && arcilla <= 20) {
         document.getElementById('resultado').innerHTML = 'Franca arenosa';
-      } else if (70 <= arena && arena <= 90 && 0 <= limo && limo <= 30 && 0 <= arcilla && arcilla <= 15) {
+      } else if (70 <= arena && arena <= 90 && 0 <= limo && limo <= 50 && 0 <= arcilla && arcilla <= 15) {
         document.getElementById('resultado').innerHTML = 'Areno francosa';
-      } else if (90 <= arena && arena <= 100 && 0 <= limo && limo <= 15 && 0 <= arcilla && arcilla <= 10) {
+      } else if (85 <= arena && arena <= 100 && 0 <= limo && limo <= 15 && 0 <= arcilla && arcilla <= 10) {
         document.getElementById('resultado').innerHTML = 'Arenosa';
-      } else if (0 <= arena && arena <= 20 && 40 <= limo && limo <= 70 && 27 <= arcilla && arcilla <= 40) {
+      } else if (0 <= arena && arena <= 20 && 40 <= limo && limo <= 73 && 27 <= arcilla && arcilla <= 40) {
         document.getElementById('resultado').innerHTML = 'Franco arcillo limosa';
-      } else if (20 <= arena && arena <= 45 && 15 <= limo && limo <= 50 && 27 <= arcilla && arcilla <= 40) {
+      } else if (20 <= arena && arena <= 45 && 15 <= limo && limo <= 53 && 27 <= arcilla && arcilla <= 40) {
         document.getElementById('resultado').innerHTML = 'Franco arcillosa';
       } else if (45 <= arena && arena <= 80 && 0 <= limo && limo <= 28 && 20 <= arcilla && arcilla <= 35) {
         document.getElementById('resultado').innerHTML = 'Franco arcilloso arenoso';  
@@ -493,7 +496,7 @@ Textura: <span id="resultado"></span>
         document.getElementById('resultado').innerHTML = 'Arcillo limosa'; 
       } else if (0 <= arena && arena <= 45 && 0 <= limo && limo <= 40 && 40 <= arcilla && arcilla <= 100) {
         document.getElementById('resultado').innerHTML = 'Arcilloso'; 
-      } else if (45 <= arena && arena <= 65 && 0 <= limo && limo <= 20 && 35 <= arcilla && arcilla <= 55) {
+      } else if (45 <= arena && arena <= 67 && 0 <= limo && limo <= 20 && 35 <= arcilla && arcilla <= 55) {
         document.getElementById('resultado').innerHTML = 'Arcillo arenosa'; 
       } else {
         document.getElementById('resultado').innerHTML = 'Datos incorrectos';

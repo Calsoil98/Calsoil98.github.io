@@ -369,6 +369,9 @@ $(document).ready(function () {
     <li>
       <a href="kuman.html">El método del ‘nuevo factor’</a>
     </li>
+    <li>
+      <a href="emision.html">Emisión Foliar</a>
+    </li>
   </ul>
 </li>
 <li class="dropdown">
@@ -505,7 +508,7 @@ en Kg: <input type="text" name="resultado" size="20"><br><br>
      function tone() {
      var n4 = parseFloat(document.MyForm2.numero4.value);
      var n5 = parseFloat(document.MyForm2.numero5.value);
-     document.MyForm2.resultado.value=(n4*n5);
+     document.MyForm2.resultado.value=(n4*n5).toFixed(3);
      }
     </script>
 </body>

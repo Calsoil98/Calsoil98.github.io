@@ -369,6 +369,9 @@ $(document).ready(function () {
     <li>
       <a href="kuman.html">El método del ‘nuevo factor’</a>
     </li>
+    <li>
+      <a href="emision.html">Emisión Foliar</a>
+    </li>
   </ul>
 </li>
 <li class="dropdown">
@@ -472,7 +475,7 @@ El nuevo factor es el coeficiente con el valor de 0.662.
      var n1 = parseFloat(document.MyForma.numero1.value);
      var n2 = parseFloat(document.MyForma.numero2.value);
      var n3 = parseFloat(document.MyForma.numero3.value);
-     document.MyForma.resultado.value=(n1*n2*n3*0.80*0.662);
+     document.MyForma.resultado.value=(n1*n2*n3*0.80*0.662).toFixed(3);
      }
     </script>
 </body>

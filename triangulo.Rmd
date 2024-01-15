@@ -47,7 +47,7 @@ body {
      function real() {
      var n1 = parseFloat(document.MyForm.numero1.value);
      var n2 = parseFloat(document.MyForm.numero2.value);
-     document.MyForm.resultado.value=Math.sqrt((Math.pow(n2, 2)) - (Math.pow((n1/2), 2)));
+     document.MyForm.resultado.value=(Math.sqrt((Math.pow(n2, 2)) - (Math.pow((n1/2), 2)))).toFixed(3);
      }
     </script>
      <script>
@@ -55,7 +55,7 @@ body {
      var n1 = parseFloat(document.MyForma.numero1.value);
      var n2 = parseFloat(document.MyForma.numero2.value);
     var n3 = parseFloat(document.MyForma.numero3.value);
-     document.MyForma.resultado.value=(n1/(n2*n3));
+     document.MyForma.resultado.value=(n1/(n2*n3)).toFixed(3);
      }
     </script>
   </body>

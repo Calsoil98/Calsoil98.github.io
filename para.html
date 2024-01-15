@@ -369,6 +369,9 @@ $(document).ready(function () {
     <li>
       <a href="kuman.html">El método del ‘nuevo factor’</a>
     </li>
+    <li>
+      <a href="emision.html">Emisión Foliar</a>
+    </li>
   </ul>
 </li>
 <li class="dropdown">
@@ -493,7 +496,7 @@ Paso 4:<input type="text" name="numero15" size="20"><br><br> Paso 3
      function real() {
      var n1 = parseFloat(document.MyForm.numero1.value);
      var n2 = parseFloat(document.MyForm.numero2.value);
-     document.MyForm.resultado.value=((n1-n2)/n1);
+     document.MyForm.resultado.value=((n1-n2)/n1).toFixed(3);
      }
     </script>
 <script>
@@ -501,28 +504,28 @@ Paso 4:<input type="text" name="numero15" size="20"><br><br> Paso 3
      var n6 = parseFloat(document.MyForm2.numero6.value);
      var n7 = parseFloat(document.MyForm2.numero7.value);
      var n8 = parseFloat(document.MyForm2.numero8.value);
-     document.MyForm2.resultado.value=((n6-n7)/n8);
+     document.MyForm2.resultado.value=((n6-n7)/n8).toFixed(3);
      }
     </script>
 <script>
      function terce() {
      var n11 = parseFloat(document.MyForm3.numero11.value);
      var n12 = parseFloat(document.MyForm3.numero12.value);
-     document.MyForm3.resultado.value=(n11-n12);
+     document.MyForm3.resultado.value=(n11-n12).toFixed(3);
      }
     </script>
 <script>
      function cuarta() {
      var n13 = parseFloat(document.MyForm4.numero13.value);
      var n14 = parseFloat(document.MyForm4.numero14.value);
-     document.MyForm4.resultado.value=(n13-(n14*n13));
+     document.MyForm4.resultado.value=(n13-(n14*n13)).toFixed(3);
      }
     </script>
 <script>
      function quinto() {
      var n15 = parseFloat(document.MyForm5.numero15.value);
      var n16 = parseFloat(document.MyForm5.numero16.value);
-     document.MyForm5.resultado.value=(n15/n16);
+     document.MyForm5.resultado.value=(n15/n16).toFixed(3);
      }
     </script>
 </body>

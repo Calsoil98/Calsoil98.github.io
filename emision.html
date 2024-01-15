@@ -11,7 +11,7 @@
 
 
 
-<title>home1.knit</title>
+<title>emision.knit</title>
 
 <script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -408,7 +408,75 @@ $(document).ready(function () {
 </div>
 
 
+<html>
+<style>
+body {
+  background-color: #148F77;
+  }
+</style>
+<head>
+<center>
+<style type="text/css"> 
 
+#round { width: 1000px; height: 650px; 
+         background-color: rgb(209, 242, 235 , 0.66); 
+         border: 1px solid #148F77; 
+         border-radius: 1em;} 
+</style>
+</head>
+<FONT FACE="times new roman">
+<body>
+<div id="round">
+<H5>
+<center>
+<b>Emisión foliar y conteo de hojas</b>
+</CENTER>
+<br>
+</H5>
+<body>
+<div
+style="display: flex; justify-content: center; align-items: center;">
+<div class="float">
+<img src="11.PNG" height="300"
+alt="Estados de desarrollo de la hoja de acuerdo a Brun." />
+<div class="figcaption">Estados de desarrollo de la hoja de acuerdo a
+Brun.</div>
+</div>
+<div class="float">
+<img src="2.PNG" height="300"
+alt="Número de hojas por Ignacio Jiménez Cadavid" />
+<div class="figcaption">Número de hojas por Ignacio Jiménez
+Cadavid</div>
+</div>
+</div>
+</body>
+<p>Una vez realizada la anotación del número de hojas por planta y el
+estado de desarrollo de la hoja cigarro, se evalúa el nivel de infección
+en las hojas No. 2, 3 y 4 <br></p>
+<form name="MyForm">
+<font color="#424949"> <strong>Bandera pasado( Primera hoja +
+bandera):</strong><input type="text" name="numero1" size="20"><br><br>
+<strong> Bandera actual(Hoja(1,2) +
+bandera):</strong><input type="text" name="numero2" size="20"><br><br>
+<strong>Emisión total:</strong>
+<input type="text" name="resultado" size="20"><br><br></font>
+<div>
+<input type="button" value="Calcular" onclick="real()"><input type="reset" value="Eliminar">
+</div>
+</form>
+<script>
+     function real() {
+     var n1 = parseFloat(document.MyForm.numero1.value);
+     var n2 = parseFloat(document.MyForm.numero2.value);
+     document.MyForm.resultado.value=((n2-n1)).toFixed(3);
+     }
+    </script>
+</body>
+</div>
+</body>
+</FONT>
+</center>
+</html>
 
 
 

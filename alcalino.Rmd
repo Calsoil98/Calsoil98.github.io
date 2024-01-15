@@ -45,7 +45,7 @@ body {
      var n3 = parseFloat(document.MyForma.numero3.value);
      var n4 = parseFloat(document.MyForma.numero4.value);
      var n5 = parseFloat(document.MyForma.numero5.value);
-     document.MyForma.resultado.value=((n1-n2)*n3*n4*n5*87);
+     document.MyForma.resultado.value=((n1-n2)*n3*n4*n5*87).toFixed(3);
      }
     </script>
   </body>

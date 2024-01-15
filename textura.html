@@ -369,6 +369,9 @@ $(document).ready(function () {
     <li>
       <a href="kuman.html">El método del ‘nuevo factor’</a>
     </li>
+    <li>
+      <a href="emision.html">Emisión Foliar</a>
+    </li>
   </ul>
 </li>
 <li class="dropdown">
@@ -499,7 +502,7 @@ Resultado del contenido de arena, en
      var n3 = parseFloat(document.MyForm.numero3.value);
      var n4 = parseFloat(document.MyForm.numero4.value);
      var n5 = parseFloat(document.MyForm.numero5.value);
-     document.MyForm.resultado.value=(((n1-((20-n3)*0.35))-(n2-((20-n4)*0.35)))/n5)*100;
+     document.MyForm.resultado.value=((((n1-((20-n3)*0.35))-(n2-((20-n4)*0.35)))/n5)*100).toFixed(3);
      }
     </script>
 <script>
@@ -509,20 +512,20 @@ Resultado del contenido de arena, en
      var n8 = parseFloat(document.MyForm2.numero8.value);
      var n9 = parseFloat(document.MyForm2.numero9.value);
      var n10 = parseFloat(document.MyForm2.numero10.value);
-     document.MyForm2.resultado.value=(((n6-((20-n8)*0.35))-(n7-((20-n9)*0.35)))/n10)*100;
+     document.MyForm2.resultado.value=((((n6-((20-n8)*0.35))-(n7-((20-n9)*0.35)))/n10)*100).toFixed(3);
      }
     </script>
 <script>
      function terce() {
      var n11 = parseFloat(document.MyForm3.numero11.value);
      var n12 = parseFloat(document.MyForm3.numero12.value);
-     document.MyForm3.resultado.value=(n11-n12);
+     document.MyForm3.resultado.value=(n11-n12).toFixed(3);
      }
     </script>
 <script>
      function cuarta() {
      var n13 = parseFloat(document.MyForm4.numero13.value);
-     document.MyForm4.resultado.value=(100-n13);
+     document.MyForm4.resultado.value=(100-n13).toFixed(3);
      }
     </script>
 </body>

@@ -36,7 +36,7 @@ body {
      function ratio() {
      var n1 = parseFloat(document.MyForm.numero1.value);
      var n2 = parseFloat(document.MyForm.numero2.value);
-     document.MyForm.resultado.value=((n1/n2));
+     document.MyForm.resultado.value=((n1/n2)).toFixed(1);
      }
     </script>
   </body>

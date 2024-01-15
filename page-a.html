@@ -369,6 +369,9 @@ $(document).ready(function () {
     <li>
       <a href="kuman.html">El método del ‘nuevo factor’</a>
     </li>
+    <li>
+      <a href="emision.html">Emisión Foliar</a>
+    </li>
   </ul>
 </li>
 <li class="dropdown">
@@ -456,7 +459,7 @@ body {
      var n2 = parseFloat(document.MyForm.numero2.value);
      var n3 = parseFloat(document.MyForm.numero3.value);
      var n4 = parseFloat(document.MyForm.numero4.value);
-     document.MyForm.resultado.value=((n2-n1)/((n4-n1)-(n3-n2)));
+     document.MyForm.resultado.value=((n2-n1)/((n4-n1)-(n3-n2))).toFixed(3);
      }
     </script>
 </body>

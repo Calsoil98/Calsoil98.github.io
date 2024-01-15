@@ -36,7 +36,7 @@ body {
      function real() {
      var n1 = parseFloat(document.MyForm.numero1.value);
      var n2 = parseFloat(document.MyForm.numero2.value);
-     document.MyForm.resultado.value=((n1 / (Math.pow(n2, 2))) * 1.154);
+     document.MyForm.resultado.value=((n1 / (Math.pow(n2, 2))) * 1.154).toFixed(3);
      }
     </script>
   </body>

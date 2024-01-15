@@ -38,7 +38,7 @@ body {
      function porosidad() {
      var n1 = parseFloat(document.MyForm.numero1.value);
      var n2 = parseFloat(document.MyForm.numero2.value);
-     document.MyForm.resultado.value=100-((n1/n2)*100);
+     document.MyForm.resultado.value=(100-((n1/n2)*100)).toFixed(3);
      }
     </script>
   </body>

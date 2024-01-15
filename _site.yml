@@ -72,6 +72,8 @@ navbar:
           href: ratio.html
         - text: "El método del ‘nuevo factor’"
           href: kuman.html
+        - text: "Emisión Foliar"
+          href: emision.html
     - text: "Enmiendas "
       icon: fa-thin fa-banana
       href: home34.html

@@ -53,14 +53,14 @@ body {
      var n2 = parseFloat(document.MyForm.numero2.value);
      var n3 = parseFloat(document.MyForm.numero3.value);
      var n4 = parseFloat(document.MyForm.numero4.value);
-     document.MyForm.resultado.value=((((n1-n2)*n3)/10*n4)*1.5);
+     document.MyForm.resultado.value=((((n1-n2)*n3)/10*n4)*1.5).toFixed(3);
      }
     </script>
     <script>
      function prnt() {
      var n1 = parseFloat(document.MyForma.numero1.value);
      var n2 = parseFloat(document.MyForma.numero2.value);
-     document.MyForma.resultado.value=((n1*n2)/100);
+     document.MyForma.resultado.value=((n1*n2)/100).toFixed(3);
      }
     </script>
   </body>

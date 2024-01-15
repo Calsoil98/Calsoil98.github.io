@@ -369,6 +369,9 @@ $(document).ready(function () {
     <li>
       <a href="kuman.html">El método del ‘nuevo factor’</a>
     </li>
+    <li>
+      <a href="emision.html">Emisión Foliar</a>
+    </li>
   </ul>
 </li>
 <li class="dropdown">
@@ -470,21 +473,21 @@ Resultado de densidad aparente :
 <script>
      function radio() {
      var n1 = parseFloat(document.MyForm.numero1.value);
-     document.MyForm.resultado.value=(n1/2);
+     document.MyForm.resultado.value=(n1/2).toFixed(3);
      }
     </script>
 <script>
      function volumen() {
      var n2 = parseFloat(document.MyForma.numero2.value);
      var n3 = parseFloat(document.MyForma.numero3.value);
-     document.MyForma.resultado.value=(3.1416*((n2)**2)*n3);
+     document.MyForma.resultado.value=(3.1416*((n2)**2)*n3).toFixed(3);
      }
     </script>
 <script>
      function densidad() {
      var n4 = parseFloat(document.MyFormas.numero4.value);
      var n5 = parseFloat(document.MyFormas.numero5.value);
-     document.MyFormas.resultado.value=(n4/n5);
+     document.MyFormas.resultado.value=(n4/n5).toFixed(3);
      }
     </script>
 </body>
