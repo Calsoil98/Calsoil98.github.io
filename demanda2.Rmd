@@ -9,7 +9,7 @@ body {
 <center>
 <style type="text/css"> 
 
-#round { width: 1200px; height: 1800px; 
+#round { width: 1000px; height: 2000px; 
          background-color: rgb(209, 242, 235 , 0.66); 
          border: 1px solid #148F77; 
          border-radius: 1em;} 
@@ -20,8 +20,79 @@ body {
    <div id="round">
 <H5><center><b>Demanda del cultivo</b></CENTER><br> </H5>
   <body>
-  <center>
-  ![](ciclo.png){height=1100px}  </center><br>
+<style type="text/css">
+	table.tableizer-table {
+		font-size: 12px;
+		border: 1px solid #212F3C; 
+		font-family: Arial, Helvetica, sans-serif;
+	} 
+	.tableizer-table td {
+		padding: 4px;
+		margin: 3px;
+		text-align: center;
+		background-color: #FBFCFC;
+		border: 1px solid #2C3E50;
+	}
+	.tableizer-table th {
+		background-color: #2C3E50; 
+		color: #ECF0F1;
+		font-weight: bold;
+	}
+</style><center>
+<table class="tableizer-table">
+<thead><tr class="tableizer-firstrow"><th>Nombre</th><th>Categoria</th><th>N</th><th>P2O5</th><th>K2O</th><th>CaO</th><th>MgO</th><th>Rango</th><th>Rendimiento (t/ha)</th></tr></thead><tbody>
+ <tr><td>Uva vinífera</td><td>Frutales</td><td>3.7</td><td>1.7</td><td>5.6</td><td>4.3</td><td>1.5</td><td>8</td><td>50</td></tr>
+ <tr><td>Uva de mesa</td><td>Frutales</td><td>4</td><td>1.7</td><td>5.6</td><td>2.2</td><td>1.2</td><td>25</td><td>40</td></tr>
+ <tr><td>Kiwi</td><td>Frutales</td><td>5</td><td>1.7</td><td>5.9</td><td>2</td><td>1</td><td>20</td><td>40</td></tr>
+ <tr><td>Manzano</td><td>Frutales</td><td>2</td><td>0.5</td><td>2.2</td><td>1.2</td><td>0.6</td><td>40</td><td>70</td></tr>
+ <tr><td>Peral</td><td>Frutales</td><td>2.2</td><td>0.7</td><td>2</td><td>1.1</td><td>0.6</td><td>50</td><td>60</td></tr>
+ <tr><td>Naranjo</td><td>Frutales</td><td>2.7</td><td>0.6</td><td>4.2</td><td>1.1</td><td>0.6</td><td>40</td><td>70</td></tr>
+ <tr><td>Limón</td><td>Frutales</td><td>2.7</td><td>0.6</td><td>4.2</td><td>1</td><td>0.6</td><td>40</td><td>80</td></tr>
+ <tr><td>Cerezo</td><td>Frutales</td><td>6.4</td><td>1.7</td><td>5</td><td>4.8</td><td>2.5</td><td>10</td><td>15</td></tr>
+ <tr><td>Durazno</td><td>Frutales</td><td>5.1</td><td>1.4</td><td>5.2</td><td>2.2</td><td>1</td><td>15</td><td>40</td></tr>
+ <tr><td>Damasco</td><td>Frutales</td><td>4.6</td><td>4.5</td><td>4.3</td><td>2</td><td>1</td><td>20</td><td>40</td></tr>
+ <tr><td>Palto</td><td>Frutales</td><td>6.2</td><td>2.9</td><td>18.2</td><td>4.8</td><td>2.5</td><td>10</td><td>15</td></tr>
+ <tr><td>Olivos</td><td>Frutales</td><td>6</td><td>2.8</td><td>6</td><td>2.4</td><td>1</td><td>20</td><td>30</td></tr>
+ <tr><td>Nogal</td><td>Frutales</td><td>22</td><td>3.7</td><td>9.7</td><td>22</td><td>3.9</td><td>3</td><td>10</td></tr>
+ <tr><td>Ciruelo</td><td>Frutales</td><td>3</td><td>1</td><td>4</td><td>1.5</td><td>0.8</td><td>30</td><td>50</td></tr>
+ <tr><td>Avellano europeo</td><td>Frutales</td><td>25</td><td>5.3</td><td>14.3</td><td>13.5</td><td>3.5</td><td>2</td><td>7</td></tr>
+ <tr><td>Papayo</td><td>Frutales</td><td>6</td><td>2.3</td><td>7</td><td>3</td><td>1.5</td><td>15</td><td>25</td></tr>
+ <tr><td>Arándano</td><td>Berries</td><td>4.7</td><td>0.8</td><td>5.2</td><td>2</td><td>1.2</td><td>10</td><td>35</td></tr>
+ <tr><td>Frambuesa</td><td>Berries</td><td>16.9</td><td>3.6</td><td>10.4</td><td>8</td><td>3.7</td><td>8</td><td>20</td></tr>
+ <tr><td>Frutilla</td><td>Berries</td><td>2.5</td><td>1.3</td><td>4.5</td><td>1.6</td><td>0.9</td><td>25</td><td>60</td></tr>
+ <tr><td>Remolacha</td><td>Cultivos</td><td>2.5</td><td>0.8</td><td>3.2</td><td>0.8</td><td>0.4</td><td>70</td><td>135</td></tr>
+ <tr><td>Papas</td><td>Cultivos</td><td>3.8</td><td>1</td><td>4</td><td>1.6</td><td>0.9</td><td>25</td><td>50</td></tr>
+ <tr><td>Maíz grano</td><td>Cultivos</td><td>20</td><td>6.9</td><td>14</td><td>4.5</td><td>2.2</td><td>12</td><td>20</td></tr>
+ <tr><td>Maíz ensilaje</td><td>Cultivos</td><td>3.9</td><td>1.6</td><td>2.5</td><td>0.8</td><td>0.4</td><td>70</td><td>90</td></tr>
+ <tr><td>Trigo</td><td>Cultivos</td><td>24.3</td><td>7.3</td><td>24</td><td>7</td><td>4.3</td><td>5</td><td>9</td></tr>
+ <tr><td>Cebada</td><td>Cultivos</td><td>22.2</td><td>7.1</td><td>22</td><td>8.6</td><td>5.4</td><td>4</td><td>7</td></tr>
+ <tr><td>Avena</td><td>Cultivos</td><td>22.2</td><td>7.6</td><td>20</td><td>8.5</td><td>5.4</td><td>4</td><td>7</td></tr>
+ <tr><td>Raps</td><td>Cultivos</td><td>56</td><td>16.9</td><td>50</td><td>15</td><td>8.5</td><td>2.5</td><td>5</td></tr>
+ <tr><td>Arroz</td><td>Cultivos</td><td>21.4</td><td>7.1</td><td>27</td><td>6.6</td><td>4</td><td>6</td><td>9</td></tr>
+ <tr><td>Maravilla</td><td>Cultivos</td><td>34.5</td><td>11</td><td>37.4</td><td>15</td><td>8</td><td>3</td><td>4</td></tr>
+ <tr><td>Frejoles</td><td>Cultivos</td><td>20</td><td>13.7</td><td>40</td><td>15</td><td>10</td><td>2</td><td>4</td></tr>
+ <tr><td>Espárragos</td><td>Hortalizas</td><td>19.3</td><td>4</td><td>20</td><td>5</td><td>3.5</td><td>6</td><td>15</td></tr>
+ <tr><td>Tomate industrial</td><td>Hortalizas</td><td>3.3</td><td>0.8</td><td>5</td><td>0.8</td><td>0.6</td><td>45</td><td>80</td></tr>
+ <tr><td>Tomate invernadero</td><td>Hortalizas</td><td>3.3</td><td>0.8</td><td>5</td><td>0.4</td><td>0.4</td><td>80</td><td>200</td></tr>
+ <tr><td>Tomate campo</td><td>Hortalizas</td><td>3.3</td><td>0.8</td><td>5</td><td>1.2</td><td>0.6</td><td>45</td><td>80</td></tr>
+ <tr><td>Cebolla</td><td>Hortalizas</td><td>3.1</td><td>1.2</td><td>4</td><td>1.6</td><td>0.9</td><td>25</td><td>50</td></tr>
+ <tr><td>Coliflor</td><td>Hortalizas</td><td>4.5</td><td>1.4</td><td>5</td><td>2.7</td><td>1.5</td><td>15</td><td>30</td></tr>
+ <tr><td>Brócoli</td><td>Hortalizas</td><td>4.5</td><td>1.4</td><td>5</td><td>2.7</td><td>1.5</td><td>15</td><td>30</td></tr>
+ <tr><td>Repollo</td><td>Hortalizas</td><td>6.5</td><td>1.5</td><td>7.5</td><td>1.6</td><td>0.9</td><td>25</td><td>50</td></tr>
+ <tr><td>Repollo de Bruselas</td><td>Hortalizas</td><td>6.5</td><td>1.5</td><td>7.5</td><td>4</td><td>2</td><td>11</td><td>18</td></tr>
+ <tr><td>Sandía</td><td>Hortalizas</td><td>3.5</td><td>1.2</td><td>4.5</td><td>1.7</td><td>0.9</td><td>20</td><td>50</td></tr>
+ <tr><td>Melón</td><td>Hortalizas</td><td>4.5</td><td>1.6</td><td>6.5</td><td>1.3</td><td>0.7</td><td>25</td><td>70</td></tr>
+ <tr><td>Pepino ensalada</td><td>Hortalizas</td><td>1.3</td><td>0.8</td><td>2.8</td><td>0.6</td><td>0.3</td><td>40</td><td>300</td></tr>
+ <tr><td>Espinaca</td><td>Hortalizas</td><td>3</td><td>1</td><td>4</td><td>2.4</td><td>1.1</td><td>15</td><td>40</td></tr>
+ <tr><td>Lechugas</td><td>Hortalizas</td><td>2.7</td><td>0.9</td><td>4.5</td><td>1.7</td><td>1</td><td>18</td><td>50</td></tr>
+ <tr><td>Porotos verdes</td><td>Hortalizas</td><td>6</td><td>4</td><td>3.5</td><td>7.5</td><td>3.8</td><td>6</td><td>10</td></tr>
+ <tr><td>Porotos granados</td><td>Hortalizas</td><td>7</td><td>6</td><td>7</td><td>8.5</td><td>4.3</td><td>5</td><td>9</td></tr>
+ <tr><td>Arvejas</td><td>Hortalizas</td><td>8</td><td>4.2</td><td>8</td><td>7.5</td><td>3.8</td><td>6</td><td>10</td></tr>
+ <tr><td>Zanahoria</td><td>Hortalizas</td><td>4</td><td>1.4</td><td>6.5</td><td>2</td><td>1</td><td>25</td><td>35</td></tr>
+ <tr><td>Pimentón</td><td>Hortalizas</td><td>3.5</td><td>0.8</td><td>5.5</td><td>2</td><td>1</td><td>24</td><td>40</td></tr>
+ <tr><td>Alcachofas</td><td>Hortalizas</td><td>9</td><td>2.7</td><td>15</td><td>2.9</td><td>2</td><td>12</td><td>30</td></tr>
+ <tr><td>Maracuya</td><td>Frutales</td><td>2.1</td><td>0.17</td><td>1.8</td><td>0.5</td><td>0.14</td><td>8</td><td>20</td></tr>
+</tbody></table>
   <center>Fuente: Ivan Vidal P. </center><br>
  <body>
     <form name="MyForm"><P >
