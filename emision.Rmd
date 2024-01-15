@@ -25,9 +25,9 @@ body {
 <body>
 <div style="display: flex; justify-content: center; align-items: center;">
 
-![Estados de desarrollo de la hoja de acuerdo a Brun.](11.PNG){height=300px}
+![Estados de desarrollo de la hoja de acuerdo a Brun.](11.png){height=300px}
 
-![Número de hojas por Ignacio Jiménez Cadavid](2.PNG){height=300px}
+![Número de hojas por Ignacio Jiménez Cadavid](2.png){height=300px}
 
 </div>
 </body>
