@@ -82,7 +82,8 @@ body {
       Ingrese T:<input type="text" name="numero4" size="20"><br><br>
       Ingrese 1000 kG :<input type="text" name="numero5" size="20"><br><br>
      Resultado en Kg:        <input type="text" name="resultado" size="20"><br><br>
-     <div><input type="button" value="Calcular" onclick="tone()"><input type="reset" value="Eliminar">
+     <div><input type="button" value="Calcular" onclick="tone()">
+      <input type="reset" value="Eliminar">
          </div>
   </form>
 

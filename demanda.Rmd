@@ -86,25 +86,29 @@ body {
       Ingrese Potasio(K2O) :<input type="text" name="numero1" size="20"><br><br>
       Ingrese Niveles Óptimos:<input type="text" name="numero2" value = "230" size="20"><br><br>
        Resultado  :        <input type="text" name="resultado" size="20"><br><br>
-     <div><input type="button" value="Calcular " onclick="Potasio()"><input type="reset" value="Eliminar"></div>
+     <div><input type="button" value="Calcular " onclick="Potasio()">
+     <input type="reset" value="Eliminar"></div>
        </form>
         <br><form name="Mycalcio"><P >
       Ingrese Calcio(CaO) :<input type="text" name="numero1" size="20"><br><br>
       Ingrese Niveles Óptimos:<input type="text" name="numero2" value = "900" size="20"><br><br>
        Resultado  :        <input type="text" name="resultado" size="20"><br><br>
-     <div><input type="button" value="Calcular " onclick="Calcio()"><input type="reset" value="Eliminar"></div>
+     <div><input type="button" value="Calcular " onclick="Calcio()">
+     <input type="reset" value="Eliminar"></div>
        </form>
        <br><form name="Mymagnesio"><P >
       Ingrese Magnesio(MgO) :<input type="text" name="numero1" size="20"><br><br>
       Ingrese Niveles Óptimos:<input type="text" name="numero2" value = "97.5" size="20"><br><br>
        Resultado  :        <input type="text" name="resultado" size="20"><br><br>
-     <div><input type="button" value="Calcular " onclick="Magnesio()"><input type="reset" value="Eliminar"></div>
+     <div><input type="button" value="Calcular " onclick="Magnesio()">
+     <input type="reset" value="Eliminar"></div>
        </form>
        <br><form name="Myazufre"><P >
       Ingrese Azufre(S) :<input type="text" name="numero1" size="20"><br><br>
       Ingrese Niveles Óptimos:<input type="text" name="numero2" value = "20.0" size="20"><br><br>
        Resultado  :        <input type="text" name="resultado" size="20"><br><br>
-     <div><input type="button" value="Calcular " onclick="Azufre()"><input type="reset" value="Eliminar"></div>
+     <div><input type="button" value="Calcular " onclick="Azufre()">
+     <input type="reset" value="Eliminar"></div>
        </form>
     <script>
      function Nitrogeno() {

@@ -28,7 +28,8 @@ body {
       Peso total mufla </strong>:<input type="text" name="numero1" size="25"><br><br></font> <font color="#424949"><strong>
       Peso en seco mufla</strong> :<input type="text" name="numero2" size="25"><br><br> </font> <font color="#424949"><strong>
       Resultado carbono orgánico</strong>:        <input type="text" name="resultado" size="25"><br><br></font>
-     <div><input type="button" value="Calcular" onclick="carbono()"><input type="reset" value="Eliminar"></div><br>
+     <div><input type="button" value="Calcular" onclick="carbono()">
+     <input type="reset" value="Eliminar"></div><br>
 
   </form>
   
@@ -36,7 +37,8 @@ body {
     <form name="MyForma"><P>
      % carbono orgánico</strong>:<input type="text" name="numero3" size="25"><br><br></font><font color="#424949"><strong> 
      Materia orgánica</strong>:        <input type="text" name="resultado" size="25"><br><br></font>
-     <div><input type="button" value="Calcular" onclick="materia()"><input type="reset" value="Eliminar"></div>
+     <div><input type="button" value="Calcular" onclick="materia()">
+     <input type="reset" value="Eliminar"></div>
        
 
 

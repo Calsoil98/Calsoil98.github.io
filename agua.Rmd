@@ -20,16 +20,18 @@ body {
 </head>
 <FONT FACE="times new roman">
 <body> 
-<div id="round"> 
-<H5><center><b>Calcular humedad aprovechable</b></CENTER><br><br> </H5>
-<body>
+<div id="round">
+<div style="text-align:center;"><br>
+        <center><h3>Calcular humedad aprovechable</font></h3></center></div>
+<br><body>
     <form name="MyForm1"> <P><font color="#424949"><strong>
       Ingrese capacidad de campo:</strong><input type="text" name="numero5" size="20"><br><br> 
       <font color="#424949"><strong>Ingrese punto de marchitez permanente :</strong><input type="text" name="numero6" size="20"><br><br>
       <font color="#424949"><strong>Ingrese densidad aparente:</strong><input type="text" name="numero7" size="20"><br><br>
       <font color="#424949"><strong>Ingrese  profundidad:</strong><input type="text" name="numero8" size="20"><br><br>
      <font color="#424949"><strong>Resultado en Lm2:</strong>        <input type="text" name="resultado" size="20"><br><br>
-     <div><input type="button" value="Calcular" onclick="agua1()"><input type="reset" value="Eliminar"></div>
+     <div><input type="button" value="Calcular" onclick="agua1()">
+     <input type="reset" value="Eliminar"></div>
       
   </form>
 

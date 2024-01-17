@@ -42,7 +42,8 @@ hojas son numeradas desde la más vieja (hoja 1) hasta la más joven (hoja N) </
      <strong> B:</strong><input type="text" name="numero2" size="20"><br><br>
       <strong>N:</strong><input type="text" name="numero3" size="20"><br><br>
      <strong>TLA:</strong>        <input type="text" name="resultado" size="20"><br><br></font>
-     <div><input type="button" value="Calcular" onclick="kuman()"><input type="reset" value="Eliminar">
+     <div><input type="button" value="Calcular" onclick="kuman()">
+     <input type="reset" value="Eliminar">
        </div>  
   </form>
   <br>

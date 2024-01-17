@@ -19,7 +19,8 @@ body {
       Limo:<input id="limo" type="text"  size="20"><br><br>
      Resultado Clase textural :        <input type="text" name="resultado" size="20"><br><br>
      <center><input type="button" value="Cálcular" onclick="clase()"></center>
-     <p id="mensaje"></p><input type="reset" value="Eliminar">
+     <p id="mensaje"></p>
+     <input type="reset" value="Eliminar">
          
 </body>
 

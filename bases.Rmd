@@ -29,7 +29,8 @@ body {
       Ingrese calcio (mq):<input type="text" name="numero1" size="20"><br><br>
       Ingrese calcio(mg/Kg):<input type="text" name="numero2" size="20"><br><br>
      Resultado en (mg/Kg)Ca:        <input type="text" name="resultado" size="20"><br><br>
-     <div><input type="button" value="Calcular" onclick="ca()"><input type="reset" value="Eliminar">
+     <div><input type="button" value="Calcular" onclick="ca()">
+     <input type="reset" value="Eliminar">
         </div> 
         <br>
   </form>
@@ -47,7 +48,8 @@ body {
       Ingrese magnesio (mq):<input type="text" name="numero3" size="20"><br><br>
       Ingrese magnesio(mg/Kg):<input type="text" name="numero4" size="20"><br><br>
      Resultado en (mg/Kg)Mg:        <input type="text" name="resultado" size="20"><br><br>
-     <div><input type="button" value="Calcular" onclick="Mg()"><input type="reset" value="Eliminar"></div>
+     <div><input type="button" value="Calcular" onclick="Mg()">
+     <input type="reset" value="Eliminar"></div>
          
   </form>
   <br>
@@ -63,7 +65,8 @@ body {
       Ingrese sodio (mq):<input type="text" name="numero5" size="20"><br><br>
       Ingrese sodio (mg/Kg):<input type="text" name="numero6" size="20"><br><br>
      Resultado en (mg/Kg)Na:        <input type="text" name="resultado" size="20"><br><br>
-     <div><input type="button" value="Calcular" onclick="so()"><input type="reset" value="Eliminar">
+     <div><input type="button" value="Calcular" onclick="so()">
+     <input type="reset" value="Eliminar">
       </div>   
   </form>
 <br>
@@ -79,7 +82,8 @@ body {
       Ingrese potasio (mq):<input type="text" name="numero7" size="20"><br><br>
       Ingrese potasio (mg/Kg):<input type="text" name="numero8" size="20"><br><br>
      Resultado en (mg/Kg)K:        <input type="text" name="resultado" size="20"><br><br>
-     <div><input type="button" value="Calcular" onclick="POTA()"><input type="reset" value="Eliminar">
+     <div><input type="button" value="Calcular" onclick="POTA()">
+     <input type="reset" value="Eliminar">
          </div>
   </form>
 <br>
@@ -128,7 +132,8 @@ body {
       Ingrese base(mg/Kg):<input type="text" name="numero4" size="20"><br><br>
       Ingrese factor :<input type="text" name="numero5" size="20"><br><br>
      Resultado en Kg(/Ha):        <input type="text" name="resultado" size="20"><br><br>
-     <div><input type="button" value="Calcular" onclick="fa()"><input type="reset" value="Eliminar">
+     <div><input type="button" value="Calcular" onclick="fa()">
+     <input type="reset" value="Eliminar">
          </div>
   </form>
 

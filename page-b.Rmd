@@ -43,7 +43,8 @@ body {
       Ingrese la masa :<input type="text" name="numero4" size="20"><br><br>
        Ingrese el volumen :<input type="text" name="numero5" size="20"><br><br>
        Resultado  de densidad aparente :        <input type="text" name="resultado" size="20"><br><br>
-     <div><input type="button" value="Calcular densidad aparente" onclick="densidad()"><input type="reset" value="Eliminar"></div>
+     <div><input type="button" value="Calcular densidad aparente" onclick="densidad()">
+     <input type="reset" value="Eliminar"></div>
        </form>
     <script>
      function radio() {

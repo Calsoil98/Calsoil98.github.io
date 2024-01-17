@@ -48,7 +48,8 @@ body {
    VolúmenDesplazado:<input type="text" name="numero11" size="20"><br><br>
  Resultado paso 2:<input type="text" name="numero12" size="20"><br><br>
     Resultado paso 3:        <input type="text" name="resultado" size="20"><br><br>
-     <div><input type="button" value="Calcular" onclick="terce()"><input type="reset" value="Eliminar">
+     <div><input type="button" value="Calcular" onclick="terce()">
+     <input type="reset" value="Eliminar">
          </div>
 <br>
   </form>

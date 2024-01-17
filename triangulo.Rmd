@@ -29,14 +29,16 @@ body {
      <font color="#424949"><strong> distancia entre plantas que forman el triángulo :</strong><input type="text" name="numero1" size="20"><br><br>
      <font color="#424949"><strong> distancia diagonal entre surcos que forman el triángulo:<input type="text" name="numero2" size="20"><br><br>
      <font color="#424949"><strong> distancia paralela entre surcos(h) :</strong>    <input type="text" name="resultado" size="20"><br><br>
-    <div> <input type="button" value="Calcular" onclick="real()"> <input type="reset" value="Eliminar"> </div>
+    <div> <input type="button" value="Calcular" onclick="real()"> 
+    <input type="reset" value="Eliminar"> </div>
   </form><br>
    <form name="MyForma"><P >
        <font color="#424949"><strong> Superficie a sembrar(m2) :</strong><input type="text" name="numero1" size="20"><br><br>
      <font color="#424949"><strong> distancia diagonal entre surcos que forman el triángulo :</strong><input type="text" name="numero2" size="20"><br><br>
      <font color="#424949"><strong> h:<input type="text" name="numero3" size="20"><br><br>
      <font color="#424949"><strong> Densidad :</strong>    <input type="text" name="resultado" size="20"><br><br>
-    <div> <input type="button" value="Calcular" onclick="densi()"> <input type="reset" value="Eliminar"> </div>
+    <div> <input type="button" value="Calcular" onclick="densi()"> 
+    <input type="reset" value="Eliminar"> </div>
          
 
   </form>

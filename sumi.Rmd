@@ -26,7 +26,8 @@ body {
       Ingrese elemento total (mg/kg):<input type="text" name="numero1" size="20"><br><br>
       Ingrese masa del suelo (kg):<input type="text" name="numero3" size="20"><br><br>
      Resultado en (mg)elemento:        <input type="text" name="resultado" size="20"><br><br>
-     <div><input type="button" value="Calcular" onclick="sumi()"><input type="reset" value="Eliminar">
+     <div><input type="button" value="Calcular" onclick="sumi()">
+     <input type="reset" value="Eliminar">
          </divr>
   </form>
 
@@ -74,7 +75,8 @@ body {
       Ingrese 1(kg):<input type="text" name="numero5" size="20"><br><br>
       Ingrese 1000000(mg):<input type="text" name="numero6" size="20"><br><br>
      Resultado en (Kg)elemento/Ha:        <input type="text" name="resultado" size="20"><br><br>
-     <div><input type="button" value="Calcular" onclick="tra()"><input type="reset" value="Eliminar">
+     <div><input type="button" value="Calcular" onclick="tra()">
+     <input type="reset" value="Eliminar">
          </div>
   </form>
 
@@ -123,7 +125,8 @@ body {
       Ingrese elemento(mg/Kg):<input type="text" name="numero8" size="20"><br><br>
       Ingrese factor :<input type="text" name="numero9" size="20"><br><br>
      Resultado en Kg(elemento/Ha):        <input type="text" name="resultado" size="20"><br><br>
-     <div><input type="button" value="Calcular" onclick="ha()"><input type="reset" value="Eliminar">
+     <div><input type="button" value="Calcular" onclick="ha()">
+     <input type="reset" value="Eliminar">
          </div>
   </form>
 

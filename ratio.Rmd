@@ -27,7 +27,8 @@ body {
      <font color="#424949"><strong> N° de cajas :</strong><input type="text" name="numero1" size="20"><br><br>
      <font color="#424949"><strong> Racimos cosechados :</strong><input type="text" name="numero2" size="20"><br><br>
      <font color="#424949"><strong> Ratio :</strong>        <input type="text" name="resultado" size="20"><br><br>
-    <div> <input type="button" value="Calcular" onclick="ratio()"> <input type="reset" value="Eliminar"> </div>
+    <div> <input type="button" value="Calcular" onclick="ratio()">
+    <input type="reset" value="Eliminar"> </div>
          
 
   </form>

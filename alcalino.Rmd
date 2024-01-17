@@ -33,7 +33,8 @@ body {
       <strong>Densidad aparente del suelo (T/m3):</strong><input type="text" name="numero4" size="20"><br><br>
       <strong>Profundidad (m):</strong><input type="text" name="numero5" size="20"><br><br>
      <strong>Dosis Yeso Agrícola (Kg/ha):</strong>        <input type="text" name="resultado" size="20"><br><br></font>
-     <div><input type="button" value="Calcular" onclick="yeso()"><input type="reset" value="Eliminar">
+     <div><input type="button" value="Calcular" onclick="yeso()">
+     <input type="reset" value="Eliminar">
        </div>  
   </form>
   <br>

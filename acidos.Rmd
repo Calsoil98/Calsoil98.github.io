@@ -20,13 +20,37 @@ body {
 <FONT FACE="times new roman">
    <body>
    <div id="round">
-  
-<H5><center><b>Enmiendas para suelos ácidos por medio de saturación de bases</b></CENTER><br> </H5>
+  <div style="text-align:center;"><br>
+        <center><h3>Enmiendas para suelos ácidos por medio de saturación de bases</font></h3></center></div>
 
+<style type="text/css">
+	table.tableizer-table {
+		font-size: 12px;
+		border: 1px solid #212F3C; 
+		font-family: Arial, Helvetica, sans-serif;
+	} 
+	.tableizer-table td {
+		padding: 4px;
+		margin: 3px;
+	  background-color: #FBFCFC;
+	  text-align: center;
+		border: 1px solid #2C3E50;
+	}
+	.tableizer-table th {
+		background-color: #2C3E50; 
+		color: #ECF0F1;
+		font-weight: bold;
+	}
+</style>
+<table class="tableizer-table">
+<thead><tr class="tableizer-firstrow"><th>Material</th><th>"Equivalente químico(EQ)"</th><th>Fórmula</th><th>Contenido de  (Ca)</th><th>Contenido de (Mg)</th></tr></thead><tbody>
+ <tr><td>Carbonato de calcio</td><td>100</td><td>CaCO3</td><td>        40</td><td>&nbsp;</td></tr>
+ <tr><td>Dolomita</td><td>        108</td><td>CaCO3MgCO3</td><td>21.6</td><td>                          13.1</td></tr>
+ <tr><td>Óxido de calcio</td><td>        179</td><td>CaO</td><td>         71</td><td>&nbsp;</td></tr>
+ <tr><td>Hidróxido de calcio</td><td>138</td><td>Ca(OH)2</td><td>         54</td><td></td></tr>
+</tbody></table>
   <body>
-  <center>
-  ![](acido.PNG){height=130px}  </center>
-  <center>Fuente: Diego Villaseñor. </center><br>
+ <br>
   
  
    <form name="MyForm"><font color="#424949">
@@ -35,16 +59,19 @@ body {
       <strong>Capacidad de Intercambio catiónico(meq/100g):</strong><input type="text" name="numero3" size="20"><br><br>
       <strong>PRNT:</strong><input type="text" name="numero4" size="20"><br><br>
      <strong>Necesidad de cal agrícola (t/ha):</strong>        <input type="text" name="resultado" size="20"><br><br></font>
-     <div><input type="button" value="Calcular" onclick="real()"><input type="reset" value="Eliminar">
+     <div><input type="button" value="Calcular" onclick="real()">
+     <input type="reset" value="Eliminar">
        </div>  
   </form>
   <br>
 <form name="MyForma"><font color="#424949">
       <strong>Equivalente químico:</strong><input type="text" name="numero1" size="20"><br><br>
      <strong> Eficiencia granulométrica:</strong><input type="text" name="numero2" value="95" size="20"><br><br>
-     <strong>PRNT:</strong> <input type="text" name="resultado" size="20"><br><br></font>
-     <div><input type="button" value="Calcular" onclick="prnt()"><input type="reset" value="Eliminar">
-       </div>  
+     <strong>PRNT:</strong> <input type="text" name="resultado" size="20"><br><br>
+     </font>
+     <div><input type="button" value="Calcular" onclick="prnt()">
+     <input type="reset" value="Eliminar">
+       </div>
 
   </form>
   <script>
