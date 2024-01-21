@@ -1,0 +1,247 @@
+<html>
+<style>
+body {
+  background-color: #148F77;
+  }
+</style>
+
+<head>
+
+<center>
+<style type="text/css"> 
+
+#round { width: 800px; height: 2000px; 
+         background-color: rgb(209, 242, 235 , 0.66); 
+         border: 1px solid #148F77; 
+         border-radius: 1em;} 
+</style> 
+</head>
+<FONT FACE="times new roman">
+   <body>
+   <div id="round">	<H5><center><b>Uso de fertilizantes y dosis</b></CENTER><br> </H5>
+
+  <body>
+<style type="text/css">
+	table.tableizer-table {
+		font-size: 12px;
+		border: 1px solid #212F3C; 
+		font-family: Arial, Helvetica, sans-serif;
+	} 
+	.tableizer-table td {
+		padding: 4px;
+		margin: 3px;
+		text-align: center;
+		background-color: #FBFCFC;
+		border: 1px solid #2C3E50;
+	}
+	.tableizer-table th {
+		background-color: #2C3E50; 
+		color: #ECF0F1;
+		font-weight: bold;
+	}
+</style><center>
+
+<style type="text/css">
+	table.tableizer-table {
+		font-size: 12px;
+		border: 1px solid #CCC; 
+		font-family: Arial, Helvetica, sans-serif;
+	} 
+	.tableizer-table td {
+		padding: 4px;
+		margin: 3px;
+		border: 1px solid #CCC;
+	}
+	.tableizer-table th {
+		background-color: #104E8B; 
+		color: #FFF;
+		font-weight: bold;
+	}
+</style>
+###########
+<style type="text/css">
+	table.tableizer-table {
+		font-size: 12px;
+		border: 1px solid #CCC; 
+		font-family: Arial, Helvetica, sans-serif;
+	} 
+	.tableizer-table td {
+		padding: 4px;
+		margin: 3px;
+		border: 1px solid #CCC;
+	}
+	.tableizer-table th {
+		background-color: #104E8B; 
+		color: #FFF;
+		font-weight: bold;
+	}
+	
+
+</style>
+<table class="tableizer-table">
+<thead><tr class="tableizer-firstrow"><th>Potasio(K)</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th></tr></thead><tbody>
+ <tr><td>Fertilizantes</td><td>N</td><td>P2O5</td><td>K2O</td><td>S</td><td>MgO</td><td>CaO</td><td>SO3</td><td>B</td><td>Mn</td><td>Zn </td><td>Fe</td></tr>
+ <tr><td>1.Muriato de potasio salino</td><td>0.00</td><td>0.00</td><td>60.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+ <tr><td>2.Nitrato de potasio</td><td>13.50</td><td>0.00</td><td>46.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+ <tr><td>3.Sulfato de potasio</td><td>0.00</td><td>0.00</td><td>50.00</td><td>18.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+ <tr><td>4. Qrop KS</td><td>12.80</td><td>0.00</td><td>46.50</td><td>0.70</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+ <tr><td>5. Qrop K</td><td>13.00</td><td>0.00</td><td>45.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+ <tr><td>6. Qrop complex Top K</td><td>12.00</td><td>6.00</td><td>24.00</td><td>5.60</td><td>2.00</td><td>3.00</td><td>0.00</td><td>0.10</td><td>0.50</td><td>0.50</td><td>0.00</td></tr>
+ <tr><td>7. Qrop SOP-G</td><td>0.00</td><td>0.00</td><td>50.00</td><td>18.00</td><td>0.00</td><td>0.13</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+ <tr><td>8.YaraMila COMPLEX</td><td>12.00</td><td>11.00</td><td>18.00</td><td>8.00</td><td>2.70</td><td>0.00</td><td>20.00</td><td>0.02</td><td>0.20</td><td>0.20</td><td>0.20</td></tr>
+</tbody></table>
+
+###########
+<style type="text/css">
+	table.tableizer-table {
+		font-size: 12px;
+		border: 1px solid #CCC; 
+		font-family: Arial, Helvetica, sans-serif;
+	} 
+	.tableizer-table td {
+		padding: 4px;
+		margin: 3px;
+		border: 1px solid #CCC;
+	}
+	.tableizer-table th {
+		background-color: #104E8B; 
+		color: #FFF;
+		font-weight: bold;
+	}
+</style>
+<table class="tableizer-table">
+<thead><tr class="tableizer-firstrow"><th>Fosforo(P)</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th></tr></thead><tbody>
+ <tr><td>Fertilizantes</td><td>N</td><td>P2O5</td><td>K2O</td><td>S</td><td>MgO</td><td>CaO</td><td>SO3</td><td>B</td><td>Mn</td><td>Zn </td><td>Fe</td></tr>
+ <tr><td>1.Fosf. Monoamónico(MAP)</td><td>12.00</td><td>60.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+ <tr><td>2.DAP</td><td>18.00</td><td>46.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+ <tr><td>3.Fos.Monopotásico</td><td>0.00</td><td>0.00</td><td>50.00</td><td>18.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+ <tr><td>4.Super Triple</td><td>0.00</td><td>46.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+</tbody></table>
+
+#############
+<style type="text/css">
+	table.tableizer-table {
+		font-size: 12px;
+		border: 1px solid #CCC; 
+		font-family: Arial, Helvetica, sans-serif;
+	} 
+	.tableizer-table td {
+		padding: 4px;
+		margin: 3px;
+		border: 1px solid #CCC;
+	}
+	.tableizer-table th {
+		background-color: #104E8B; 
+		color: #FFF;
+		font-weight: bold;
+	}
+</style>
+<table class="tableizer-table">
+<thead><tr class="tableizer-firstrow"><th>Calcio(Ca)</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th></tr></thead><tbody>
+ <tr><td>Fertilizantes</td><td>N</td><td>P2O5</td><td>K2O</td><td>S</td><td>MgO</td><td>CaO</td><td>SO3</td><td>B</td><td>Mn</td><td>Zn </td><td>Fe</td></tr>
+ <tr><td>1Nitrato de calcio</td><td>15.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>26.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+ <tr><td>2Cal agrícola</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>40.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+ <tr><td>3Yeso agrícola</td><td>0.00</td><td>0.00</td><td>0.00</td><td>18.00</td><td>0.00</td><td>32.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+</tbody></table>
+##################
+<style type="text/css">
+	table.tableizer-table {
+		font-size: 12px;
+		border: 1px solid #CCC; 
+		font-family: Arial, Helvetica, sans-serif;
+	} 
+	.tableizer-table td {
+		padding: 4px;
+		margin: 3px;
+		border: 1px solid #CCC;
+	}
+	.tableizer-table th {
+		background-color: #104E8B; 
+		color: #FFF;
+		font-weight: bold;
+	}
+</style>
+<table class="tableizer-table">
+<thead><tr class="tableizer-firstrow"><th>Azufre(S)</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th></tr></thead><tbody>
+ <tr><td>Fertilizantes</td><td>N</td><td>P2O5</td><td>K2O</td><td>S</td><td>MgO</td><td>CaO</td><td>SO3</td><td>B</td><td>Mn</td><td>Zn </td><td>Fe</td></tr>
+ <tr><td>1.Sulfato de amonio acido</td><td>21.00</td><td>0.00</td><td>0.00</td><td>24.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+ <tr><td>2.Sulfato de potasio</td><td>0.00</td><td>0.00</td><td>50.00</td><td>18.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+ <tr><td>3.Sulfato de calcio</td><td>0.00</td><td>0.00</td><td>0.00</td><td>18.00</td><td>0.00</td><td>23.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+ <tr><td>4.Super triple</td><td>0.00</td><td>46.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+</tbody></table>
+
+#####
+<style type="text/css">
+	table.tableizer-table {
+		font-size: 12px;
+		border: 1px solid #CCC; 
+		font-family: Arial, Helvetica, sans-serif;
+	} 
+	.tableizer-table td {
+		padding: 4px;
+		margin: 3px;
+		border: 1px solid #CCC;
+	}
+	.tableizer-table th {
+		background-color: #104E8B; 
+		color: #FFF;
+		font-weight: bold;
+	}
+</style>
+<table class="tableizer-table">
+<thead><tr class="tableizer-firstrow"><th>Nitrógeno(N)</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th></tr></thead><tbody>
+ <tr><td>Fertilizantes</td><td>N</td><td>P2O5</td><td>K2O</td><td>S</td><td>MgO</td><td>CaO</td><td>SO3</td><td>B</td><td>Mn</td><td>Zn </td><td>Fe</td></tr>
+ <tr><td>1.Nitrato de amonio</td><td>34.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+ <tr><td>2.Urea</td><td>46.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+ <tr><td>3.Nitrato de potasio</td><td>13.50</td><td>0.00</td><td>46.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+ <tr><td>4.Sulfato de amonio</td><td>21.00</td><td>0.00</td><td>0.00</td><td>24.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+ <tr><td>5.NovaTec® Solub 45</td><td>45.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+ <tr><td>6.YaraBela NITROMAG</td><td>21.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>7.00</td><td>11.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+ <tr><td>7.YaraBela NITRODOBLE (CAN-27)</td><td>27.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>4.00</td><td>6.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+ <tr><td>8.YaraMila HYDRAN</td><td>19.00</td><td>4.00</td><td>19.00</td><td>0.00</td><td>3.00</td><td>0.00</td><td>0.00</td><td>1.00</td><td>0.00</td><td>1.00</td><td>0.00</td></tr>
+ <tr><td>9.Nitroquim Ne 38 Elite</td><td>38.00</td><td>0.00</td><td>0.00</td><td>0.03</td><td>2.00</td><td>1.00</td><td>0.00</td><td>1.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+ <tr><td>10.Nitrofoska special</td><td>12.00</td><td>12.00</td><td>1.70</td><td>0.00</td><td>2.00</td><td>0.00</td><td>8.00</td><td>0.00</td><td>0.00</td><td>1.00</td><td>0.00</td></tr>
+</tbody></table>
+
+
+
+######
+<body>
+    <form name="MyForm"><P >
+      Ingrese porcentaje del elemento :<input type="text" name="numero1" size="20"><br><br>
+      Ingrese dosis:<input type="text" name="numero2"  size="20"><br><br>
+       Resultado(Kg/elemento)  :        <input type="text" name="resultado" size="20"><br><br>
+     <div><input type="button" value="Calcular " onclick="ciclo()">
+       <input type="reset" value="Eliminar"></div><br>
+       </form>
+       </form>
+    <script>
+     function ciclo() {
+     var n1 = parseFloat(document.MyForm.numero1.value);
+     var n2 = parseFloat(document.MyForm.numero2.value);
+     document.MyForm.resultado.value= ((100*n2)/n1).toFixed(3) ;
+     }
+    </script>
+    <body>
+    <form name="MyForma"><P >
+      Ingrese porcentaje del elemento :<input type="text" name="numero1" size="20"><br><br>
+      Ingrese el resultado de (Kg/elemento):<input type="text" name="numero2"  size="20"><br><br>
+       Resultado  :        <input type="text" name="resultado" size="20"><br><br>
+     <div><input type="button" value="Calcular " onclick="fer()">
+       <input type="reset" value="Eliminar"></div><br>
+       </form>
+       </form>
+    <script>
+     function fer() {
+     var n1 = parseFloat(document.MyForma.numero1.value);
+     var n2 = parseFloat(document.MyForma.numero2.value);
+     document.MyForma.resultado.value= ((n1*n2)/100).toFixed(3) ;
+     }
+    </script>
+
+ </body>
+ </div> 
+   </body>
+   </FONT>
+  </center>
+</html>

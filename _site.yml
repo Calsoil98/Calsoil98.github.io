@@ -52,6 +52,8 @@ navbar:
       icon: fa-thin fa-sliders
       href: home22.html
       menu:
+        - text: "Conversión de bases(Ca,K,Na,Mg)"
+          href: bases.html
         - text: "Masa del suelo"
           href: masa.html
         - text: "Calculo suministro"
@@ -62,8 +64,11 @@ navbar:
           href: demanda2.html
         - text: "Dosis"
           href: dosis.html
-        - text: "Conversión de bases(Ca,K,Na,Mg)"
-          href: bases.html 
+        - text: "Tabla de índices de fertilizantes "
+          href: ferti.html
+        - text: "Cálculo de fertilizantes "
+          href: fertilizantes.html
+         
     - text: "Banano "
       icon: fa-thin fa-banana
       href: home32.html
