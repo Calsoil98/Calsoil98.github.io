@@ -384,6 +384,9 @@ $(document).ready(function () {
     <li>
       <a href="emision.html">Emisión Foliar</a>
     </li>
+    <li>
+      <a href="anexos.html">Fotografias y videos</a>
+    </li>
   </ul>
 </li>
 <li class="dropdown">
@@ -851,47 +854,83 @@ Resultado : <input type="text" name="resultado" size="20"><br><br>
 </div>
 </form>
 <script>
-     function Nitrogeno() {
-     var n1 = parseFloat(document.MyForm.numero1.value);
-     var n2 = parseFloat(document.MyForm.numero2.value);
-     document.MyForm.resultado.value= n1>47.5 ;
-     }
-    </script>
+    function Nitrogeno() {
+        var n1 = parseFloat(document.MyForm.numero1.value);
+        var n2 = parseFloat(document.MyForm.numero2.value);
+        if (n1 > 60) {
+            document.MyForm.resultado.value = 300;
+        } else if (n1 < 35) {
+            document.MyForm.resultado.value = 450;
+        } else if (n1 >= 35 && n1 <= 60) {
+            document.MyForm.resultado.value = 350;
+        }
+    }
+</script>
 <script>
-     function Fósforo() {
-     var n1 = parseFloat(document.MyForma.numero1.value);
-     var n2 = parseFloat(document.MyForma.numero2.value);
-     document.MyForma.resultado.value= n1>32.5;
-     }
-    </script>
+    function Fósforo() {
+        var n1 = parseFloat(document.MyForma.numero1.value);
+        var n2 = parseFloat(document.MyForma.numero2.value);
+        if (n1 > 40) {
+            document.MyForma.resultado.value = 0;
+        } else if (n1 < 25) {
+            document.MyForma.resultado.value = 100;
+        } else if (n1 >= 25 && n1 <= 40) {
+            document.MyForma.resultado.value = 50;
+        }
+    }
+</script>
 <script>
-     function Potasio() {
-     var n1 = parseFloat(document.MyFormas.numero1.value);
-     var n2 = parseFloat(document.MyFormas.numero2.value);
-     document.MyFormas.resultado.value= n1>230;
-     }
-    </script>
+    function Potasio() {
+        var n1 = parseFloat(document.MyFormas.numero1.value);
+        var n2 = parseFloat(document.MyFormas.numero2.value);
+        if (n1 > 300) {
+            document.MyFormas.resultado.value = 450;
+        } else if (n1 < 140) {
+            document.MyFormas.resultado.value = 700;
+        } else if (n1 >= 140 && n1 <= 320) {
+            document.MyFormas.resultado.value = 600;
+        }
+    }
+</script>
 <script>
-     function Calcio() {
-     var n1 = parseFloat(document.Mycalcio.numero1.value);
-     var n2 = parseFloat(document.Mycalcio.numero2.value);
-     document.Mycalcio.resultado.value= n1>900;
-     }
-    </script>
+    function Calcio() {
+        var n1 = parseFloat(document.Mycalcio.numero1.value);
+        var n2 = parseFloat(document.Mycalcio.numero2.value);
+        if (n1 > 1200) {
+            document.Mycalcio.resultado.value = 0;
+        } else if (n1 < 600) {
+            document.Mycalcio.resultado.value = 1000;
+        } else if (n1 >= 600 && n1 <= 1200) {
+            document.Mycalcio.resultado.value = 500;
+        }
+    }
+</script>
 <script>
-     function Magnesio() {
-     var n1 = parseFloat(document.Mymagnesio.numero1.value);
-     var n2 = parseFloat(document.Mymagnesio.numero2.value);
-     document.Mymagnesio.resultado.value= n1>97.5;
-     }
-    </script>
+    function Magnesio() {
+        var n1 = parseFloat(document.Mymagnesio.numero1.value);
+        var n2 = parseFloat(document.Mymagnesio.numero2.value);
+        if (n1 > 135) {
+            document.Mymagnesio.resultado.value = 0;
+        } else if (n1 < 60) {
+            document.Mymagnesio.resultado.value = 100;
+        } else if (n1 >= 60 && n1 <= 135) {
+            document.Mymagnesio.resultado.value = 50;
+        }
+    }
+</script>
 <script>
-     function Azufre() {
-     var n1 = parseFloat(document.Myazufre.numero1.value);
-     var n2 = parseFloat(document.Myazufre.numero2.value);
-     document.Myazufre.resultado.value= n1>20.0;
-     }
-    </script>
+    function Azufre() {
+        var n1 = parseFloat(document.Myazufre.numero1.value);
+        var n2 = parseFloat(document.Myazufre.numero2.value);
+        if (n1 > 25) {
+            document.Myazufre.resultado.value = 0;
+        } else if (n1 < 15) {
+            document.Myazufre.resultado.value = 100;
+        } else if (n1 >= 15 && n1 <= 25) {
+            document.Myazufre.resultado.value = 50;
+        }
+    }
+</script>
 </body>
 </div>
 </body>

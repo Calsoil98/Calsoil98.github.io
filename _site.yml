@@ -84,6 +84,8 @@ navbar:
           href: kuman.html
         - text: "Emisión Foliar"
           href: emision.html
+        - text: "Fotografias y videos"
+          href: anexos.html
     - text: "Enmiendas "
       icon: fa-thin fa-banana
       href: home34.html
