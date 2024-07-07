@@ -10,7 +10,7 @@ body {
 <center>
 <style type="text/css"> 
 
-#coca { width: 410px; height: 330px; 
+#coca { width: 420px; height: 550px; 
          background-color: rgb(209, 242, 235 , 0.66); 
          border: 1px solid #148F77; 
          border-radius: 1em;} 
@@ -21,7 +21,7 @@ body {
 <body> 
 <div id="coca"> 
    <body>  <H5><center><b>Calcular rectangulo</b></CENTER><br> </H5>
-
+<center>![](rect.png){height=190px}</center><br>
   <body>
     <form name="MyForme"><P >
      <font color="#424949"><strong> Superficie a sembrar(m2) :</strong><input type="text" name="numero1" size="20"><br><br>

@@ -1,0 +1,91 @@
+<html>
+<div>
+<style>
+body {
+  background-color: #148F77;
+  }
+</style>
+
+<head>
+<center>
+<style type="text/css"> 
+
+#coca { width: 600px; height: 1200px; 
+         background-color: rgb(209, 242, 235 , 0.66); 
+         border: 1px solid #148F77; 
+         border-radius: 1em;} 
+</style> 
+
+</head>
+<FONT FACE="times new roman">
+<body> 
+<div id="coca"> 
+   <body>  <H5><center><b>Densidad triángulo (tres bolillos) doble hilera</b></CENTER><br> </H5>
+<center>
+  ![](doblee.png){height=200px}  </center><br>
+
+  <body>
+    <form name="MyForm"><P >
+     <font color="#424949"><strong> Distancia entre plantas que forman el triángulo :</strong><input type="text" name="numero1" size="20"><br><br>
+     <font color="#424949"><strong> Distancia diagonal entre surcos que forman el triángulo:<input type="text" name="numero2" size="20"><br><br>
+     <font color="#424949"><strong> Altura(h) :</strong>    <input type="text" name="resultado" size="20"><br><br>
+    <div> <input type="button" value="Calcular" onclick="real()"> 
+    <input type="reset" value="Eliminar"> </div>
+  </form><br>
+  
+   <form name="MyForma"><P >
+       <font color="#424949"><strong>  Distancia entre plantas :</strong><input type="text" name="numero1" size="20"><br><br>
+     <font color="#424949"><strong> NPDH:</strong>    <input type="text" name="resultado" size="20"><br><br>
+    <div> <input type="button" value="Calcular" onclick="densi()"> 
+    <input type="reset" value="Eliminar"> </div>
+        
+  </form><br>
+  
+   <form name="MyFormas"><P >
+       <font color="#424949"><strong>  Distancia entre calle :</strong><input type="text" name="numero1" size="20"><br><br>
+<font color="#424949"><strong> Altura(h)</strong>  :<input type="text" name="numero2" size="20"><br><br>       
+     <font color="#424949"><strong> NPH:</strong>    <input type="text" name="resultado" size="20"><br><br>
+    <div> <input type="button" value="Calcular" onclick="np()"> 
+    <input type="reset" value="Eliminar"> </div>
+  </form><br>
+   <form name="MyFormass"><P >
+     <font color="#424949"><strong> NPDH:</strong><input type="text" name="numero1" size="20"><br><br>
+     <font color="#424949"><strong> NPH:<input type="text" name="numero2" size="20"><br><br>
+     <font color="#424949"><strong> Densidad :</strong>    <input type="text" name="resultado" size="20"><br><br>
+    <div> <input type="button" value="Calcular" onclick="resu()"> 
+    <input type="reset" value="Eliminar"> </div>
+  </form><br>
+  
+  <script>
+     function real() {
+     var n1 = parseFloat(document.MyForm.numero1.value);
+     var n2 = parseFloat(document.MyForm.numero2.value);
+     document.MyForm.resultado.value=(Math.sqrt((Math.pow(n2, 2)) - (Math.pow((n1/2), 2)))).toFixed(3);
+     }
+    </script>
+     <script>
+     function densi() {
+     var n1 = parseFloat(document.MyForma.numero1.value);
+     document.MyForma.resultado.value=((100/n1)*2).toFixed(1);
+     }
+    </script>
+    <script>
+     function np() {
+     var n1 = parseFloat(document.MyFormas.numero1.value);
+     var n2 = parseFloat(document.MyFormas.numero2.value);
+     document.MyFormas.resultado.value=((100/(n1+n2))).toFixed(1);
+     }
+    </script>
+     <script>
+     function resu() {
+     var n1 = parseFloat(document.MyFormass.numero1.value);
+     var n2 = parseFloat(document.MyFormass.numero2.value);
+     document.MyFormass.resultado.value=(n1*n2).toFixed(3);
+     }
+    </script>
+    
+  </body>
+ </FONT>
+  </center>
+  </div>
+</html>
