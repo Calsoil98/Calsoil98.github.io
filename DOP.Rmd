@@ -1,0 +1,156 @@
+---
+title: "Gestión de nutrientes en suelo de Banano: Método Estático DOP"
+output: html_document
+---
+<h3>Entrada de Datos de Nutrientes (mg/kg)</h3>
+<FONT FACE="times new roman">
+<style>
+  #grafico-container {
+    margin-top: 20px;
+    background-color: white; /* Fondo blanco para el contenedor de la gráfica */
+  }
+</style>
+
+<style>
+  body {
+    background-color: rgba(220, 237, 200);
+  }
+  #nutrientes-form {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* Cambiado a 6 columnas */
+    grid-template-rows: repeat(2, auto); /* 3 filas automáticas */
+    gap: 10px;
+  }
+  #nutrientes-form label {
+    display: block;
+  }
+  #nutrientes-form input {
+    width: 100%;
+  }
+  #grafico-container {
+    margin-top: 20px;
+  }
+</style>
+
+<form id="nutrientes-form">
+  <label for="nitrogeno">Nitrógeno:</label>
+  <input type="number" id="nitrogeno" name="nitrogeno" value="0">
+  
+  <label for="fosforo">Fósforo:</label>
+  <input type="number" id="fosforo" name="fosforo" value="0">
+  
+  <label for="potasio">Potasio:</label>
+  <input type="number" id="potasio" name="potasio" value="0">
+  
+  <label for="calcio">Calcio:</label>
+  <input type="number" id="calcio" name="calcio" value="0">
+  
+  <label for="magnesio">Magnesio:</label>
+  <input type="number" id="magnesio" name="magnesio" value="0">
+  
+  <label for="azufre">Azufre:</label>
+  <input type="number" id="azufre" name="azufre" value="0">
+  
+  <label for="hierro">Hierro:</label>
+  <input type="number" id="hierro" name="hierro" value="0">
+  
+  <label for="manganeso">Manganeso:</label>
+  <input type="number" id="manganeso" name="manganeso" value="0">
+  
+  <label for="cobre">Cobre:</label>
+  <input type="number" id="cobre" name="cobre" value="0">
+  
+  <label for="zinc">Zinc:</label>
+  <input type="number" id="zinc" name="zinc" value="0">
+  
+  <label for="boro">Boro:</label>
+  <input type="number" id="boro" name="boro" value="0">
+  
+  <label for="sodio">Sodio:</label>
+  <input type="number" id="sodio" name="sodio" value="0">
+  
+  <label for="cloruro">Cloruro:</label>
+  <input type="number" id="cloruro" name="cloruro" value="0">
+  
+  <input type="button" value="Actualizar Gráfico" onclick="actualizarGrafico()" style="grid-column: span 6;">
+</form>
+
+<h2>Gráfico de Nutrientes</h2>
+<div id="grafico-container">
+  <!-- El gráfico se generará aquí -->
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  function actualizarGrafico() {
+    const valoresReferencia = {
+      nitrogeno: 47.5,
+      fosforo: 32.5,
+      potasio: 230,
+      calcio: 900,
+      magnesio: 97.5,
+      azufre: 20,
+      hierro: 35,
+      manganeso: 18,
+      cobre: 2.5,
+      zinc: 3.6,
+      boro: 0.375,
+      sodio: 140,
+      cloruro: 210
+    };
+
+    const valoresMedidos = {
+      nitrogeno: parseFloat(document.getElementById('nitrogeno').value),
+      fosforo: parseFloat(document.getElementById('fosforo').value),
+      potasio: parseFloat(document.getElementById('potasio').value),
+      calcio: parseFloat(document.getElementById('calcio').value),
+      magnesio: parseFloat(document.getElementById('magnesio').value),
+      azufre: parseFloat(document.getElementById('azufre').value),
+      hierro: parseFloat(document.getElementById('hierro').value),
+      manganeso: parseFloat(document.getElementById('manganeso').value),
+      cobre: parseFloat(document.getElementById('cobre').value),
+      zinc: parseFloat(document.getElementById('zinc').value),
+      boro: parseFloat(document.getElementById('boro').value),
+      sodio: parseFloat(document.getElementById('sodio').value),
+      cloruro: parseFloat(document.getElementById('cloruro').value)
+    };
+
+    const dopValues = Object.keys(valoresReferencia).map(nutriente => {
+      const C = valoresMedidos[nutriente];
+      const C_REF = valoresReferencia[nutriente];
+      return ((C * 100) / C_REF) - 100;
+    });
+
+    const colors = dopValues.map(value => value < 0 ? 'rgba(255, 99, 132, 0.2)' : 'rgba(75, 192, 192, 0.2)');
+    const borderColors = dopValues.map(value => value < 0 ? 'rgba(255, 99, 132, 1)' : 'rgba(75, 192, 192, 1)');
+
+    const ctx = document.createElement('canvas');
+    document.getElementById('grafico-container').innerHTML = '';
+    document.getElementById('grafico-container').appendChild(ctx);
+
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Nitrógeno', 'Fósforo', 'Potasio', 'Calcio', 'Magnesio', 'Azufre', 'Hierro', 'Manganeso', 'Cobre', 'Zinc', 'Boro', 'Sodio', 'Cloruro'],
+        datasets: [{
+          label: 'Desviación Óptima Porcentual (DOP)',
+          data: dopValues,
+          backgroundColor: colors,
+          borderColor: borderColors,
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+            title: {
+              display: true,
+              text: 'DOP (%)'
+            }
+          }
+        }
+      }
+    });
+  }
+</script>
