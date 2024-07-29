@@ -1,0 +1,15 @@
+---
+title: "NDVI: Índice De Vegetación De Diferencia Normalizada"
+output: html_document
+---
+<style>
+h1.title {
+  color: white;
+}
+</style>
+<style>
+body {
+  background-color: #148F77;
+  }
+</style>
+<iframe src="https://ee-fernando109819.projects.earthengine.app/view/ndvi" width="100%" height="600px"></iframe>

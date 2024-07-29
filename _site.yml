@@ -78,6 +78,8 @@ navbar:
       icon: fa-thin fa-banana
       href: home32.html
       menu:
+        - text: "NDVI"
+          href: NDVI.html
         - text: "Ratio"
           href: ratio.html
         - text: "El método del ‘nuevo factor’"
