@@ -32,8 +32,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -432,7 +432,7 @@ $(document).ready(function () {
 </div>
 
 
-<html>
+&lt;!DOCTYPE html&gt;
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -476,6 +476,7 @@ Entrada de Datos de Nutrientes (%)
 <input type="file" id="fileUpload" accept=".xlsx" onchange="cargarExcel()">
 <br>
 <input type="button" value="Calcular DRIS" onclick="calcularDRIS()">
+<input type="button" value="Calcular I_DRIS" onclick="calcularIDRIS()">
 </form>
 <h2>
 Índices DRIS (Log)
@@ -514,7 +515,6 @@ Flog(Relación)
 <h2>
 Índices DRIS Calculados (I_DRIS)
 </h2>
-<input type="button" value="Calcular I_DRIS" onclick="calcularIDRIS()">
 <table id="idris-resultados">
 <thead>
 <tr>
@@ -564,139 +564,137 @@ Gráfico de Índices DRIS
 <canvas id="idrisChart">
 </canvas>
 <script>
-        let promedios = {};
-        let desviaciones = {};
+    let promedios = {};
+    let desviaciones = {};
 
-        function cargarExcel() {
-            let file = document.getElementById("fileUpload").files[0];
-            let reader = new FileReader();
-            reader.readAsBinaryString(file);
-            reader.onload = function(event) {
-                let data = event.target.result;
-                let workbook = XLSX.read(data, { type: "binary" });
-                let sheet = workbook.Sheets[workbook.SheetNames[0]];
-                let jsonData = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+    function cargarExcel() {
+        let file = document.getElementById("fileUpload").files[0];
+        let reader = new FileReader();
+        reader.readAsBinaryString(file);
+        reader.onload = function (event) {
+            let data = event.target.result;
+            let workbook = XLSX.read(data, { type: "binary" });
+            let sheet = workbook.Sheets[workbook.SheetNames[0]];
+            let jsonData = XLSX.utils.sheet_to_json(sheet, { header: 1 });
 
-                let headers = jsonData[0];
-                let promedioValues = jsonData[1];
-                let desviacionValues = jsonData[2];
+            let headers = jsonData[0];
+            let promedioValues = jsonData[1];
+            let desviacionValues = jsonData[2];
 
-                headers.forEach((header, index) => {
-                    if (!header.includes("Cl") && !header.includes("Na")) {
-                        promedios[header] = promedioValues[index];
-                        desviaciones[header] = desviacionValues[index];
-                    }
-                });
-            };
-        }
-
-        function calcularDRIS() {
-            let tbodyLog = document.querySelector("#resultados tbody");
-            let tbodyFlog = document.querySelector("#flog-resultados tbody");
-            tbodyLog.innerHTML = "";
-            tbodyFlog.innerHTML = "";
-
-            let nutrientes = ["N", "P", "K", "Ca", "Mg", "S", "B", "Cu", "Fe", "Mn", "Zn"];
-
-            nutrientes.forEach(n1 => {
-                nutrientes.forEach(n2 => {
-                    if (n1 !== n2) {
-                        let relacionNombre = log_${n1}/${n2};
-                        let valorN1 = parseFloat(document.getElementById(n1).value) || 0;
-                        let valorN2 = parseFloat(document.getElementById(n2).value) || 0;
-
-                        if (valorN1 > 0 && valorN2 > 0) {
-                            let logRelacion = Math.log10(valorN1 / valorN2).toFixed(4);
-                            let promedio = promedios[relacionNombre] || 1;
-                            let desviacion = desviaciones[relacionNombre] || 1;
-                            // Aplicar la fórmula correcta de Excel
-                    let flogValor;
-                    if (logRelacion < promedio) {
-                        flogValor = ((logRelacion - promedio) / desviacion) * (promedio / logRelacion);
-                    } else {
-                        flogValor = (logRelacion - promedio) / desviacion;
-                    }
-
-                    flogValor = flogValor.toFixed(3);
-
-
-                            tbodyLog.innerHTML += <tr><td>${relacionNombre}</td><td>${logRelacion}</td></tr>;
-                            tbodyFlog.innerHTML += <tr><td>Flog_${n1}/${n2}</td><td>${flogValor}</td></tr>;
-                        }
-                    }
-                });
+            headers.forEach((header, index) => {
+                if (!header.includes("Cl") && !header.includes("Na")) {
+                    promedios[header] = promedioValues[index];
+                    desviaciones[header] = desviacionValues[index];
+                }
             });
-        }
+        };
+    }
 
-       function calcularIDRIS() {
-    let flogFilas = document.querySelectorAll("#flog-resultados tbody tr");
-    let idris = {};
-    let nutrientes = ["N", "P", "K", "Ca", "Mg", "S", "B", "Cu", "Fe", "Mn", "Zn"];
+    function calcularDRIS() {
+        let tbodyLog = document.querySelector("#resultados tbody");
+        let tbodyFlog = document.querySelector("#flog-resultados tbody");
+        tbodyLog.innerHTML = "";
+        tbodyFlog.innerHTML = "";
 
-    nutrientes.forEach(nutriente => {
-        idris[nutriente] = { suma: 0, conteo: 0 };
-    });
+        let nutrientes = ["N", "P", "K", "Ca", "Mg", "S", "B", "Cu", "Fe", "Mn", "Zn"];
 
-    flogFilas.forEach(fila => {
-        let celdas = fila.getElementsByTagName("td");
-        let relacion = celdas[0].textContent.trim();
-        let valorFlog = parseFloat(celdas[1].textContent.trim());
+        nutrientes.forEach(n1 => {
+            nutrientes.forEach(n2 => {
+                if (n1 !== n2) {
+                    let relacionNombre = `log_${n1}/${n2}`;
+                    let valorN1 = parseFloat(document.getElementById(n1).value) || 0;
+                    let valorN2 = parseFloat(document.getElementById(n2).value) || 0;
+
+                    if (valorN1 > 0 && valorN2 > 0) {
+                        let logRelacion = Math.log10(valorN1 / valorN2).toFixed(4);
+                        let promedio = promedios[relacionNombre] || 1;
+                        let desviacion = desviaciones[relacionNombre] || 1;
+
+                        let flogValor = 0;
+                        if (desviacion !== 0) {
+                            if (logRelacion < promedio) {
+                                flogValor = ((logRelacion - promedio) / desviacion) * (promedio / logRelacion);
+                            } else {
+                                flogValor = (logRelacion - promedio) / desviacion;
+                            }
+                        }
+
+                        flogValor = flogValor.toFixed(3);
+
+                        tbodyLog.innerHTML += `<tr><td>${relacionNombre}</td><td>${logRelacion}</td></tr>`;
+                        tbodyFlog.innerHTML += `<tr><td>Flog_${n1}/${n2}</td><td>${flogValor}</td></tr>`;
+                    }
+                }
+            });
+        });
+    }
+
+    function calcularIDRIS() {
+        let flogFilas = document.querySelectorAll("#flog-resultados tbody tr");
+        let idris = {};
+        let nutrientes = ["N", "P", "K", "Ca", "Mg", "S", "B", "Cu", "Fe", "Mn", "Zn"];
 
         nutrientes.forEach(nutriente => {
-            if (relacion.includes(Flog_${nutriente}/)) {
-                if (!relacion.includes("Cl") && !relacion.includes("Na")) {
+            idris[nutriente] = { suma: 0, conteo: 0 };
+        });
+
+        flogFilas.forEach(fila => {
+            let celdas = fila.getElementsByTagName("td");
+            let relacion = celdas[0].textContent.trim();
+            let valorFlog = parseFloat(celdas[1].textContent.trim());
+
+            nutrientes.forEach(nutriente => {
+                if (relacion.includes(`Flog_${nutriente}/`)) {
                     idris[nutriente].suma += valorFlog;
                     idris[nutriente].conteo++;
                 }
-            }
+            });
         });
-    });
 
-    let idrisRow = document.getElementById("idris-values");
-    idrisRow.innerHTML = "";
+        let idrisRow = document.getElementById("idris-values");
+        idrisRow.innerHTML = "";
 
-    let valores = [];
-    nutrientes.forEach(nutriente => {
-        let promedio = idris[nutriente].conteo > 0 ? (idris[nutriente].suma / idris[nutriente].conteo).toFixed(4) : "0";
-        idrisRow.innerHTML += <td>${promedio}</td>;
-        valores.push(parseFloat(promedio));
-    });
+        let valores = [];
+        nutrientes.forEach(nutriente => {
+            let promedio = idris[nutriente].conteo > 0 ? (idris[nutriente].suma / idris[nutriente].conteo).toFixed(4) : "0";
+            idrisRow.innerHTML += `<td>${promedio}</td>`;
+            valores.push(parseFloat(promedio));
+        });
 
-    generarGraficoIDRIS(valores);
-}
-
-function generarGraficoIDRIS(valores) {
-    let ctx = document.getElementById("idrisChart").getContext("2d");
-    let nutrientes = ["N", "P", "K", "Ca", "Mg", "S", "B", "Cu", "Fe", "Mn", "Zn"];
-
-    // Destruir gráfico previo si existe
-    if (window.myChart) {
-        window.myChart.destroy();
+        generarGraficoIDRIS(valores);
     }
 
-    // Crear nuevo gráfico
-    window.myChart = new Chart(ctx, {
-        type: "bar",
-        data: {
-            labels: nutrientes,
-            datasets: [{
-                label: "Índices DRIS",
-                data: valores,
-                backgroundColor: "teal",
-                borderColor: "black",
-                borderWidth: 1
-            }]
-        },
-        options: {
-            responsive: true,
-            scales: {
-                y: { beginAtZero: true }
-            }
-        }
-    });
-}
+    function generarGraficoIDRIS(valores) {
+        let ctx = document.getElementById("idrisChart").getContext("2d");
+        let nutrientes = ["N", "P", "K", "Ca", "Mg", "S", "B", "Cu", "Fe", "Mn", "Zn"];
 
-    </script>
+        // Destruir gráfico previo si existe
+        if (window.myChart instanceof Chart) {
+            window.myChart.destroy();
+        }
+
+        // Crear nuevo gráfico
+        window.myChart = new Chart(ctx, {
+            type: "bar",
+            data: {
+                labels: nutrientes,
+                datasets: [{
+                    label: "Índices DRIS",
+                    data: valores,
+                    backgroundColor: "teal",
+                    borderColor: "black",
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        });
+    }
+</script>
 </body>
 </html>
 
