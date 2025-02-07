@@ -74,7 +74,7 @@ navbar:
         - text: "Cálculo de fertilizantes "
           href: fertilizantes.html
         - text: "Dris_P "
-          href: DRIS.html
+          href: Dris_P.html
          
     - text: "Banano "
       icon: fa-thin fa-banana
