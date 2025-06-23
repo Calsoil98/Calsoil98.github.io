@@ -1,99 +1,93 @@
 
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      background-color: #148F77;
-      font-family: "Times New Roman", Times, serif;
-      }
-    #coca {
-      width: 500px;
-      height: 640px;
-      background-color: rgba(209, 242, 235, 0.66);
-      border: 1px solid #148F77;
-      border-radius: 1em;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin: auto;
-      margin-top: 50px;
-    }
-  </style>
-</head>
-<body>
-    <div id="coca">
-<body>
-      <div style="text-align:center;"><br>
-        <center><h2><font color="#17202A">Clase textural</font></h2></center></div>
-       ![](text.png){height=325px}  </center><br>
-        
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculadora con HTML</title>
-</head>
-<body>
-    
+<style>
+  body {
+    background-color: #148F77;
+    font-family: 'Georgia', serif;
+  }
+  .contenedor {
+    max-width: 520px;
+    background-color: #A3E4D7;
+    padding: 30px;
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    text-align: center;
+  }
+  h2 {
+    color: #17202A;
+  }
+  label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #1B2631;
+    text-align: left;
+  }
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #117A65;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+  }
+  #resultado {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #154360;
+  }
+  img {
+    border-radius: 10px;
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+</style>
 
-  <label for="valor1">Arena:</label>
+<div class="contenedor">
+  <h2>Clase textural</h2>
+  <img src="text.png" alt="Triángulo textural" height="350px">
+
+  <label for="valor1">Arena (%):</label>
   <input type="number" id="valor1" placeholder="">
 
-  <label for="valor2">Limo:</label>
+  <label for="valor2">Limo (%):</label>
   <input type="number" id="valor2" placeholder="">
-  
-  <label for="valor3">Arcilla:</label>
+
+  <label for="valor3">Arcilla (%):</label>
   <input type="number" id="valor3" placeholder="">
 
   <button onclick="calcular()">Calcular</button>
 
-  <p>Textura: <span id="resultado"></span></p>
+  <p id="resultado">Textura: </p>
+</div>
 
-  <script>
-    function calcular() {
-      // Obtener los valores de los campos de entrada
-      var arena = parseFloat(document.getElementById('valor1').value);
-      var limo = parseFloat(document.getElementById('valor2').value);
-      var arcilla = parseFloat(document.getElementById('valor3').value);
-      // Realizar las condiciones
-      if (0 < arena && arena <= 20 && 80 <= limo && limo <= 100 && 0 < arcilla && arcilla <= 12) {
-        document.getElementById('resultado').innerHTML = 'Liomosa';
-      } else if (0 <= arena && arena <= 50 && 50 <= limo && limo <= 87 && 0 <= arcilla && arcilla <= 27) {
-        document.getElementById('resultado').innerHTML = 'Franca Limosa';
-      } else if (23 <= arena && arena <= 52 && 32 <= limo && limo <= 52&& 7 <= arcilla && arcilla <= 27) {
-        document.getElementById('resultado').innerHTML = 'Franca';
-      } else if (43 <= arena && arena <= 85 && 0 <= limo && limo <= 50 && 0 <= arcilla && arcilla <= 20) {
-        document.getElementById('resultado').innerHTML = 'Franca arenosa';
-      } else if (70 <= arena && arena <= 90 && 0 <= limo && limo <= 50 && 0 <= arcilla && arcilla <= 15) {
-        document.getElementById('resultado').innerHTML = 'Areno francosa';
-      } else if (85 <= arena && arena <= 100 && 0 <= limo && limo <= 15 && 0 <= arcilla && arcilla <= 10) {
-        document.getElementById('resultado').innerHTML = 'Arenosa';
-      } else if (0 <= arena && arena <= 20 && 40 <= limo && limo <= 73 && 27 <= arcilla && arcilla <= 40) {
-        document.getElementById('resultado').innerHTML = 'Franco arcillo limosa';
-      } else if (20 <= arena && arena <= 45 && 15 <= limo && limo <= 53 && 27 <= arcilla && arcilla <= 40) {
-        document.getElementById('resultado').innerHTML = 'Franco arcillosa';
-      } else if (45 <= arena && arena <= 80 && 0 <= limo && limo <= 28 && 20 <= arcilla && arcilla <= 35) {
-        document.getElementById('resultado').innerHTML = 'Franco arcilloso arenoso';  
-      } else if (0 <= arena && arena <= 20 && 40 <= limo && limo <= 60 && 40 <= arcilla && arcilla <= 60) {
-        document.getElementById('resultado').innerHTML = 'Arcillo limosa'; 
-      } else if (0 <= arena && arena <= 45 && 0 <= limo && limo <= 40 && 40 <= arcilla && arcilla <= 100) {
-        document.getElementById('resultado').innerHTML = 'Arcilloso'; 
-      } else if (45 <= arena && arena <= 67 && 0 <= limo && limo <= 20 && 35 <= arcilla && arcilla <= 55) {
-        document.getElementById('resultado').innerHTML = 'Arcillo arenosa'; 
-      } else {
-        document.getElementById('resultado').innerHTML = 'Datos incorrectos';
-      }
+<script>
+  function calcular() {
+    var arena = parseFloat(document.getElementById('valor1').value);
+    var limo = parseFloat(document.getElementById('valor2').value);
+    var arcilla = parseFloat(document.getElementById('valor3').value);
+    var resultado = "";
+
+    if (0 < arena && arena <= 20 && 80 <= limo && limo <= 100 && 0 < arcilla && arcilla <= 12) {
+      resultado = 'Limosa';
+    } else if (0 <= arena && arena <= 50 && 50 <= limo && limo <= 87 && 0 <= arcilla && arcilla <= 27) {
+      resultado = 'Franca Limosa';
+    } else if (23 <= arena && arena <= 52 && 32 <= limo && limo <= 52 && 7 <= arcilla && arcilla <= 27) {
+      resultado = 'Franca';
+    } else {
+      resultado = 'Datos incorrectos';
     }
-  </script>
-  
-  
-  
-  
-  
-  
-  
-</body>
-</html>
+
+    document.getElementById('resultado').innerHTML = 'Textura: ' + resultado;
+  }
+</script>

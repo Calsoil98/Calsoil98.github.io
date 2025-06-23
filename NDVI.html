@@ -365,7 +365,7 @@ $(document).ready(function () {
       <a href="fertilizantes.html">Cálculo de fertilizantes </a>
     </li>
     <li>
-      <a href="Dris1.html">Dris </a>
+      <a href="Driss.html">Dris</a>
     </li>
   </ul>
 </li>
@@ -434,18 +434,42 @@ Normalizada</h1>
 </div>
 
 
+<!-- Cambia color de fondo del sitio -->
 <style>
-h1.title {
-  color: white;
-}
-</style>
-<style>
-body {
-  background-color: #148F77;
+  body {
+    background-color: #148F77; /* Verde oscuro */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  h1.title {
+    color: white;
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 20px;
+  }
+
+  .iframe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh; /* Toma 90% de la altura de la pantalla */
+    padding: 20px;
+  }
+
+  iframe {
+    width: 90vw;  /* Ocupa el 90% del ancho de la pantalla */
+    height: 85vh; /* Ocupa el 85% de la altura de la pantalla */
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
   }
 </style>
-<iframe src="https://ee-fernando109819.projects.earthengine.app/view/ndvi" width="100%" height="600px">
-</iframe>
+<!-- Contenedor centrado del iframe -->
+<div class="iframe-container">
+<p><iframe src="https://ee-fernando109819.projects.earthengine.app/view/ndvi"></iframe></p>
+</div>
 
 
 

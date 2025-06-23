@@ -32,8 +32,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -365,7 +365,7 @@ $(document).ready(function () {
       <a href="fertilizantes.html">Cálculo de fertilizantes </a>
     </li>
     <li>
-      <a href="Dris1.html">Dris </a>
+      <a href="Dris1.html">Dris</a>
     </li>
   </ul>
 </li>
@@ -432,75 +432,91 @@ $(document).ready(function () {
 </div>
 
 
-<html>
 <style>
-body {
-  background-color: #148F77;
+  body {
+    background-color: #148F77;
+  }
+
+  #round {
+    width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(209, 242, 235, 0.9);
+    border: 2px solid #0E6251;
+    border-radius: 15px;
+    font-family: 'Times New Roman', serif;
+    color: #424949;
+    text-align: center;
+  }
+
+  input[type="text"] {
+    width: 250px;
+    padding: 5px;
+    margin: 10px auto;
+    border-radius: 5px;
+    border: 1px solid #B2BABB;
+    display: block;
+  }
+
+  input[type="button"], input[type="reset"] {
+    padding: 8px 16px;
+    margin: 15px 10px;
+    background-color: #148F77;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  input[type="button"]:hover, input[type="reset"]:hover {
+    background-color: #117864;
+  }
+
+  label, strong {
+    display: block;
+    margin-top: 15px;
   }
 </style>
-<head>
-<center>
-<style type="text/css"> 
-
-#round { width: 800px; height: 500px; 
-         background-color: rgb(209, 242, 235 , 0.66); 
-         border: 1px solid #148F77; 
-         border-radius: 1em;} 
-</style>
-</head>
-<FONT FACE="times new roman">
-<body>
 <div id="round">
-<H5>
-<center>
+<h4>
 <b>Cálculo de dosis de Yeso Agrícola para suelos sódicos</b>
-</CENTER>
-<br>
-</H5>
-<H5>
-<center>
-<b>Sulfato de calcio (CaSO4 2H2O)</b>
-</CENTER>
-<br>
-</H5>
-<body>
-<center>
+</h4>
+<h5>
+<b>Sulfato de calcio (CaSO₄·2H₂O)</b>
+</h5>
 <form name="MyForma">
-<font color="#424949"> <strong>Porcentaje de saturación de sodio
-actual:</strong><input type="text" name="numero1" size="20"><br><br>
-<strong> Porcentaje de saturación de sodio
-deseado:</strong><input type="text" name="numero2" size="20"><br><br>
-<strong>Capacidad de Intercambio
-catiónico(meq/100g):</strong><input type="text" name="numero3" size="20"><br><br>
-<strong>Densidad aparente del suelo
-(T/m3):</strong><input type="text" name="numero4" size="20"><br><br>
-<strong>Profundidad
-(m):</strong><input type="text" name="numero5" size="20"><br><br>
-<strong>Dosis Yeso Agrícola (Kg/ha):</strong>
-<input type="text" name="resultado" size="20"><br><br></font>
-<div>
+<p><strong>Porcentaje de saturación de sodio actual:</strong>
+<input type="text" name="numero1"></p>
+<p><strong>Porcentaje de saturación de sodio deseado:</strong>
+<input type="text" name="numero2"></p>
+<p><strong>Capacidad de Intercambio Catiónico (meq/100g):</strong>
+<input type="text" name="numero3"></p>
+<p><strong>Densidad aparente del suelo (t/m³):</strong>
+<input type="text" name="numero4"></p>
+<p><strong>Profundidad (m):</strong>
+<input type="text" name="numero5"></p>
+<p><strong>Dosis de Yeso Agrícola (kg/ha):</strong>
+<input type="text" name="resultado" readonly></p>
 <input type="button" value="Calcular" onclick="yeso()">
 <input type="reset" value="Eliminar">
-</div>
 </form>
-<p><br></p>
+</div>
 <script>
-     function yeso() {
-     var n1 = parseFloat(document.MyForma.numero1.value);
-     var n2 = parseFloat(document.MyForma.numero2.value);
-     var n3 = parseFloat(document.MyForma.numero3.value);
-     var n4 = parseFloat(document.MyForma.numero4.value);
-     var n5 = parseFloat(document.MyForma.numero5.value);
-     document.MyForma.resultado.value=((n1-n2)*n3*n4*n5*87).toFixed(3);
-     }
-    </script>
-</body>
-</div>
-</body>
-</FONT>
-</center>
-</html>
-</div>
+  function yeso() {
+    var n1 = parseFloat(document.MyForma.numero1.value);
+    var n2 = parseFloat(document.MyForma.numero2.value);
+    var n3 = parseFloat(document.MyForma.numero3.value);
+    var n4 = parseFloat(document.MyForma.numero4.value);
+    var n5 = parseFloat(document.MyForma.numero5.value);
+
+    if (!isNaN(n1) && !isNaN(n2) && !isNaN(n3) && !isNaN(n4) && !isNaN(n5)) {
+      var resultado = ((n1 - n2) * n3 * n4 * n5 * 87).toFixed(3);
+      document.MyForma.resultado.value = resultado;
+    } else {
+      alert("Por favor, ingresa todos los valores numéricos correctamente.");
+    }
+  }
+</script>
 
 
 

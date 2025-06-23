@@ -1,122 +1,184 @@
 
+```{=html}
+<div id="coca">
+  <div style="text-align:center;">
+    <h3 style="font-family:'Times New Roman'; color:#424949;">
+      Calcular Densidad Aparente
+    </h3>
+  </div>
 
-<html>
-<div>
+  <!-- Paso 1 -->
+  <form name="MyForm" style="font-family:'Times New Roman'; color:#424949;">
+    <label>4to Terrón Húmedo:</label><br>
+    <input type="text" name="numero1"><br><br>
+
+    <label>4to Terrón Seco 105°C:</label><br>
+    <input type="text" name="numero2"><br><br>
+
+    <label>Resultado paso 1:</label><br>
+    <input type="text" name="resultado" readonly><br><br>
+
+    <input type="button" value="Calcular" onclick="real()">
+    <input type="reset" value="Eliminar">
+  </form>
+
+  <hr>
+
+  <!-- Paso 2 -->
+  <form name="MyForm2" style="font-family:'Times New Roman'; color:#424949;">
+    <label>Terrón Parafina:</label><br>
+    <input type="text" name="numero6"><br><br>
+
+    <label>Terrón Húmedo:</label><br>
+    <input type="text" name="numero7"><br><br>
+
+    <label>Densidad Parafina:</label><br>
+    <input type="text" name="numero8"><br><br>
+
+    <label>Resultado paso 2:</label><br>
+    <input type="text" name="resultado" readonly><br><br>
+
+    <input type="button" value="Calcular" onclick="segu()">
+    <input type="reset" value="Eliminar">
+  </form>
+
+  <hr>
+
+  <!-- Paso 3 -->
+  <form name="MyForm3" style="font-family:'Times New Roman'; color:#424949;">
+    <label>Volumen Desplazado:</label><br>
+    <input type="text" name="numero11"><br><br>
+
+    <label>Resultado paso 2:</label><br>
+    <input type="text" name="numero12"><br><br>
+
+    <label>Resultado paso 3:</label><br>
+    <input type="text" name="resultado" readonly><br><br>
+
+    <input type="button" value="Calcular" onclick="terce()">
+    <input type="reset" value="Eliminar">
+  </form>
+
+  <hr>
+
+  <!-- Paso 4 -->
+  <form name="MyForm4" style="font-family:'Times New Roman'; color:#424949;">
+    <label>Terrón Húmedo:</label><br>
+    <input type="text" name="numero13"><br><br>
+
+    <label>Resultado paso 1:</label><br>
+    <input type="text" name="numero14"><br><br>
+
+    <label>Resultado paso 4:</label><br>
+    <input type="text" name="resultado" readonly><br><br>
+
+    <input type="button" value="Calcular" onclick="cuarta()">
+    <input type="reset" value="Eliminar">
+  </form>
+
+  <hr>
+
+  <!-- Paso 5 -->
+  <form name="MyForm5" style="font-family:'Times New Roman'; color:#424949;">
+    <label>Paso 4:</label><br>
+    <input type="text" name="numero15"><br><br>
+
+    <label>Paso 3:</label><br>
+    <input type="text" name="numero16"><br><br>
+
+    <label>Resultado paso 5:</label><br>
+    <input type="text" name="resultado" readonly><br><br>
+
+    <input type="button" value="Calcular" onclick="quinto()">
+    <input type="reset" value="Eliminar">
+  </form>
+</div>
+
+<script>
+  function real() {
+    var n1 = parseFloat(document.MyForm.numero1.value);
+    var n2 = parseFloat(document.MyForm.numero2.value);
+    if (!isNaN(n1) && !isNaN(n2)) {
+      document.MyForm.resultado.value = ((n1 - n2) / n1).toFixed(3);
+    }
+  }
+
+  function segu() {
+    var n6 = parseFloat(document.MyForm2.numero6.value);
+    var n7 = parseFloat(document.MyForm2.numero7.value);
+    var n8 = parseFloat(document.MyForm2.numero8.value);
+    if (!isNaN(n6) && !isNaN(n7) && !isNaN(n8)) {
+      document.MyForm2.resultado.value = ((n6 - n7) / n8).toFixed(3);
+    }
+  }
+
+  function terce() {
+    var n11 = parseFloat(document.MyForm3.numero11.value);
+    var n12 = parseFloat(document.MyForm3.numero12.value);
+    if (!isNaN(n11) && !isNaN(n12)) {
+      document.MyForm3.resultado.value = (n11 - n12).toFixed(3);
+    }
+  }
+
+  function cuarta() {
+    var n13 = parseFloat(document.MyForm4.numero13.value);
+    var n14 = parseFloat(document.MyForm4.numero14.value);
+    if (!isNaN(n13) && !isNaN(n14)) {
+      document.MyForm4.resultado.value = (n13 - (n14 * n13)).toFixed(3);
+    }
+  }
+
+  function quinto() {
+    var n15 = parseFloat(document.MyForm5.numero15.value);
+    var n16 = parseFloat(document.MyForm5.numero16.value);
+    if (!isNaN(n15) && !isNaN(n16)) {
+      document.MyForm5.resultado.value = (n15 / n16).toFixed(3);
+    }
+  }
+</script>
+
 <style>
-body {
-  background-color: #148F77;
+  body {
+    background-color: #148F77;
+  }
+
+  #coca {
+    width: 500px;
+    margin: auto;
+    background-color: rgba(209, 242, 235, 0.92);
+    border: 1px solid #148F77;
+    border-radius: 1em;
+    padding: 30px;
+    margin-top: 40px;
+  }
+
+  input[type="text"] {
+    width: 95%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+  }
+
+  input[type="button"],
+  input[type="reset"] {
+    padding: 6px 12px;
+    margin: 5px;
+    background-color: #117A65;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  input[type="button"]:hover,
+  input[type="reset"]:hover {
+    background-color: #0e6655;
+  }
+
+  hr {
+    margin: 30px 0;
+    border: 0;
+    border-top: 1px solid #aaa;
   }
 </style>
-
-<head>
-<center>
-<style type="text/css"> 
-
-#coca { width: 500px; height: 1300px; 
-         background-color: rgb(209, 242, 235 , 0.66); 
-         border: 1px solid #148F77; 
-         border-radius: 1em;} 
-</style> 
-
-</head>
-<FONT FACE="times new roman">
-<body> 
-<div id="coca"> 
-   <body>  <H5><center><b>Calcular densidad aparente</b></CENTER><br> </H5>
-
-  <body>
-    <form name="MyForm"><P>
-     4to Terrón Húmedo:<input type="text" name="numero1" size="20"><br><br>
-     4toTerrón Seco 105°C:<input type="text" name="numero2" size="20"><br><br>
-     Resultado paso 1:        <input type="text" name="resultado" size="20"><br><br>
-     <div><input type="button" value="Calcular" onclick="real()">
-     <input type="reset" value="Eliminar"></div>
-   </p>    
-
-  </form>
-    <form name="MyForm2"><P >
-     TerrónParafina:<input type="text" name="numero6" size="20"><br><br>
-     TerrónHúmedo:<input type="text" name="numero7" size="20"><br><br>
-     Densidad parafina:<input type="text" name="numero8" size="20"><br><br>
-     Resultado paso 2:        <input type="text" name="resultado" size="20"><br><br>
-     <div><input type="button" value="Calcular" onclick="segu()">
-     <input type="reset" value="Eliminar"></div><br>
-        
-
-  </form>
-     <form name="MyForm3"><P >
-   VolúmenDesplazado:<input type="text" name="numero11" size="20"><br><br>
- Resultado paso 2:<input type="text" name="numero12" size="20"><br><br>
-    Resultado paso 3:        <input type="text" name="resultado" size="20"><br><br>
-     <div><input type="button" value="Calcular" onclick="terce()">
-     <input type="reset" value="Eliminar">
-         </div>
-<br>
-  </form>
-  
-  
-  <form name="MyForm4"><P>
-    TerrónHúmedo:<input type="text" name="numero13" size="20"><br><br>
-   Resultado paso 1:<input type="text" name="numero14" size="20"><br><br>
-    Resultado paso 4:<input type="text" name="resultado" size="20"><br><br>
-       <div><input type="button" value="Calcular" onclick="cuarta()">
-     <input type="reset" value="Eliminar"></div>
-    </p>
-   </form>
-  
-  
-  <form name="MyForm5"><P >
-    Paso 4:<input type="text" name="numero15" size="20"><br><br>
-   Paso 3 :<input type="text" name="numero16" size="20"><br><br>
-    Resultado paso 5:<input type="text" name="resultado" size="20"><br><br>
-       <div><input type="button" value="Calcular" onclick="quinto()">
-     <input type="reset" value="Eliminar"></div>
-  </p>
-</form>
-
-  
-  <script>
-     function real() {
-     var n1 = parseFloat(document.MyForm.numero1.value);
-     var n2 = parseFloat(document.MyForm.numero2.value);
-     document.MyForm.resultado.value=((n1-n2)/n1).toFixed(3);
-     }
-    </script>
-  <script>
-     function segu() {
-     var n6 = parseFloat(document.MyForm2.numero6.value);
-     var n7 = parseFloat(document.MyForm2.numero7.value);
-     var n8 = parseFloat(document.MyForm2.numero8.value);
-     document.MyForm2.resultado.value=((n6-n7)/n8).toFixed(3);
-     }
-    </script>
-
-
-  <script>
-     function terce() {
-     var n11 = parseFloat(document.MyForm3.numero11.value);
-     var n12 = parseFloat(document.MyForm3.numero12.value);
-     document.MyForm3.resultado.value=(n11-n12).toFixed(3);
-     }
-    </script>
-   
-
-   <script>
-     function cuarta() {
-     var n13 = parseFloat(document.MyForm4.numero13.value);
-     var n14 = parseFloat(document.MyForm4.numero14.value);
-     document.MyForm4.resultado.value=(n13-(n14*n13)).toFixed(3);
-     }
-    </script>
-    <script>
-     function quinto() {
-     var n15 = parseFloat(document.MyForm5.numero15.value);
-     var n16 = parseFloat(document.MyForm5.numero16.value);
-     document.MyForm5.resultado.value=(n15/n16).toFixed(3);
-     }
-    </script>
-  </body>
- </FONT>
-  </center>
-  </div>
-</html>
+```

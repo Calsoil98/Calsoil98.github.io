@@ -60,6 +60,7 @@ if (window.hljs) {
 
 
 
+<link rel="stylesheet" href="estilos.css" type="text/css" />
 
 
 
@@ -365,7 +366,7 @@ $(document).ready(function () {
       <a href="fertilizantes.html">Cálculo de fertilizantes </a>
     </li>
     <li>
-      <a href="Dris1.html">Dris </a>
+      <a href="Driss.html">Dris</a>
     </li>
   </ul>
 </li>
@@ -434,36 +435,74 @@ Método Estático DOP</h1>
 </div>
 
 
-<h3>
+<style>
+/* Este estilo afecta directamente al título del documento */
+h1.title {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Times New Roman", serif;
+}
+</style>
+<h3 style="text-align: center; color: rgba(255, 255, 255, 0.7); font-family: &#39;Times New Roman&#39;, serif;">
 Entrada de Datos de Nutrientes (mg/kg)
 </h3>
-<FONT FACE="times new roman">
-<style>
-  #grafico-container {
-    margin-top: 20px;
-    background-color: white; /* Fondo blanco para el contenedor de la gráfica */
-  }
-</style>
 <style>
   body {
-    background-color: rgba(220, 237, 200);
+    background-color:  #148F77;
+    font-family: 'Times New Roman', serif;
   }
+
+  .contenedor-centro {
+    width: 1000px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 15px;
+  }
+
   #nutrientes-form {
     display: grid;
-    grid-template-columns: repeat(7, 1fr); /* Cambiado a 6 columnas */
-    grid-template-rows: repeat(2, auto); /* 3 filas automáticas */
+    grid-template-columns: repeat(6, 1fr);
     gap: 10px;
+    margin-bottom: 20px;
   }
+
   #nutrientes-form label {
     display: block;
+    font-size: 14px;
+    color: #0b4c42;
   }
+
   #nutrientes-form input {
     width: 100%;
+    padding: 4px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
   }
+
   #grafico-container {
     margin-top: 20px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  input[type="button"] {
+    grid-column: span 6;
+    padding: 8px 16px;
+    background-color: #0d5c50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  input[type="button"]:hover {
+    background-color: #0b4c42;
   }
 </style>
+<div class="contenedor-centro">
 <form id="nutrientes-form">
 <p><label for="nitrogeno">Nitrógeno:</label>
 <input type="number" id="nitrogeno" name="nitrogeno" value="0"></p>
@@ -491,13 +530,14 @@ Entrada de Datos de Nutrientes (mg/kg)
 <input type="number" id="sodio" name="sodio" value="0"></p>
 <p><label for="cloruro">Cloruro:</label>
 <input type="number" id="cloruro" name="cloruro" value="0"></p>
-<input type="button" value="Actualizar Gráfico" onclick="actualizarGrafico()" style="grid-column: span 6;">
+<input type="button" value="Actualizar Gráfico" onclick="actualizarGrafico()">
 </form>
-<h2>
+<h3>
 Gráfico de Nutrientes
-</h2>
+</h3>
 <div id="grafico-container">
-<p><!-- El gráfico se generará aquí --></p>
+
+</div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>

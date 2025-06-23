@@ -1,62 +1,102 @@
 
 
-<html>
-<div>
+```{=html}
+<div id="coca">
+  <div style="text-align:center;">
+    <h3 style="font-family:'Times New Roman'; color:#424949;">
+      Carbono Orgánico y Materia Orgánica
+    </h3>
+  </div>
+
+  <form name="MyForm" style="font-family:'Times New Roman'; color:#424949; padding: 10px;">
+    <label><strong>Peso total mufla:</strong></label><br>
+    <input type="text" name="numero1" size="25"><br><br>
+
+    <label><strong>Peso en seco mufla:</strong></label><br>
+    <input type="text" name="numero2" size="25"><br><br>
+
+    <label><strong>Resultado carbono orgánico:</strong></label><br>
+    <input type="text" name="resultado" size="25" readonly><br><br>
+
+    <div style="text-align:center;">
+      <input type="button" value="Calcular" onclick="carbono()">
+      <input type="reset" value="Eliminar">
+    </div>
+  </form>
+
+  <hr>
+
+  <form name="MyForma" style="font-family:'Times New Roman'; color:#424949; padding: 10px;">
+    <label><strong>% Carbono orgánico:</strong></label><br>
+    <input type="text" name="numero3" size="25"><br><br>
+
+    <label><strong>Materia orgánica:</strong></label><br>
+    <input type="text" name="resultado" size="25" readonly><br><br>
+
+    <div style="text-align:center;">
+      <input type="button" value="Calcular" onclick="materia()">
+      <input type="reset" value="Eliminar">
+    </div>
+  </form>
+</div>
+
+<script>
+  function carbono() {
+    var n1 = parseFloat(document.MyForm.numero1.value);
+    var n2 = parseFloat(document.MyForm.numero2.value);
+    if (!isNaN(n1) && !isNaN(n2)) {
+      document.MyForm.resultado.value = (n1 - n2).toFixed(3);
+    } else {
+      document.MyForm.resultado.value = "Error";
+    }
+  }
+
+  function materia() {
+    var n3 = parseFloat(document.MyForma.numero3.value);
+    if (!isNaN(n3)) {
+      document.MyForma.resultado.value = (n3 * 1.724).toFixed(3);
+    } else {
+      document.MyForma.resultado.value = "Error";
+    }
+  }
+</script>
+
 <style>
-body {
-  background-color: #148F77;
+  body {
+    background-color: #148F77;
+  }
+
+  #coca {
+    width: 500px;
+    margin: auto;
+    background-color: rgba(209, 242, 235, 0.9);
+    border: 1px solid #148F77;
+    border-radius: 1em;
+    padding: 20px;
+    margin-top: 40px;
+  }
+
+  input[type="text"] {
+    width: 95%;
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+
+  input[type="button"],
+  input[type="reset"] {
+    padding: 8px 16px;
+    margin: 5px;
+    border-radius: 6px;
+    background-color: #117A65;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  input[type="button"]:hover,
+  input[type="reset"]:hover {
+    background-color: #0e6655;
   }
 </style>
-
-<head>
-<center>
-<style type="text/css"> 
-
-#coca { width: 600px; height: 525px; 
-         background-color: rgb(209, 242, 235 , 0.66); 
-         border: 1px solid #148F77; 
-         border-radius: 1em;} 
-</style> 
-
-</head>
-<FONT FACE="times new roman">
-<body> 
-<div id="coca"> 
-   <body>  <H5><center><b><font color="#424949">Carbono orgánico y Materia orgánica</b></CENTER><br> </H5></font>
-  <body>
-    <form name="MyForm"><P ><font color="#424949"><strong>
-      Peso total mufla </strong>:<input type="text" name="numero1" size="25"><br><br></font> <font color="#424949"><strong>
-      Peso en seco mufla</strong> :<input type="text" name="numero2" size="25"><br><br> </font> <font color="#424949"><strong>
-      Resultado carbono orgánico</strong>:        <input type="text" name="resultado" size="25"><br><br></font>
-     <div><input type="button" value="Calcular" onclick="carbono()">
-     <input type="reset" value="Eliminar"></div><br>
-
-  </form>
-  
-  <body><font color="#424949"><strong>
-    <form name="MyForma"><P>
-     % carbono orgánico</strong>:<input type="text" name="numero3" size="25"><br><br></font><font color="#424949"><strong> 
-     Materia orgánica</strong>:        <input type="text" name="resultado" size="25"><br><br></font>
-     <div><input type="button" value="Calcular" onclick="materia()">
-     <input type="reset" value="Eliminar"></div>
-       
-
-
-  <script>
-     function carbono() {
-     var n1 = parseFloat(document.MyForm.numero1.value);
-     var n2 = parseFloat(document.MyForm.numero2.value);
-     document.MyForm.resultado.value=(n1-n2).toFixed(3);
-     }
-    </script>
-      <script>
-     function materia() {
-     var n3 = parseFloat(document.MyForma.numero3.value);
-     document.MyForma.resultado.value=(n3*1.724).toFixed(3);
-     }
-    </script>
-  </body>
-  </FONT>
-  </center>
-  </div>
-</html>
+```

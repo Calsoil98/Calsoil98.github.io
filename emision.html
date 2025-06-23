@@ -365,7 +365,7 @@ $(document).ready(function () {
       <a href="fertilizantes.html">Cálculo de fertilizantes </a>
     </li>
     <li>
-      <a href="Dris1.html">Dris </a>
+      <a href="Driss.html">Dris</a>
     </li>
   </ul>
 </li>
@@ -432,76 +432,109 @@ $(document).ready(function () {
 </div>
 
 
-<html>
 <style>
-body {
-  background-color: #148F77;
+  body {
+    background-color: #148F77;
+    font-family: Arial, sans-serif;
+  }
+  #round {
+    margin: 30px auto;
+    width: 1000px;
+    height: 725px;
+    background-color: rgba(209, 242, 235, 0.66);
+    border: 1px solid #148F77;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+  h5, li, p {
+    color: #0b4c42;
+    font-family: 'Times New Roman', serif;
+    font-size: 14px;
+  }
+  input[type="text"] {
+    width: 160px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  button, input[type="button"], input[type="reset"] {
+    padding: 6px 12px;
+    margin: 4px;
+    border-radius: 5px;
+    background-color: #0d5c50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  button:hover, input[type="button"]:hover, input[type="reset"]:hover {
+    background-color: #0b4c42;
+  }
+  .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 15px;
   }
 </style>
-<head>
-<center>
-<style type="text/css"> 
-
-#round { width: 1000px; height: 650px; 
-         background-color: rgb(209, 242, 235 , 0.66); 
-         border: 1px solid #148F77; 
-         border-radius: 1em;} 
-</style>
-</head>
-<FONT FACE="times new roman">
-<body>
 <div id="round">
-<H5>
-<center>
+<h5>
 <b>Emisión foliar y conteo de hojas</b>
-</CENTER>
-<br>
-</H5>
+</h5>
 <body>
 <div
 style="display: flex; justify-content: center; align-items: center;">
 <div class="float">
-<img src="11.png" height="300"
+<img src="Estados.png" height="300"
 alt="Estados de desarrollo de la hoja de acuerdo a Brun." />
 <div class="figcaption">Estados de desarrollo de la hoja de acuerdo a
 Brun.</div>
 </div>
 <div class="float">
-<img src="2.png" height="300"
+<img src="candela.png" height="300"
 alt="Número de hojas por Ignacio Jiménez Cadavid" />
 <div class="figcaption">Número de hojas por Ignacio Jiménez
 Cadavid</div>
 </div>
 </div>
 </body>
-<p>Una vez realizada la anotación del número de hojas por planta y el
-estado de desarrollo de la hoja cigarro, se evalúa el nivel de infección
-en las hojas No. 2, 3 y 4 <br></p>
-<form name="MyForm">
-<font color="#424949"> <strong>Bandera pasado( Primera hoja +
-bandera):</strong><input type="text" name="numero1" size="20"><br><br>
-<strong> Bandera actual(Hoja(1,2) +
-bandera):</strong><input type="text" name="numero2" size="20"><br><br>
-<strong>Emisión total:</strong>
-<input type="text" name="resultado" size="20"><br><br></font>
 <div>
+<p align="left">
+Una vez realizada la anotación del número de hojas por planta y el
+estado de desarrollo de la hoja cigarro, se evalúa el nivel de infección
+en las hojas No. 2, 3 y 4.
+</p>
+<form name="MyForm" class="form-center">
+<p>
+<strong>Bandera pasado (Primera hoja + bandera):</strong><br>
+<input type="text" name="numero1">
+</p>
+<p>
+<strong>Bandera actual (Hoja 1 o 2 + bandera):</strong><br>
+<input type="text" name="numero2">
+</p>
+<p>
+<strong>Emisión total:</strong><br>
+<input type="text" name="resultado" readonly>
+</p>
 <input type="button" value="Calcular" onclick="real()">
 <input type="reset" value="Eliminar">
-</div>
 </form>
-<script>
-     function real() {
-     var n1 = parseFloat(document.MyForm.numero1.value);
-     var n2 = parseFloat(document.MyForm.numero2.value);
-     document.MyForm.resultado.value=((n2-n1)).toFixed(3);
-     }
-    </script>
-</body>
 </div>
-</body>
-</FONT>
-</center>
-</html>
+<script>
+  function real() {
+    var n1 = parseFloat(document.MyForm.numero1.value);
+    var n2 = parseFloat(document.MyForm.numero2.value);
+    if (isNaN(n1) || isNaN(n2)) {
+      alert("Por favor ingrese valores válidos.");
+      return;
+    }
+    document.MyForm.resultado.value = (n2 - n1).toFixed(3);
+  }
+</script>
+</div>
 
 
 

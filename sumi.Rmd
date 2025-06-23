@@ -1,154 +1,105 @@
 
-<html>
+```{=html}
 <style>
 body {
   background-color: #148F77;
-  }
+  font-family: 'Times New Roman';
+}
+#coca, #coca1, #coca11 {
+  width: 500px;
+  margin: auto;
+  background-color: rgba(209, 242, 235, 0.66);
+  border: 1px solid #148F77;
+  border-radius: 1em;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  margin: 5px 0;
+}
+input[type="button"], input[type="reset"] {
+  background-color: #117864;
+  color: white;
+  padding: 5px 15px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+}
+h5, b, center {
+  color: #424949;
+}
 </style>
 
-<head>
-<center>
-<style type="text/css"> 
+<!-- FORMULARIO 1: CÁLCULO DE SUMINISTRO -->
+<div id="coca">
+<h5><center><b>Cálculo de suministro</b></center></h5>
+<form name="MyForm">
+  Ingrese elemento total (mg/kg):<br>
+  <input type="text" name="numero1"><br>
+  Ingrese masa del suelo (kg):<br>
+  <input type="text" name="numero3"><br>
+  Resultado en (mg) elemento:<br>
+  <input type="text" name="resultado"><br><br>
+  <input type="button" value="Calcular" onclick="sumi()">
+  <input type="reset" value="Eliminar">
+</form>
+</div>
 
-#coca { width: 500px; height: 310px; 
-         background-color: rgb(209, 242, 235 , 0.66); 
-         border: 1px solid #148F77; 
-         border-radius: 1em;} 
-</style> 
+<!-- FORMULARIO 2: CONVERSIÓN A KG/HA -->
+<div id="coca1">
+<h5><center><b>Convertir de mg (Elemento) a (Kg)/Ha</b></center></h5>
+<form name="MyForm2">
+  Ingrese elemento (mg):<br>
+  <input type="text" name="numero4"><br>
+  Ingrese 1 (kg):<br>
+  <input type="text" name="numero5"><br>
+  Ingrese 1,000,000 (mg):<br>
+  <input type="text" name="numero6"><br>
+  Resultado en (Kg) elemento/Ha:<br>
+  <input type="text" name="resultado"><br><br>
+  <input type="button" value="Calcular" onclick="tra()">
+  <input type="reset" value="Eliminar">
+</form>
+</div>
 
-</head>
-<FONT FACE="times new roman">
-<body> 
-<div id="coca"> 
-   <body>  <H5><center><b>Calculo suministro </b></CENTER><br> </H5>
-  <body>
-    <form name="MyForm"><P >
-      Ingrese elemento total (mg/kg):<input type="text" name="numero1" size="20"><br><br>
-      Ingrese masa del suelo (kg):<input type="text" name="numero3" size="20"><br><br>
-     Resultado en (mg)elemento:        <input type="text" name="resultado" size="20"><br><br>
-     <div><input type="button" value="Calcular" onclick="sumi()">
-     <input type="reset" value="Eliminar">
-         </divr>
-  </form>
+<!-- FORMULARIO 3: CÁLCULO CON FACTOR -->
+<div id="coca11">
+<h5><center><b>Calcular suministro con el factor</b></center></h5>
+<form name="MyForm6">
+  Ingrese elemento (mg/kg):<br>
+  <input type="text" name="numero8"><br>
+  Ingrese factor:<br>
+  <input type="text" name="numero9"><br>
+  Resultado en Kg (elemento/Ha):<br>
+  <input type="text" name="resultado"><br><br>
+  <input type="button" value="Calcular" onclick="ha()">
+  <input type="reset" value="Eliminar">
+</form>
 
-  <script>
-     function sumi() {
-     var n1 = parseFloat(document.MyForm.numero1.value);
-     var n3 = parseFloat(document.MyForm.numero3.value);
-     document.MyForm.resultado.value=((n1*n3));
-     }
-    </script>
-  </body>
- </div> 
-   </body>
-   </FONT>
-  </center>
-</html>
-############
+<br><h5><center><b>Factor de conversión</b></center></h5>
+<center><b>P = 2.29 P₂O₅</b></center>
+<center><b>K = 1.20 K₂O</b></center>
+<center><b>Mg = 1.66 MgO</b></center>
+<center><b>Ca = 1.40 CaO</b></center>
+</div>
 
-<html>
-<style>
-body {
-  background-color: #148F77;
-  }
-</style>
-
-<head>
-<center>
-<style type="text/css"> 
-
-#coca1 { width: 500px; height: 365px; 
-         background-color: rgb(209, 242, 235 , 0.66); 
-         border: 1px solid #148F77; 
-         border-radius: 1em;} 
-</style> 
-
-</head>
-<FONT FACE="times new roman">
-<body> 
-<div id="coca1"> 
-   <body><br>  <H5><center><b>Convertir de mg(Elemento) a (Kg)/Ha </b></CENTER><br> </H5>
-
-  <body>
-    <form name="MyForm2"><P >
-      Ingrese elemento(mg):<input type="text" name="numero4" size="20"><br><br>
-      Ingrese 1(kg):<input type="text" name="numero5" size="20"><br><br>
-      Ingrese 1000000(mg):<input type="text" name="numero6" size="20"><br><br>
-     Resultado en (Kg)elemento/Ha:        <input type="text" name="resultado" size="20"><br><br>
-     <div><input type="button" value="Calcular" onclick="tra()">
-     <input type="reset" value="Eliminar">
-         </div>
-  </form>
-
-  <script>
-     function tra() {
-     var n4 = parseFloat(document.MyForm2.numero4.value);
-     var n5 = parseFloat(document.MyForm2.numero5.value);
-     var n6 = parseFloat(document.MyForm2.numero6.value);
-     document.MyForm2.resultado.value=((n4*n5)/n6);
-     }
-    </script>
-  </body>
- </div> 
-   </body>
-   </FONT>
-  </center>
-</html>
-
-#############
- <br> 
-<html>
-<style>
-body {
-  background-color: #148F77;
-  }
-</style>
-
-<head>
-<center>
-<style type="text/css"> 
-
-#coca11 { width: 500px; height: 430px; 
-         background-color: rgb(209, 242, 235 , 0.66); 
-         border: 1px solid #148F77; 
-         border-radius: 1em;} 
-</style> 
-
-</head>
-<FONT FACE="times new roman">
-<body> 
-<div id="coca11"> 
-   <body><br>  <H5><center><b>Calcular suministro con el factor</b></CENTER><br> </H5>
-
-  <body>
-    <form name="MyForm6"><P>
-      Ingrese elemento(mg/Kg):<input type="text" name="numero8" size="20"><br><br>
-      Ingrese factor :<input type="text" name="numero9" size="20"><br><br>
-     Resultado en Kg(elemento/Ha):        <input type="text" name="resultado" size="20"><br><br>
-     <div><input type="button" value="Calcular" onclick="ha()">
-     <input type="reset" value="Eliminar">
-         </div>
-  </form>
-
-  <script>
-     function ha() {
-     var n8 = parseFloat(document.MyForm6.numero8.value);
-     var n9 = parseFloat(document.MyForm6.numero9.value);
-     document.MyForm6.resultado.value=(n8*n9).toFixed(3);
-     }
-    </script>
-    <br>
-    <H5><center><b>Factor de conversión</b></CENTER> </H5>
-    <center><b>P=2.29 P2O5</b></CENTER> 
-        <center><b>K=1.2 K2O</b></CENTER> 
-    <center><b>Mg=1.66 MgO</b></CENTER> 
-    <center><b>Ca=1.4 CaO</b></CENTER> 
-
-
-  </body>
-</div> 
-  <body>
-   </body>
-   </FONT>
-  </center>
-</html>
+<script>
+function sumi() {
+  var n1 = parseFloat(document.MyForm.numero1.value);
+  var n3 = parseFloat(document.MyForm.numero3.value);
+  document.MyForm.resultado.value = (n1 * n3).toFixed(3);
+}
+function tra() {
+  var n4 = parseFloat(document.MyForm2.numero4.value);
+  var n5 = parseFloat(document.MyForm2.numero5.value);
+  var n6 = parseFloat(document.MyForm2.numero6.value);
+  document.MyForm2.resultado.value = ((n4 * n5) / n6).toFixed(3);
+}
+function ha() {
+  var n8 = parseFloat(document.MyForm6.numero8.value);
+  var n9 = parseFloat(document.MyForm6.numero9.value);
+  document.MyForm6.resultado.value = (n8 * n9).toFixed(3);
+}
+</script>

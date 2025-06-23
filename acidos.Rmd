@@ -1,98 +1,114 @@
-
-<html>
+```{=html}
 <style>
-body {
-  background-color: #148F77;
+  body {
+    background-color: #117864;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  #round {
+    margin: auto;
+    margin-top: 40px;
+    width: 80%;
+    max-width: 900px;
+    background-color: rgba(209, 242, 235, 0.66);
+    border-radius: 20px;
+    padding: 30px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+    background-color: white;
+  }
+
+  th, td {
+    border: 1px solid #1B4F72;
+    padding: 8px;
+    text-align: center;
+  }
+
+  th {
+    background-color: #2E86C1;
+    color: white;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 6px;
+    margin: 5px 0 15px 0;
+    box-sizing: border-box;
+  }
+
+  input[type="button"],
+  input[type="reset"] {
+    padding: 6px 20px;
+    margin: 10px 10px 0 10px;
+    background-color: #0b5345;
+    color: white;
+    font-weight: bold;
+  }
+
+  .form-buttons {
+    text-align: center;
   }
 </style>
 
-<head>
-<center>
-<style type="text/css"> 
+<div id="round">
+  <h3 style="text-align:center;">Enmiendas para suelos ácidos por medio de saturación de bases</h3>
 
-#round { width: 800px; height: 800px; 
-         background-color: rgb(209, 242, 235 , 0.66); 
-         border: 1px solid #148F77; 
-         border-radius: 1em;} 
-</style> 
+  <table>
+    <thead>
+      <tr>
+        <th>Material</th>
+        <th>Equivalente químico (EQ)</th>
+        <th>Fórmula</th>
+        <th>Contenido de Ca</th>
+        <th>Contenido de Mg</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Carbonato de calcio</td><td>100</td><td>CaCO₃</td><td>40</td><td>-</td></tr>
+      <tr><td>Dolomita</td><td>108</td><td>CaCO₃·MgCO₃</td><td>21.6</td><td>13.1</td></tr>
+      <tr><td>Óxido de calcio</td><td>179</td><td>CaO</td><td>71</td><td>-</td></tr>
+      <tr><td>Hidróxido de calcio</td><td>138</td><td>Ca(OH)₂</td><td>54</td><td>-</td></tr>
+    </tbody>
+  </table>
 
-</head>
-<FONT FACE="times new roman">
-   <body>
-   <div id="round">
-  <div style="text-align:center;"><br>
-        <center><h3>Enmiendas para suelos ácidos por medio de saturación de bases</font></h3></center></div>
+  <form name="MyForm">
+    <label>Saturación de bases deseada:</label>
+    <input type="text" name="numero1">
 
-<style type="text/css">
-	table.tableizer-table {
-		font-size: 12px;
-		border: 1px solid #212F3C; 
-		font-family: Arial, Helvetica, sans-serif;
-	} 
-	.tableizer-table td {
-		padding: 4px;
-		margin: 3px;
-	  background-color: #FBFCFC;
-	  text-align: center;
-		border: 1px solid #2C3E50;
-	}
-	.tableizer-table th {
-		background-color: #2C3E50; 
-		color: #ECF0F1;
-		font-weight: bold;
-	}
-</style>
-<table class="tableizer-table">
-<thead><tr class="tableizer-firstrow"><th>Material</th><th>"Equivalente químico(EQ)"</th><th>Fórmula</th><th>Contenido de  (Ca)</th><th>Contenido de (Mg)</th></tr></thead><tbody>
- <tr><td>Carbonato de calcio</td><td>100</td><td>CaCO3</td><td>        40</td><td>&nbsp;</td></tr>
- <tr><td>Dolomita</td><td>        108</td><td>CaCO3MgCO3</td><td>21.6</td><td>                          13.1</td></tr>
- <tr><td>Óxido de calcio</td><td>        179</td><td>CaO</td><td>         71</td><td>&nbsp;</td></tr>
- <tr><td>Hidróxido de calcio</td><td>138</td><td>Ca(OH)2</td><td>         54</td><td></td></tr>
-</tbody></table>
-  <body>
- <br>
-  
- 
-   <form name="MyForm"><font color="#424949">
-      <strong>Saturación de bases deseada:</strong><input type="text" name="numero1" size="20"><br><br>
-     <strong> Saturación de bases actual:</strong><input type="text" name="numero2" size="20"><br><br>
-      <strong>Capacidad de Intercambio catiónico(meq/100g):</strong><input type="text" name="numero3" size="20"><br><br>
-      <strong>PRNT:</strong><input type="text" name="numero4" size="20"><br><br>
-     <strong>Necesidad de cal agrícola (t/ha):</strong>        <input type="text" name="resultado" size="20"><br><br></font>
-     <div><input type="button" value="Calcular" onclick="real()">
-     <input type="reset" value="Eliminar">
-       </div>  
+    <label>Saturación de bases actual:</label>
+    <input type="text" name="numero2">
+
+    <label>CIC (meq/100g):</label>
+    <input type="text" name="numero3">
+
+    <label>PRNT:</label>
+    <input type="text" name="numero4">
+
+    <label>Necesidad de cal agrícola (t/ha):</label>
+    <input type="text" name="resultado" readonly>
+
+    <div class="form-buttons">
+      <input type="button" value="Calcular" onclick="real()">
+      <input type="reset" value="Eliminar">
+    </div>
   </form>
-  <br>
-<form name="MyForma"><font color="#424949">
-      <strong>Equivalente químico:</strong><input type="text" name="numero1" size="20"><br><br>
-     <strong> Eficiencia granulométrica:</strong><input type="text" name="numero2" value="95" size="20"><br><br>
-     <strong>PRNT:</strong> <input type="text" name="resultado" size="20"><br><br>
-     </font>
-     <div><input type="button" value="Calcular" onclick="prnt()">
-     <input type="reset" value="Eliminar">
-       </div>
 
-  </form>
   <script>
-     function real() {
-     var n1 = parseFloat(document.MyForm.numero1.value);
-     var n2 = parseFloat(document.MyForm.numero2.value);
-     var n3 = parseFloat(document.MyForm.numero3.value);
-     var n4 = parseFloat(document.MyForm.numero4.value);
-     document.MyForm.resultado.value=((((n1-n2)*n3)/10*n4)*1.5).toFixed(3);
-     }
-    </script>
-    <script>
-     function prnt() {
-     var n1 = parseFloat(document.MyForma.numero1.value);
-     var n2 = parseFloat(document.MyForma.numero2.value);
-     document.MyForma.resultado.value=((n1*n2)/100).toFixed(3);
-     }
-    </script>
-  </body>
- </div> 
-   </body>
-   </FONT>
-  </center>
-</html>
+    function real() {
+      var n1 = parseFloat(document.MyForm.numero1.value);
+      var n2 = parseFloat(document.MyForm.numero2.value);
+      var n3 = parseFloat(document.MyForm.numero3.value);
+      var n4 = parseFloat(document.MyForm.numero4.value);
+      if (!isNaN(n1) && !isNaN(n2) && !isNaN(n3) && !isNaN(n4)) {
+        document.MyForm.resultado.value = ((((n1 - n2) * n3) / 10 * n4) * 1.5).toFixed(3);
+      }
+    }
+  </script>
+</div>
+```

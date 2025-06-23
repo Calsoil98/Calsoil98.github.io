@@ -1,83 +1,126 @@
 ---
 title: "Gestión de nutrientes en suelo de Banano: Método Estático DOP"
-output: html_document
+output: 
+  html_document:
+    css: estilos.css
 ---
-<h3>Entrada de Datos de Nutrientes (mg/kg)</h3>
-<FONT FACE="times new roman">
+
 <style>
-  #grafico-container {
-    margin-top: 20px;
-    background-color: white; /* Fondo blanco para el contenedor de la gráfica */
-  }
+/* Este estilo afecta directamente al título del documento */
+h1.title {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Times New Roman", serif;
+}
 </style>
+
+<h3 style="text-align: center; color: rgba(255, 255, 255, 0.7); font-family: 'Times New Roman', serif;">
+  Entrada de Datos de Nutrientes (mg/kg)
+</h3>
 
 <style>
   body {
-    background-color: rgba(220, 237, 200);
+    background-color:  #148F77;
+    font-family: 'Times New Roman', serif;
   }
+
+  .contenedor-centro {
+    width: 1000px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 15px;
+  }
+
   #nutrientes-form {
     display: grid;
-    grid-template-columns: repeat(7, 1fr); /* Cambiado a 6 columnas */
-    grid-template-rows: repeat(2, auto); /* 3 filas automáticas */
+    grid-template-columns: repeat(6, 1fr);
     gap: 10px;
+    margin-bottom: 20px;
   }
+
   #nutrientes-form label {
     display: block;
+    font-size: 14px;
+    color: #0b4c42;
   }
+
   #nutrientes-form input {
     width: 100%;
+    padding: 4px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
   }
+
   #grafico-container {
     margin-top: 20px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  input[type="button"] {
+    grid-column: span 6;
+    padding: 8px 16px;
+    background-color: #0d5c50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  input[type="button"]:hover {
+    background-color: #0b4c42;
   }
 </style>
 
-<form id="nutrientes-form">
-  <label for="nitrogeno">Nitrógeno:</label>
-  <input type="number" id="nitrogeno" name="nitrogeno" value="0">
-  
-  <label for="fosforo">Fósforo:</label>
-  <input type="number" id="fosforo" name="fosforo" value="0">
-  
-  <label for="potasio">Potasio:</label>
-  <input type="number" id="potasio" name="potasio" value="0">
-  
-  <label for="calcio">Calcio:</label>
-  <input type="number" id="calcio" name="calcio" value="0">
-  
-  <label for="magnesio">Magnesio:</label>
-  <input type="number" id="magnesio" name="magnesio" value="0">
-  
-  <label for="azufre">Azufre:</label>
-  <input type="number" id="azufre" name="azufre" value="0">
-  
-  <label for="hierro">Hierro:</label>
-  <input type="number" id="hierro" name="hierro" value="0">
-  
-  <label for="manganeso">Manganeso:</label>
-  <input type="number" id="manganeso" name="manganeso" value="0">
-  
-  <label for="cobre">Cobre:</label>
-  <input type="number" id="cobre" name="cobre" value="0">
-  
-  <label for="zinc">Zinc:</label>
-  <input type="number" id="zinc" name="zinc" value="0">
-  
-  <label for="boro">Boro:</label>
-  <input type="number" id="boro" name="boro" value="0">
-  
-  <label for="sodio">Sodio:</label>
-  <input type="number" id="sodio" name="sodio" value="0">
-  
-  <label for="cloruro">Cloruro:</label>
-  <input type="number" id="cloruro" name="cloruro" value="0">
-  
-  <input type="button" value="Actualizar Gráfico" onclick="actualizarGrafico()" style="grid-column: span 6;">
-</form>
+<div class="contenedor-centro">
+  <form id="nutrientes-form">
+    <label for="nitrogeno">Nitrógeno:</label>
+    <input type="number" id="nitrogeno" name="nitrogeno" value="0">
 
-<h2>Gráfico de Nutrientes</h2>
-<div id="grafico-container">
-  <!-- El gráfico se generará aquí -->
+    <label for="fosforo">Fósforo:</label>
+    <input type="number" id="fosforo" name="fosforo" value="0">
+
+    <label for="potasio">Potasio:</label>
+    <input type="number" id="potasio" name="potasio" value="0">
+
+    <label for="calcio">Calcio:</label>
+    <input type="number" id="calcio" name="calcio" value="0">
+
+    <label for="magnesio">Magnesio:</label>
+    <input type="number" id="magnesio" name="magnesio" value="0">
+
+    <label for="azufre">Azufre:</label>
+    <input type="number" id="azufre" name="azufre" value="0">
+
+    <label for="hierro">Hierro:</label>
+    <input type="number" id="hierro" name="hierro" value="0">
+
+    <label for="manganeso">Manganeso:</label>
+    <input type="number" id="manganeso" name="manganeso" value="0">
+
+    <label for="cobre">Cobre:</label>
+    <input type="number" id="cobre" name="cobre" value="0">
+
+    <label for="zinc">Zinc:</label>
+    <input type="number" id="zinc" name="zinc" value="0">
+
+    <label for="boro">Boro:</label>
+    <input type="number" id="boro" name="boro" value="0">
+
+    <label for="sodio">Sodio:</label>
+    <input type="number" id="sodio" name="sodio" value="0">
+
+    <label for="cloruro">Cloruro:</label>
+    <input type="number" id="cloruro" name="cloruro" value="0">
+
+    <input type="button" value="Actualizar Gráfico" onclick="actualizarGrafico()">
+  </form>
+
+  <h3>Gráfico de Nutrientes</h3>
+  <div id="grafico-container"></div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

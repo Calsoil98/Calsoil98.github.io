@@ -365,7 +365,7 @@ $(document).ready(function () {
       <a href="fertilizantes.html">Cálculo de fertilizantes </a>
     </li>
     <li>
-      <a href="Dris1.html">Dris </a>
+      <a href="Driss.html">Dris</a>
     </li>
   </ul>
 </li>
@@ -432,118 +432,89 @@ $(document).ready(function () {
 </div>
 
 
-<html>
 <style>
 body {
   background-color: #148F77;
-  }
+  font-family: 'Times New Roman';
+}
+#round1, #coca {
+  width: 530px;
+  margin: auto;
+  background-color: rgba(209, 242, 235, 0.66);
+  border: 1px solid #148F77;
+  border-radius: 1em;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+h5, b, center {
+  color: #141414;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  margin: 5px 0;
+}
+input[type="button"], input[type="reset"] {
+  background-color: #117864;
+  color: white;
+  padding: 5px 15px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+}
 </style>
-<head>
-<center>
-<style type="text/css"> 
-#round1 { width: 530px; height: 570px; 
-         background-color: rgb(209, 242, 235 , 0.66); 
-         border: 1px solid #148F77; 
-         border-radius: 1em;} 
-</style>
-</head>
-<FONT FACE="times new roman">
-<body>
 <div id="round1">
-<body>
-<br>
 <center>
-<img src="2.JPG" height="160" />
+<img src="2.JPG" height="160px"><br> Fuente: Riego en frutales y vides
 </center>
-<center>
-Fuente:Riego en frutales y vides
-</center>
-<H5>
+<h5>
 <center>
 <b>Calcular masa del suelo</b>
-</CENTER>
-<br>
-</H5>
-<body>
-<form name="MyForm">
-<P >
-Ingrese 1Ha(m2):<input type="text" name="numero1" size="20"><br><br>
-Ingrese densidad aparente(T/m3)
-:<input type="text" name="numero2" size="20"><br><br> Ingrese
-profundidad(m):<input type="text" name="numero3" size="20"><br><br>
-Resultado en T: <input type="text" name="resultado" size="20"><br><br>
-<div>
-<input type="button" value="Calcular" onclick="masa()"><input type="reset" value="Eliminar">
-</div>
-</form>
-<script>
-     function masa() {
-     var n1 = parseFloat(document.MyForm.numero1.value);
-     var n2 = parseFloat(document.MyForm.numero2.value);
-     var n3 = parseFloat(document.MyForm.numero3.value);
-     document.MyForm.resultado.value=(n1*n2*n3);
-     }
-    </script>
-</body>
-</div>
-</body>
-</FONT>
 </center>
-</html>
-<p><br><br></p>
-<html>
-<div>
-<style>
-body {
-  background-color: #148F77;
-  }
-</style>
-<head>
-<center>
-<style type="text/css"> 
-
-#coca { width: 530px; height: 300px; 
-         background-color: rgb(209, 242, 235 , 0.66); 
-         border: 1px solid #148F77; 
-         border-radius: 1em;} 
-</style>
-</head>
-<FONT FACE="times new roman">
-<body>
+</h5>
+<form name="MyForm">
+<p>
+Ingrese 1Ha (m²):<br><input type="text" name="numero1">
+<p>
+Ingrese densidad aparente (T/m³):<br><input type="text" name="numero2">
+<p>
+Ingrese profundidad (m):<br><input type="text" name="numero3">
+<p>
+Resultado en Toneladas:<br><input type="text" name="resultado">
+<input type="button" value="Calcular" onclick="masa()">
+<input type="reset" value="Eliminar">
+</form>
+</div>
 <div id="coca">
-<body>
-<H5>
+<h5>
 <center>
-<b>Convertir (T) A (kg) </b>
-</CENTER>
-<br>
-</H5>
-<body>
+<b>Convertir (T) a (kg)</b>
+</center>
+</h5>
 <form name="MyForm2">
-<P >
-Ingrese T:<input type="text" name="numero4" size="20"><br><br> Ingrese
-1000 kG :<input type="text" name="numero5" size="20"><br><br> Resultado
-en Kg: <input type="text" name="resultado" size="20"><br><br>
-<div>
+<p>
+Ingrese T:<br><input type="text" name="numero4">
+<p>
+Ingrese 1000 Kg:<br><input type="text" name="numero5">
+<p>
+Resultado en Kg:<br><input type="text" name="resultado">
 <input type="button" value="Calcular" onclick="tone()">
 <input type="reset" value="Eliminar">
-</div>
 </form>
+</div>
 <script>
-     function tone() {
-     var n4 = parseFloat(document.MyForm2.numero4.value);
-     var n5 = parseFloat(document.MyForm2.numero5.value);
-     document.MyForm2.resultado.value=(n4*n5).toFixed(3);
-     }
-    </script>
-</body>
-</div>
-</body>
-</FONT>
-</center>
-</div>
-</html>
-</div>
+function masa() {
+  var n1 = parseFloat(document.MyForm.numero1.value);
+  var n2 = parseFloat(document.MyForm.numero2.value);
+  var n3 = parseFloat(document.MyForm.numero3.value);
+  document.MyForm.resultado.value = (n1 * n2 * n3).toFixed(3);
+}
+function tone() {
+  var n4 = parseFloat(document.MyForm2.numero4.value);
+  var n5 = parseFloat(document.MyForm2.numero5.value);
+  document.MyForm2.resultado.value = (n4 * n5).toFixed(3);
+}
+</script>
 </div>
 </div>
 

@@ -1,49 +1,71 @@
+```{=html}
+<div id="coca">
+  <div style="text-align:center;">
+    <h3 style="font-family:'Times New Roman';">Calcular Porosidad (%)</h3>
+  </div>
 
+  <form name="MyForm" style="font-family:'Times New Roman'; color:#424949; padding: 10px;">
+    <label><strong>Densidad aparente (g/cm³):</strong></label><br>
+    <input type="text" name="numero1" size="20"><br><br>
+    <label><strong>Densidad real (g/cm³):</strong></label><br>
+    <input type="text" name="numero2" size="20"><br><br>
+    <label><strong>Resultado de porosidad (%):</strong></label><br>
+    <input type="text" name="resultado" size="20"><br><br>
+    <div style="text-align:center;">
+      <input type="button" value="Calcular" onclick="porosidad()">
+      <input type="reset" value="Eliminar">
+    </div>
+  </form>
+</div>
 
-<html>
-<div>
+<script>
+  function porosidad() {
+    var n1 = parseFloat(document.MyForm.numero1.value);
+    var n2 = parseFloat(document.MyForm.numero2.value);
+    if (n2 > 0) {
+      document.MyForm.resultado.value = (100 - ((n1 / n2) * 100)).toFixed(3);
+    } else {
+      document.MyForm.resultado.value = "Error";
+    }
+  }
+</script>
+
 <style>
-body {
-  background-color: #148F77;
+  body {
+    background-color: #148F77;
+  }
+
+  #coca {
+    width: 410px;
+    margin: auto;
+    background-color: rgba(209, 242, 235, 0.9);
+    border: 1px solid #148F77;
+    border-radius: 1em;
+    padding: 20px;
+    margin-top: 40px;
+  }
+
+  input[type="text"] {
+    width: 95%;
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+
+  input[type="button"],
+  input[type="reset"] {
+    padding: 8px 16px;
+    margin: 5px;
+    border-radius: 6px;
+    background-color: #117A65;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  input[type="button"]:hover,
+  input[type="reset"]:hover {
+    background-color: #0e6655;
   }
 </style>
-
-<head>
-<center>
-<style type="text/css"> 
-
-#coca { width: 410px; height: 310px; 
-         background-color: rgb(209, 242, 235 , 0.66); 
-         border: 1px solid #148F77; 
-         border-radius: 1em;} 
-</style> 
-
-</head>
-<FONT FACE="times new roman">
-<body> 
-<div id="coca"> 
-   <body>  <H5><center><b>Calcular porosidad</b></CENTER><br> </H5>
-
-  <body>
-    <form name="MyForm"><P >
-     <font color="#424949"><strong> Densidad aparente :</strong><input type="text" name="numero1" size="20"><br><br>
-     <font color="#424949"><strong> Densidad real :</strong><input type="text" name="numero2" size="20"><br><br>
-     <font color="#424949"><strong> Resultado porosidad :</strong>        <input type="text" name="resultado" size="20"><br><br>
-    <div> <input type="button" value="Calcular" onclick="porosidad()">
-    <input type="reset" value="Eliminar"> </div>
-         
-
-  </form>
-
-  <script>
-     function porosidad() {
-     var n1 = parseFloat(document.MyForm.numero1.value);
-     var n2 = parseFloat(document.MyForm.numero2.value);
-     document.MyForm.resultado.value=(100-((n1/n2)*100)).toFixed(3);
-     }
-    </script>
-  </body>
- </FONT>
-  </center>
-  </div>
-</html>
+```

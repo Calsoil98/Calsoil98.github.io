@@ -365,7 +365,7 @@ $(document).ready(function () {
       <a href="fertilizantes.html">Cálculo de fertilizantes </a>
     </li>
     <li>
-      <a href="Dris1.html">Dris </a>
+      <a href="Driss.html">Dris</a>
     </li>
   </ul>
 </li>
@@ -601,7 +601,11 @@ Gráfico de Índices DRIS
         nutrientes.forEach(n1 => {
             nutrientes.forEach(n2 => {
                 if (n1 !== n2) {
+<<<<<<< HEAD
                     let relacionNombre = `log_${n1}/${n2}`;
+=======
+                    let relacionNombre = log_${n1}/${n2};
+>>>>>>> 502bea1 (2025_june)
                     let valorN1 = parseFloat(document.getElementById(n1).value) || 0;
                     let valorN2 = parseFloat(document.getElementById(n2).value) || 0;
 
@@ -621,8 +625,13 @@ Gráfico de Índices DRIS
 
                         flogValor = flogValor.toFixed(3);
 
+<<<<<<< HEAD
                         tbodyLog.innerHTML += `<tr><td>${relacionNombre}</td><td>${logRelacion}</td></tr>`;
                         tbodyFlog.innerHTML += `<tr><td>Flog_${n1}/${n2}</td><td>${flogValor}</td></tr>`;
+=======
+                        tbodyLog.innerHTML += <tr><td>${relacionNombre}</td><td>${logRelacion}</td></tr>;
+                        tbodyFlog.innerHTML += <tr><td>Flog_${n1}/${n2}</td><td>${flogValor}</td></tr>;
+>>>>>>> 502bea1 (2025_june)
                     }
                 }
             });
@@ -644,7 +653,11 @@ Gráfico de Índices DRIS
             let valorFlog = parseFloat(celdas[1].textContent.trim());
 
             nutrientes.forEach(nutriente => {
+<<<<<<< HEAD
                 if (relacion.includes(`Flog_${nutriente}/`)) {
+=======
+                if (relacion.includes(Flog_${nutriente}/)) {
+>>>>>>> 502bea1 (2025_june)
                     idris[nutriente].suma += valorFlog;
                     idris[nutriente].conteo++;
                 }
@@ -657,7 +670,11 @@ Gráfico de Índices DRIS
         let valores = [];
         nutrientes.forEach(nutriente => {
             let promedio = idris[nutriente].conteo > 0 ? (idris[nutriente].suma / idris[nutriente].conteo).toFixed(4) : "0";
+<<<<<<< HEAD
             idrisRow.innerHTML += `<td>${promedio}</td>`;
+=======
+            idrisRow.innerHTML += <td>${promedio}</td>;
+>>>>>>> 502bea1 (2025_june)
             valores.push(parseFloat(promedio));
         });
 

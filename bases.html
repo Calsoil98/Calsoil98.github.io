@@ -365,7 +365,7 @@ $(document).ready(function () {
       <a href="fertilizantes.html">Cálculo de fertilizantes </a>
     </li>
     <li>
-      <a href="Dris1.html">Dris </a>
+      <a href="Driss.html">Dris</a>
     </li>
   </ul>
 </li>
@@ -432,188 +432,133 @@ $(document).ready(function () {
 </div>
 
 
-<html>
+```{=html}
 <style>
 body {
   background-color: #148F77;
-  }
+  font-family: 'Times New Roman';
+}
+#coca12, #coca121 {
+  width: 400px;
+  margin: auto;
+  background-color: rgba(209, 242, 235, 0.66);
+  border: 1px solid #148F77;
+  border-radius: 1em;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+h5, b, center {
+  color: #424949;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  margin: 5px 0;
+}
+input[type="button"], input[type="reset"] {
+  background-color: #117864;
+  color: white;
+  padding: 5px 15px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+}
 </style>
-<head>
-<center>
-<style type="text/css"> 
-
-#coca12 { width: 400px; height: 1200px; 
-         background-color: rgb(209, 242, 235 , 0.66); 
-         border: 1px solid #148F77; 
-         border-radius: 1em;} 
-</style>
-</head>
-<FONT FACE="times new roman">
-<body>
 <div id="coca12">
-<body>
-<br>
 <center>
-<img src="conversion.JPG" height="160" />
+<img src="conversion.JPG" height="160px"><br> Fuente: Ing. Diego R.
+Villaseñor Ortiz
 </center>
+<h5>
 <center>
-Fuente:Ing.Diego R. Villaseñor Ortiz
+<b>Cálculo de bases</b>
 </center>
-<body>
-<br>
-<H5>
-<center>
-<b>Calculo de bases</b>
-</CENTER>
-<br>
-</H5>
-</body>
-<body>
+</h5>
 <form name="MyForm">
-<P >
-Ingrese calcio (mq):<input type="text" name="numero1" size="20"><br><br>
-Ingrese
-calcio(mg/Kg):<input type="text" name="numero2" size="20"><br><br>
-Resultado en (mg/Kg)Ca:
-<input type="text" name="resultado" size="20"><br><br>
-<div>
+<p>
+Ingrese calcio (mq):<br><input type="text" name="numero1">
+<p>
+Ingrese calcio (mg/Kg):<br><input type="text" name="numero2">
+<p>
+Resultado en (mg/Kg) Ca:<br><input type="text" name="resultado">
 <input type="button" value="Calcular" onclick="ca()">
 <input type="reset" value="Eliminar">
-</div>
-<br>
 </form>
-<script>
-     function ca() {
-     var n1 = parseFloat(document.MyForm.numero1.value);
-     var n2 = parseFloat(document.MyForm.numero2.value);
-     document.MyForm.resultado.value=(n1*n2).toFixed(3);
-     }
-    </script>
-<body>
 <form name="MyForm2">
-<P>
-Ingrese magnesio
-(mq):<input type="text" name="numero3" size="20"><br><br> Ingrese
-magnesio(mg/Kg):<input type="text" name="numero4" size="20"><br><br>
-Resultado en (mg/Kg)Mg:
-<input type="text" name="resultado" size="20"><br><br>
-<div>
+<p>
+Ingrese magnesio (mq):<br><input type="text" name="numero3">
+<p>
+Ingrese magnesio (mg/Kg):<br><input type="text" name="numero4">
+<p>
+Resultado en (mg/Kg) Mg:<br><input type="text" name="resultado">
 <input type="button" value="Calcular" onclick="Mg()">
 <input type="reset" value="Eliminar">
-</div>
 </form>
-<br>
-<script>
-     function Mg() {
-     var n3 = parseFloat(document.MyForm2.numero3.value);
-     var n4 = parseFloat(document.MyForm2.numero4.value);
-     document.MyForm2.resultado.value=(n3*n4).toFixed(3);
-     }
-    </script>
-<body>
 <form name="MyForm3">
-<P >
-Ingrese sodio (mq):<input type="text" name="numero5" size="20"><br><br>
-Ingrese sodio
-(mg/Kg):<input type="text" name="numero6" size="20"><br><br> Resultado
-en (mg/Kg)Na: <input type="text" name="resultado" size="20"><br><br>
-<div>
+<p>
+Ingrese sodio (mq):<br><input type="text" name="numero5">
+<p>
+Ingrese sodio (mg/Kg):<br><input type="text" name="numero6">
+<p>
+Resultado en (mg/Kg) Na:<br><input type="text" name="resultado">
 <input type="button" value="Calcular" onclick="so()">
 <input type="reset" value="Eliminar">
-</div>
 </form>
-<br>
-<script>
-     function so() {
-     var n5 = parseFloat(document.MyForm3.numero5.value);
-     var n6 = parseFloat(document.MyForm3.numero6.value);
-     document.MyForm3.resultado.value=(n5*n6).toFixed(3);
-     }
-    </script>
-<body>
 <form name="MyForm4">
-<P >
-Ingrese potasio
-(mq):<input type="text" name="numero7" size="20"><br><br> Ingrese
-potasio (mg/Kg):<input type="text" name="numero8" size="20"><br><br>
-Resultado en (mg/Kg)K:
-<input type="text" name="resultado" size="20"><br><br>
-<div>
+<p>
+Ingrese potasio (mq):<br><input type="text" name="numero7">
+<p>
+Ingrese potasio (mg/Kg):<br><input type="text" name="numero8">
+<p>
+Resultado en (mg/Kg) K:<br><input type="text" name="resultado">
 <input type="button" value="Calcular" onclick="POTA()">
 <input type="reset" value="Eliminar">
-</div>
 </form>
-<br>
-<script>
-     function POTA() {
-     var n7 = parseFloat(document.MyForm4.numero7.value);
-     var n8 = parseFloat(document.MyForm4.numero8.value);
-     document.MyForm4.resultado.value=(n7*n8).toFixed(3);
-     }
-    </script>
-</body>
 </div>
-</body>
-</FONT>
-</center>
-</html>
-<div id="section" class="section level56">
-<p class="heading"></p>
-<br>
-<html>
-<style>
-body {
-  background-color: #148F77;
-  }
-</style>
-<head>
-<center>
-<style type="text/css"> 
-
-#coca121 { width: 400px; height: 320px; 
-         background-color: rgb(209, 242, 235 , 0.66); 
-         border: 1px solid #148F77; 
-         border-radius: 1em;} 
-</style>
-</head>
-<FONT FACE="times new roman">
-<body>
 <div id="coca121">
-<body>
-<br>
-<H5>
+<h5>
 <center>
-<b>Convertir de mg/Kg a Kg(/Ha)</b>
-</CENTER>
-<br>
-</H5>
-</body>
-<body>
+<b>Convertir de mg/Kg a Kg/Ha</b>
+</center>
+</h5>
 <form name="MyForm5">
-<P >
-Ingrese base(mg/Kg):<input type="text" name="numero4" size="20"><br><br>
-Ingrese factor :<input type="text" name="numero5" size="20"><br><br>
-Resultado en Kg(/Ha):
-<input type="text" name="resultado" size="20"><br><br>
-<div>
+<p>
+Ingrese base (mg/Kg):<br><input type="text" name="numero4">
+<p>
+Ingrese factor:<br><input type="text" name="numero5">
+<p>
+Resultado en Kg/Ha:<br><input type="text" name="resultado">
 <input type="button" value="Calcular" onclick="fa()">
 <input type="reset" value="Eliminar">
-</div>
 </form>
+</div>
 <script>
-     function fa() {
-     var n4 = parseFloat(document.MyForm5.numero4.value);
-     var n5 = parseFloat(document.MyForm5.numero5.value);
-     document.MyForm5.resultado.value=(n4*n5).toFixed(3);
-     }
-    </script>
-</body>
-</div>
-</body>
-</FONT>
-</center>
-</html>
-</div>
+function ca() {
+  var n1 = parseFloat(document.MyForm.numero1.value);
+  var n2 = parseFloat(document.MyForm.numero2.value);
+  document.MyForm.resultado.value = (n1 * n2).toFixed(3);
+}
+function Mg() {
+  var n3 = parseFloat(document.MyForm2.numero3.value);
+  var n4 = parseFloat(document.MyForm2.numero4.value);
+  document.MyForm2.resultado.value = (n3 * n4).toFixed(3);
+}
+function so() {
+  var n5 = parseFloat(document.MyForm3.numero5.value);
+  var n6 = parseFloat(document.MyForm3.numero6.value);
+  document.MyForm3.resultado.value = (n5 * n6).toFixed(3);
+}
+function POTA() {
+  var n7 = parseFloat(document.MyForm4.numero7.value);
+  var n8 = parseFloat(document.MyForm4.numero8.value);
+  document.MyForm4.resultado.value = (n7 * n8).toFixed(3);
+}
+function fa() {
+  var n4 = parseFloat(document.MyForm5.numero4.value);
+  var n5 = parseFloat(document.MyForm5.numero5.value);
+  document.MyForm5.resultado.value = (n4 * n5).toFixed(3);
+}
+</script>
 </div>
 </div>
 

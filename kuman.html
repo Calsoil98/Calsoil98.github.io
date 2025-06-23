@@ -365,7 +365,7 @@ $(document).ready(function () {
       <a href="fertilizantes.html">Cálculo de fertilizantes </a>
     </li>
     <li>
-      <a href="Dris1.html">Dris </a>
+      <a href="Driss.html">Dris</a>
     </li>
   </ul>
 </li>
@@ -432,83 +432,83 @@ $(document).ready(function () {
 </div>
 
 
-<html>
 <style>
-body {
-  background-color: #148F77;
+  body {
+    background-color: #148F77;
+    font-family: Arial, sans-serif;
+  }
+  #round {
+    margin: 30px auto;
+    width: 800px;
+    background-color: rgba(209, 242, 235, 0.9);
+    border: 1px solid #148F77;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+  h5, li {
+    color: #0b4c42;
+    font-family: 'Times New Roman', serif;
+    font-size: 16px;
+    text-align: justify;
+  }
+  input[type="text"] {
+    width: 120px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  button, input[type="button"], input[type="reset"] {
+    padding: 6px 12px;
+    margin: 4px;
+    border-radius: 5px;
+    background-color: #0d5c50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  button:hover, input[type="button"]:hover, input[type="reset"]:hover {
+    background-color: #0b4c42;
   }
 </style>
-<head>
-<center>
-<style type="text/css"> 
 
-#round { width: 800px; height: 500px; 
-         background-color: rgb(209, 242, 235 , 0.66); 
-         border: 1px solid #148F77; 
-         border-radius: 1em;} 
-</style>
-</head>
-<FONT FACE="times new roman">
-<body>
 <div id="round">
-<H5>
-<center>
-<b>La fórmula que Kumar et al. (2002), propone estimar el área foliar
-total de una planta</b>
-</CENTER>
-<br>
-</H5>
-<H5 align="left">
-<ul>
-<li>
-Donde TLA es el área foliar total de la planta
-</li>
-<li>
-N es el número de hojas en la planta (y también el número foliar de la
-hoja más joven cuando las hojas son numeradas desde la más vieja (hoja
-1) hasta la más joven (hoja N)
-</li>
-<li>
-L y B son el largo y el ancho de la tercera hoja más joven (AN-3)
-</li>
-<li>
-0.8 es el factor de proporcionalidad propuesto por Murray (1960).
-</li>
-<li>
-El nuevo factor es el coeficiente con el valor de 0.662.
-</li>
-</ul>
-</H5>
-<body>
-<center>
-<form name="MyForma">
-<font color="#424949">
-<strong>L:</strong><input type="text" name="numero1" size="20"><br><br>
-<strong> B:</strong><input type="text" name="numero2" size="20"><br><br>
-<strong>N:</strong><input type="text" name="numero3" size="20"><br><br>
-<strong>TLA:</strong>
-<input type="text" name="resultado" size="20"><br><br></font>
-<div>
-<input type="button" value="Calcular" onclick="kuman()">
-<input type="reset" value="Eliminar">
+  <h5><b>La fórmula que Kumar et al. (2002) propone para estimar el área foliar total de una planta:</b></h5>
+  <ul align="left">
+    <li>TLA (Total Leaf Area) es el área foliar total de la planta.</li>
+    <li>N es el número de hojas en la planta (y también el número foliar de la hoja más joven cuando las hojas son numeradas desde la más vieja (hoja 1) hasta la más joven (hoja N).</li>
+    <li>L y B representan el largo y el ancho de la tercera hoja más joven (llamada AN-3).</li>
+    <li>El valor 0.8 corresponde a un factor de proporcionalidad propuesto por Murray (1960) .</li>
+    <li>El valor 0.662 es un coeficiente de ajuste empírico para mejorar la precisión del modelo propuesto.</li>
+  </ul>
+
+  <form name="MyForma">
+    <p><strong>L:</strong><br>
+    <input type="text" name="numero1"></p>
+    <p><strong>B:</strong><br>
+    <input type="text" name="numero2"></p>
+    <p><strong>N:</strong><br>
+    <input type="text" name="numero3"></p>
+    <p><strong>TLA:</strong><br>
+    <input type="text" name="resultado" readonly></p>
+    <input type="button" value="Calcular" onclick="kuman()">
+    <input type="reset" value="Eliminar">
+  </form>
 </div>
-</form>
-<p><br></p>
+
 <script>
-     function kuman() {
-     var n1 = parseFloat(document.MyForma.numero1.value);
-     var n2 = parseFloat(document.MyForma.numero2.value);
-     var n3 = parseFloat(document.MyForma.numero3.value);
-     document.MyForma.resultado.value=(n1*n2*n3*0.80*0.662).toFixed(3);
-     }
-    </script>
-</body>
-</div>
-</body>
-</FONT>
-</center>
-</html>
-</div>
+  function kuman() {
+    var n1 = parseFloat(document.MyForma.numero1.value);
+    var n2 = parseFloat(document.MyForma.numero2.value);
+    var n3 = parseFloat(document.MyForma.numero3.value);
+    if (isNaN(n1) || isNaN(n2) || isNaN(n3)) {
+      alert("Por favor ingrese todos los valores válidos.");
+      return;
+    }
+    document.MyForma.resultado.value = (n1 * n2 * n3 * 0.80 * 0.662).toFixed(3);
+  }
+</script>
 
 
 
