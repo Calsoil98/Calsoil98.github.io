@@ -1,5 +1,4 @@
 
-```{=html}
 <style>
 body {
   background-color: #148F77;
@@ -28,7 +27,7 @@ input[type="button"], input[type="reset"] {
   border-radius: 5px;
 }
 h5, b, center {
-  color: #424949;
+  color: #F9FDFB;
 }
 </style>
 

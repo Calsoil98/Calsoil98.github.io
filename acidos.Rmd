@@ -1,34 +1,37 @@
 ```{=html}
 <style>
   body {
-    background-color: #117864;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+    background-color: #148F77;
   }
 
-  #round {
-    margin: auto;
-    margin-top: 40px;
-    width: 80%;
-    max-width: 900px;
-    background-color: rgba(209, 242, 235, 0.66);
-    border-radius: 20px;
-    padding: 30px;
-  }
+#round {
+  margin: auto;
+  margin-top: 40px;
+  width: 95%; /* Cambia de 80% a 95% para pantallas pequeñas */
+  max-width: 850px;
+  background-color: rgba(209, 242, 235, 0.66);
+  border-radius: 20px;
+  padding: 30px;
+  box-sizing: border-box; /* Importante para que padding no sume al ancho */
+  overflow-x: auto; /* Añade scroll horizontal si fuera necesario */
+}
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 25px;
-    background-color: white;
-  }
 
-  th, td {
-    border: 1px solid #1B4F72;
-    padding: 8px;
-    text-align: center;
-  }
+table {
+  width: 100%; /* Hace que la tabla ocupe todo el ancho disponible */
+  border-collapse: collapse;
+  margin-bottom: 25px;
+  background-color: white;
+  table-layout: fixed; /* Hace que las celdas se ajusten mejor */
+}
+
+th, td {
+  border: 1px solid #1B4F72;
+  padding: 8px;
+  text-align: center;
+  word-wrap: break-word; /* Permite que el contenido largo se divida en líneas */
+}
+
 
   th {
     background-color: #2E86C1;

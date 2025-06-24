@@ -2,7 +2,7 @@
 title: "Gestión de nutrientes en suelo de Banano: Método Estático DOP"
 output: 
   html_document:
-    css: estilos.css
+    css: estilo-personalizado.css
 ---
 
 <style>

@@ -1,0 +1,113 @@
+/* --------------------------
+   General: Fuente y fondo
+--------------------------- */
+body {
+  font-family: "Segoe UI", "Roboto", sans-serif;
+  background-color: #F9FDFB;
+}
+
+/* --------------------------
+   Navbar principal
+--------------------------- */
+.navbar {
+  background-color: #145A32 !important;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  border-bottom: 2px solid #28B463;
+}
+
+.navbar-brand {
+  color: #E8F6F3 !important;
+  font-weight: bold;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+}
+
+/* Título hover (opcional) */
+.navbar-brand:hover {
+  color: #ABEBC6 !important;
+  text-decoration: none;
+}
+
+/* Enlaces del menú principal */
+.navbar-nav > li > a {
+  color: #ABEBC6 !important;
+  font-weight: 500;
+  padding: 10px 14px;
+}
+
+/* Hover en el menú principal */
+.navbar-nav > li > a:hover {
+  background-color: #1E8449 !important;
+  color: white !important;
+  border-radius: 5px;
+}
+
+/* Menú activo */
+.navbar-nav > .active > a {
+  background-color: #196F3D !important;
+  color: #fff !important;
+  border-radius: 5px;
+}
+
+/* --------------------------
+   Menús desplegables
+--------------------------- */
+.dropdown-menu {
+  background-color: #ffffff;
+  border: 1px solid #D5F5E3;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border-radius: 6px;
+}
+
+.dropdown-menu > li > a {
+  color: #117A65 !important;
+  font-weight: 500;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu > li > a:hover {
+  background-color: #ABEBC6 !important;
+  color: #0B5345 !important;
+  border-radius: 4px;
+}
+
+/* --------------------------
+   Botón personalizado CalSoil
+--------------------------- */
+.btn-calsoil {
+  background-color: #28B463;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn-calsoil:hover {
+  background-color: #1D8348;
+  cursor: pointer;
+}
+
+/* --------------------------
+   Títulos y secciones
+--------------------------- */
+h1, h2, h3 {
+  color: #117864;
+  font-weight: bold;
+}
+
+/* --------------------------
+   Enlaces normales
+--------------------------- */
+a {
+  color: #148F77 !important;
+}
+a:hover {
+  color: #0E6251 !important;
+  text-decoration: underline;
+}

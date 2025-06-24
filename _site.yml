@@ -1,8 +1,7 @@
 name: "my-website"
 output_dir: "."
 navbar:
-  title: <b> CalSoil </b>
-  icon: fa fa-leaf
+  title: "<b>CalSoil</b> <span style='font-size:18px; vertical-align:middle;'>🍂</span>"
   href: home2.html
   left:
     - text: "Cálculo de textura "
@@ -103,6 +102,7 @@ navbar:
     - text: "Erick Fernando Cuenca Saquicaray "     
 output:
   html_document:
-    theme: paper
-    highlight: textmate
-
+    theme: flatly
+    css: estilo-personalizado.css
+    includes:
+      in_header: header.html

@@ -63,6 +63,11 @@
     <tr><td>Kg CaO/ha/año</td><td>1000</td><td>500</td><td>0</td></tr>
     <tr><td>Azufre (mg/kg)</td><td>&lt;12</td><td>12-20</td><td>&gt;20</td></tr>
     <tr><td>Kg S/ha/año</td><td>100</td><td>50</td><td>0</td></tr>
+    <tr><td>Zinc (mg/kg)</td><td>&lt;3</td><td>3-15</td><td>&gt;15</td></tr>
+    <tr><td>Kg Zn/ha/año</td><td>5</td><td>2.5</td><td>0</td></tr>
+    <tr><td>Boro (mg/kg)</td><td>&lt;0.2</td><td>0.2-0.7</td><td>&gt;0.7</td></tr>
+    <tr><td>Kg Zn/ha/año</td><td>2</td><td>1</td><td>0</td></tr>
+    <tr><td>Nitrogeno(mg/kg)</td><td>300</td><td>350</td><td>450</td></tr>
   </table>
 
   <h2>Evaluación de nutrientes por rangos de adecuación</h2>

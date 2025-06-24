@@ -1,5 +1,4 @@
 
-```{=html}
 <style>
 body {
   background-color: #148F77;
@@ -15,7 +14,7 @@ body {
   margin-bottom: 30px;
 }
 h5, b, center {
-  color: #424949;
+  color: #F9FDFB;
 }
 input[type="text"] {
   width: 100%;
