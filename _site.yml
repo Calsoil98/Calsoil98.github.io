@@ -56,6 +56,8 @@ navbar:
       icon: fa-thin fa-sliders
       href: home22.html
       menu:
+        - text: "DOP suelo"
+          href: DOP.html
         - text: "Conversión de bases(Ca,K,Na,Mg)"
           href: bases.html
         - text: "Masa del suelo"
@@ -79,17 +81,17 @@ navbar:
       icon: fa-thin fa-banana
       href: home32.html
       menu:
-        - text: "NDVI"
-          href: NDVI.html
         - text: "Ratio"
           href: ratio.html
+        - text: "Merma"
+          href: Merma.html
         - text: "El método del ‘nuevo factor’"
           href: kuman.html
+        - text: "IAF’"
+          href: IAF.html
         - text: "Emisión Foliar"
           href: emision.html
-        - text: "DOP suelo"
-          href: DOP.html
-        - text: "Fotografias y videos"
+        - text: "Conceptos"
           href: anexos.html
     - text: "Enmiendas "
       icon: fa-thin fa-banana
@@ -99,6 +101,12 @@ navbar:
           href: acidos.html
         - text: "Suelos sódicos"
           href: alcalino.html
+    - text: "Índices"
+      icon: fa-thin fa-banana
+      href: home40.html
+      menu:
+        - text: "NDVI"
+          href: NDVI.html
     - text: "Erick Fernando Cuenca Saquicaray "     
 output:
   html_document:

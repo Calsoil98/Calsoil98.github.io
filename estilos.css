@@ -1,0 +1,141 @@
+/* --------------------------
+   General: Fuente y fondo
+--------------------------- */
+body {
+  font-family: "Segoe UI", "Roboto", sans-serif;
+  background-color: #F9FDFB;
+}
+
+/* --------------------------
+   Navbar principal
+--------------------------- */
+.navbar {
+  background-color: #145A32 !important;  /* Verde oscuro */
+  padding-top: 4px;
+  padding-bottom: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  border-bottom: 2px solid #28B463;
+}
+
+.navbar-brand {
+  color: #E8F6F3 !important;
+  font-weight: bold;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+}
+
+/* Título hover (opcional) */
+.navbar-brand:hover {
+  color: #ABEBC6 !important;
+  text-decoration: none;
+}
+
+/* Enlaces del menú principal */
+.navbar-nav > li > a {
+  color: #ABEBC6 !important;
+  font-weight: 500;
+  padding: 10px 14px;
+}
+
+/* Hover en el menú principal */
+.navbar-nav > li > a:hover {
+  background-color: #1E8449 !important;
+  color: white !important;
+  border-radius: 5px;
+}
+
+/* Menú activo */
+.navbar-nav > .active > a {
+  background-color: #196F3D !important;
+  color: #fff !important;
+  border-radius: 5px;
+}
+
+/* --------------------------
+   Menús desplegables
+--------------------------- */
+.dropdown-menu {
+  background-color: #ffffff;
+  border: 1px solid #D5F5E3;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border-radius: 6px;
+}
+
+.dropdown-menu > li > a {
+  color: #117A65 !important;
+  font-weight: 500;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu > li > a:hover {
+  background-color: #ABEBC6 !important;
+  color: #0B5345 !important;
+  border-radius: 4px;
+}
+
+/* --------------------------
+   Botón personalizado CalSoil
+--------------------------- */
+.btn-calsoil {
+  background-color: #28B463;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn-calsoil:hover {
+  background-color: #1D8348;
+  cursor: pointer;
+}
+
+/* --------------------------
+   Botones de nutrientes (menú de nutrientes)
+--------------------------- */
+/* --------------------------
+   Estilo para los botones de nutrientes (menú de nutrientes)
+--------------------------- */
+.nutrient-btn {
+    background-color: #28B463;  /* Verde para los botones de nutrientes */
+    color: white;
+    padding: 20px 40px;  /* Aumentar el tamaño de los botones */
+    margin: 15px;  /* Más espacio entre los botones */
+    border: none;
+    cursor: pointer;
+    border-radius: 60px;  /* Bordes más redondeados */
+    font-weight: 600;
+    font-size: 2em;  /* Aumentar el tamaño del texto */
+    transition: background-color 0.3s ease, transform 0.3s ease;  /* Transiciones para color y escala */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Sombra suave */
+}
+
+/* Hover de los botones de nutrientes */
+.nutrient-btn:hover {
+    background-color: #1D8348;  /* Verde más oscuro en hover */
+    color: white;
+    transform: scale(2);  /* Efecto de escala para agrandar el botón */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);  /* Sombra más intensa en hover */
+}
+
+/* Botón de nutrientes activo */
+.nutrient-btn.active {
+    background-color: #196F3D;  /* Fondo verde más oscuro cuando está activo */
+    color: white;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);  /* Sombra más intensa cuando está activo */
+}
+
+/* --------------------------
+   Barra de navegación principal
+--------------------------- */
+#navbar {
+    background-color: #145A32 !important;  /* Verde oscuro */
+    padding: 10px;
+    border-radius: 6px;  /* Sin borde redondeado para evitar efectos no deseados */
+    box-shadow: none;  /* Eliminar sombra */
+    margin: 0;  /* Eliminar márgenes */
+    width: 100%;  /* Asegurarse de que ocupe el ancho completo */
+}

@@ -1,0 +1,83 @@
+<style>
+body {
+  background-color: #148F77;
+  font-family: "Times New Roman", serif;
+  color: #424949;
+}
+
+#round {
+  width: 450px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: rgba(209, 242, 235, 0.66);
+  border: 2px solid #148F77;
+  border-radius: 1em;
+  box-shadow: 0 0 10px #0e6655;
+}
+
+h2 {
+  text-align: center;
+  color: #0b5345;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input[type="text"] {
+  width: 90%;
+  padding: 6px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+}
+
+input[type="button"], input[type="reset"] {
+  margin-top: 15px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0b5345;
+  color: white;
+  cursor: pointer;
+}
+
+input[type="button"]:hover, input[type="reset"]:hover {
+  background-color: #117a65;
+}
+</style>
+
+<div id="round">
+  <h2>Calcular IAF </h2>
+  <form name="MyForm">
+    <label><strong>AF : Área foliar (m²):</strong></label>
+    <input type="text" name="AF" placeholder="Ingrese el área foliar en m²">
+
+    <label><strong>Av : Espacio por planta (m²):</strong></label>
+    <input type="text" name="Av" placeholder="Ingrese el espacio por planta en m²">
+
+    <label><strong>IAF (Índice de Área Foliar):</strong></label>
+    <input type="text" name="resultado" readonly>
+
+    <input type="button" value="Calcular" onclick="calcularIAF()">
+    <input type="reset" value="Eliminar">
+  </form>
+</div>
+
+<script>
+function calcularIAF() {
+  var AF = parseFloat(document.MyForm.AF.value);
+  var Av = parseFloat(document.MyForm.Av.value);
+  
+  if (!isNaN(AF) && !isNaN(Av) && Av !== 0) {
+    // Calculamos el IAF
+    var IAF = AF / Av;
+    
+    // Mostramos el resultado
+    document.MyForm.resultado.value = IAF.toFixed(2);
+  } else {
+    document.MyForm.resultado.value = "Error: Valores no válidos";
+  }
+}
+</script>

@@ -1,0 +1,90 @@
+<style>
+body {
+  background-color: #148F77;
+  font-family: "Times New Roman", serif;
+  color: #424949;
+}
+
+#round {
+  width: 450px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: rgba(209, 242, 235, 0.66);
+  border: 2px solid #148F77;
+  border-radius: 1em;
+  box-shadow: 0 0 10px #0e6655;
+}
+
+h2 {
+  text-align: center;
+  color: #0b5345;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input[type="text"] {
+  width: 90%;
+  padding: 6px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+}
+
+input[type="button"], input[type="reset"] {
+  margin-top: 15px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0b5345;
+  color: white;
+  cursor: pointer;
+}
+
+input[type="button"]:hover, input[type="reset"]:hover {
+  background-color: #117a65;
+}
+</style>
+
+<div id="round">
+  <h2>Calcular merma 12 %</h2>
+  <form name="MyForm">
+    <label><strong>RC : Racimos cortados:</strong></label>
+    <input type="text" name="RC" placeholder="Ingrese valor de RC">
+
+    <label><strong>PPR :Peso promedio bruto del racimo (kg):</strong></label>
+    <input type="text" name="PPR" placeholder="Ingrese valor de PPR">
+
+    <label><strong>Peso neto de cajas elaboradas(kg):</strong></label>
+    <input type="text" name="totalKilos" placeholder="Ingrese total de kilos">
+
+    <label><strong>Resultado:</strong></label>
+    <input type="text" name="resultado" readonly>
+
+    <input type="button" value="Calcular" onclick="calcular()">
+    <input type="reset" value="Eliminar">
+  </form>
+</div>
+
+<script>
+function calcular() {
+  var RC = parseFloat(document.MyForm.RC.value);
+  var PPR = parseFloat(document.MyForm.PPR.value);
+  var totalKilos = parseFloat(document.MyForm.totalKilos.value);
+  
+  if (!isNaN(RC) && !isNaN(PPR) && !isNaN(totalKilos)) {
+  var numerator = (RC * (PPR-(PPR*0.12))) - totalKilos;
+    var denominator = RC * (PPR-(PPR*0.12));
+    if (denominator !== 0) {
+      var result = (numerator / denominator) * 100;
+      document.MyForm.resultado.value = result.toFixed(2);
+    } else {
+      document.MyForm.resultado.value = "Error: División por cero";
+    }
+  } else {
+    document.MyForm.resultado.value = "Error: Valores no válidos";
+  }
+}
+</script>

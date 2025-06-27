@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario con Mapa Interactivo</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-draw/dist/leaflet.draw.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"/>
+</head>
+<body>
+  <h3>Formulario con Mapa Interactivo</h3>
+  
+  <div id="form-container">
+    <label><strong>Superficie a sembrar (m²):</strong></label><br>
+    <input type="number" id="superficie" placeholder="Ej. 1000"><br><br>
+
+    <label><strong>Distancia por plantas (m):</strong></label><br>
+    <input type="number" id="distancia_plantas" placeholder="Ej. 2"><br><br>
+
+    <label><strong>Distancia entre hileras (m):</strong></label><br>
+    <input type="number" id="distancia_hileras" placeholder="Ej. 4"><br><br>
+
+    <button onclick="calcular()">Calcular</button><br><br>
+    <p id="resultado"></p>
+  </div>
+
+  <!-- Mapa -->
+  <div id="map" style="height: 400px;"></div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-draw/dist/leaflet.draw.js"></script>
+  <script src="https://unpkg.com/@turf/turf/turf.min.js"></script>
+  <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+
+  <script>
+    // Inicializar mapa
+    const map = L.map('map').setView([20.01, 2], 2); // Centrado global
+
+    // Agregar capa base (capa satelital de ESRI)
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+      attribution: '&copy; <a href="https://www.esri.com/">Esri</a>',
+      maxZoom: 18
+    }).addTo(map);
+
+    // Barra de búsqueda de ubicación
+    L.Control.geocoder().addTo(map);
+
+    // Inicializar el dibujo en el mapa
+    const drawnItems = new L.FeatureGroup();
+    map.addLayer(drawnItems);
+
+    const drawControl = new L.Control.Draw({
+      edit: {
+        featureGroup: drawnItems
+      },
+      draw: {
+        polygon: true,
+        polyline: false,
+        rectangle: false,
+        circle: false
+      }
+    });
+    map.addControl(drawControl);
+
+    // Función cuando se dibuja el polígono
+    map.on('draw:created', function (e) {
+      const layer = e.layer;
+      drawnItems.addLayer(layer);
+
+      // Calcular el área del polígono
+      const polygonGeoJSON = layer.toGeoJSON();
+      const area = turf.area(polygonGeoJSON); // Área en metros cuadrados
+      document.getElementById('superficie').value = area.toFixed(2); // Actualizar el formulario con el área
+
+      // Calcular y agregar puntos para las plantas en el polígono
+      const distancia_plantas = parseFloat(document.getElementById('distancia_plantas').value);
+      const distancia_hileras = parseFloat(document.getElementById('distancia_hileras').value);
+
+      if (distancia_plantas && distancia_hileras) {
+        const coords = turf.coordAll(polygonGeoJSON);
+        const bbox = turf.bbox(polygonGeoJSON); // Obtener la caja delimitadora del polígono
+
+        // Crear una cuadrícula de hileras en el área
+        const cellWidth = distancia_plantas; // Distancia entre plantas
+        const cellHeight = distancia_hileras; // Distancia entre hileras
+        const grid = turf.squareGrid(bbox, cellWidth, { units: 'meters' });
+
+        // Agregar los puntos de la cuadrícula dentro del polígono con icono pequeño
+        grid.features.forEach(function (cell) {
+          if (turf.booleanPointInPolygon(cell, polygonGeoJSON)) { // Verificar que el punto esté dentro del polígono
+            const center = turf.center(cell); // Centro de cada celda de la cuadrícula
+            const lat = center.geometry.coordinates[1];
+            const lng = center.geometry.coordinates[0];
+            
+            // Icono pequeño para las plantas
+            const plantIcon = L.icon({
+              iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png', // Icono predeterminado
+              iconSize: [5, 5], // Tamaño pequeño
+              iconAnchor: [2, 2], // Centrado
+              popupAnchor: [0, -10]
+            });
+            
+            // Agregar marcador en el mapa para cada punto de la cuadrícula
+            L.marker([lat, lng], { icon: plantIcon }).addTo(map);
+          }
+        });
+
+        // Calcular el número de plantas
+        const plantasPorHectarea = area / (distancia_plantas * distancia_hileras);
+        document.getElementById('resultado').textContent = `Número de plantas por hectárea: ${Math.round(plantasPorHectarea)}`;
+      }
+    });
+
+    // Función de cálculo de plantas por hectárea
+    function calcular() {
+      const superficie = parseFloat(document.getElementById('superficie').value);
+      const distancia_plantas = parseFloat(document.getElementById('distancia_plantas').value);
+      const distancia_hileras = parseFloat(document.getElementById('distancia_hileras').value);
+
+      if (!isNaN(superficie) && !isNaN(distancia_plantas) && !isNaN(distancia_hileras)) {
+        const plantasPorHectarea = superficie / (distancia_plantas * distancia_hileras);
+        document.getElementById('resultado').textContent = `Número de plantas por hectárea: ${Math.round(plantasPorHectarea)}`;
+      } else {
+        document.getElementById('resultado').textContent = 'Por favor, ingrese todos los valores correctamente.';
+      }
+    }
+  </script>
+</body>
+</html>
