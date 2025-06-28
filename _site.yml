@@ -56,6 +56,8 @@ navbar:
       icon: fa-thin fa-sliders
       href: home22.html
       menu:
+        - text: "Mecánismos"
+          href: nut.html
         - text: "Ingreso de datos"
           href: rem.html
         - text: "DOP suelo"

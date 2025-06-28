@@ -1,0 +1,83 @@
+
+<!-- ESTILOS -->
+<style>
+  body {
+    background-color:  #F5F5F5;
+    font-family: Arial, sans-serif;
+  }
+  #round {
+    margin: 30px auto;
+    width: 96%;            /* más ancho que antes */
+    max-width: 1200px;     /* ancho máximo controlado */
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    padding: 30px 40px;    /* más espacio interno */
+    text-align: center;
+  }
+ table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.05);
+  font-size: 13px;
+  table-layout: fixed; /* Fuerza ancho fijo por columna */
+}
+
+th, td {
+  border: 1px solid #0d5c50;
+  padding: 6px 4px;             /* Menos espacio interno */
+  text-align: center;
+  white-space: nowrap;          /* Todo en una línea */
+  overflow: hidden;
+  text-overflow: ellipsis;      /* Agrega "..." si se pasa del ancho */
+}
+
+th {
+  background-color: #0d5c50;
+  color: white;
+}
+  h2 {
+    color: #0b4c42;
+  }
+</style>
+<!-- CONTENIDO DE LA TABLA -->
+<div id="round">
+  <h2>Tabla de Macronutrientes y Micronutrientes</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Requerido como</th>
+        <th>Absorción por la planta</th>
+        <th>Elemento</th>
+        <th>Símbolo</th>
+        <th>Forma disponible</th>
+        <th>Peso atómico</th>
+        <th>Valencia</th>
+        <th>Mecanismo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td rowspan="10"><strong>MACRONUTRIENTES</strong></td><td></td><td>Carbono</td><td>C</td><td>CO₂</td><td>12.01</td><td>4</td><td>–</td></tr>
+      <tr><td></td><td>Hidrógeno</td><td>H</td><td>H₂O</td><td>1.01</td><td>1</td><td>–</td></tr>
+      <tr><td></td><td>Oxígeno</td><td>O</td><td>O₂, H₂O</td><td>16</td><td>6</td><td>–</td></tr>
+      <tr><td>Anión</td><td>Nitrógeno</td><td>N</td><td>NO₃⁻</td><td>14.01</td><td>-1</td><td>Flujo de masa</td></tr>
+      <tr><td></td><td>Fósforo</td><td>P</td><td>H₂PO₄⁻, HPO₄²⁻</td><td>30.98</td><td>-3</td><td>Difusión</td></tr>
+      <tr><td></td><td>Azufre</td><td>S</td><td>SO₄²⁻</td><td>32.07</td><td>-2</td><td>Flujo de masa</td></tr>
+      <tr><td>Catión</td><td>Nitrógeno</td><td>N</td><td>NH₄⁺</td><td>14.01</td><td>1</td><td>Flujo de masa</td></tr>
+      <tr><td></td><td>Potasio</td><td>K</td><td>K⁺</td><td>39.1</td><td>1</td><td>Difusión</td></tr>
+      <tr><td></td><td>Magnesio</td><td>Mg</td><td>Mg²⁺</td><td>24.32</td><td>2</td><td>Flujo de masa</td></tr>
+      <tr><td></td><td>Calcio</td><td>Ca</td><td>Ca²⁺</td><td>40.08</td><td>2</td><td>Flujo de masa</td></tr>
+
+      <tr><td rowspan="9"><strong>MICRONUTRIENTES</strong></td><td>Anión</td><td>Molibdeno</td><td>Mo</td><td>MoO₄²⁻</td><td>95.95</td><td>-2</td><td>Flujo de masa</td></tr>
+      <tr><td></td><td>Boro</td><td>B</td><td>H₃BO₃</td><td>10.82</td><td>-3</td><td>Flujo de masa</td></tr>
+      <tr><td></td><td>Cloro</td><td>Cl</td><td>Cl⁻</td><td>35.46</td><td>-1</td><td>Flujo de masa</td></tr>
+      <tr><td>Catión</td><td>Hierro</td><td>Fe</td><td>Fe³⁺, Fe²⁺</td><td>55.85</td><td>3</td><td>Intercepción, DF</td></tr>
+      <tr><td></td><td>Manganeso</td><td>Mn</td><td>Mn²⁺</td><td>54.94</td><td>2</td><td>Difusión, Intercepción</td></tr>
+      <tr><td></td><td>Níquel</td><td>Ni</td><td>Ni²⁺</td><td>58.71</td><td>2</td><td>Difusión, Intercepción</td></tr>
+      <tr><td></td><td>Cobre</td><td>Cu</td><td>Cu²⁺, Cu³⁺</td><td>63.54</td><td>3</td><td>Intercepción, FM</td></tr>
+      <tr><td></td><td>Zinc</td><td>Zn</td><td>Zn²⁺</td><td>65.38</td><td>2</td><td>Difusión, FM, Intercepción</td></tr>
+    </tbody>
+  </table>
+</div>
