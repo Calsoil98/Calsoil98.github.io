@@ -1,0 +1,122 @@
+
+<style>
+  body {
+    background-color: #F5F5F5;
+    font-family: "Times New Roman", serif;
+    color: #424949;
+  }
+
+  .box {
+    width: 500px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px #0e6655;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    text-align: center;
+  }
+
+  h2 {
+    color: #0b5345;
+    margin-bottom: 15px;
+  }
+
+  label {
+    display: block;
+    text-align: left;
+    margin-top: 12px;
+    font-weight: bold;
+  }
+
+  input[type="text"] {
+    width: 90%;
+    padding: 6px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+  }
+
+  input[type="button"], input[type="reset"] {
+    margin-top: 20px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0b5345;
+    color: white;
+    cursor: pointer;
+  }
+
+  input[type="button"]:hover, input[type="reset"]:hover {
+    background-color: #117a65;
+  }
+
+  .formula {
+    font-style: italic;
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #145A32;
+    text-align: left;
+  }
+</style>
+<!-- Retorno por racimos -->
+<div class="box">
+  <h2>Retorno por racimos cosechados</h2>
+  <p class="formula"></p>
+  <form name="Retorno1">
+    <label>No. racimos cosechados año/ha:</label>
+    <input type="text" name="racimos" placeholder="Ej: 1800">
+
+    <label>Número de plantas/ha:</label>
+    <input type="text" name="plantas" placeholder="Ej: 1500">
+
+    <label>Resultado (retorno):</label>
+    <input type="text" name="resultado" readonly>
+
+    <input type="button" value="Calcular" onclick="calcularRetorno1()">
+    <input type="reset" value="Eliminar">
+  </form>
+</div>
+
+<!-- Retorno por días -->
+<div class="box">
+  <h2>Retorno por días</h2>
+  <p class="formula"></p>
+  <form name="Retorno2">
+    <label>Días del año:</label>
+    <input type="text" name="diasAnio" placeholder="Ej: 365">
+
+    <label>Días entre cortes:</label>
+    <input type="text" name="diasCorte" placeholder="Ej: 30">
+
+    <label>Resultado (retorno):</label>
+    <input type="text" name="resultado" readonly>
+
+    <input type="button" value="Calcular" onclick="calcularRetorno2()">
+    <input type="reset" value="Eliminar">
+  </form>
+</div>
+
+
+<script>
+  function calcularRetorno1() {
+    var racimos = parseFloat(document.Retorno1.racimos.value);
+    var plantas = parseFloat(document.Retorno1.plantas.value);
+    if (!isNaN(racimos) && !isNaN(plantas) && plantas !== 0) {
+      document.Retorno1.resultado.value = (racimos / plantas).toFixed(3);
+    } else {
+      document.Retorno1.resultado.value = "Error";
+    }
+  }
+
+  function calcularRetorno2() {
+    var diasAnio = parseFloat(document.Retorno2.diasAnio.value);
+    var diasCorte = parseFloat(document.Retorno2.diasCorte.value);
+    if (!isNaN(diasAnio) && !isNaN(diasCorte) && diasCorte !== 0) {
+      document.Retorno2.resultado.value = (diasAnio / diasCorte).toFixed(2);
+    } else {
+      document.Retorno2.resultado.value = "Error";
+    }
+  }
+
+</script>

@@ -6,7 +6,7 @@ output: html_document
 <!-- Cambia color de fondo del sitio -->
 <style>
   body {
-    background-color: #148F77; /* Verde oscuro */
+    background-color: #F5F5F5;
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;

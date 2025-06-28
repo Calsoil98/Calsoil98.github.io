@@ -1,7 +1,7 @@
 ```{=html}
 <style>
   body {
-    background-color: #148F77;
+  background-color: #F5F5F5;
   }
 
 #round {
@@ -9,7 +9,9 @@
   margin-top: 40px;
   width: 95%; /* Cambia de 80% a 95% para pantallas pequeñas */
   max-width: 850px;
-  background-color: rgba(209, 242, 235, 0.66);
+  background-color: #FFFFFF;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   padding: 30px;
   box-sizing: border-box; /* Importante para que padding no sume al ancho */
@@ -21,12 +23,12 @@ table {
   width: 100%; /* Hace que la tabla ocupe todo el ancho disponible */
   border-collapse: collapse;
   margin-bottom: 25px;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.1);
   table-layout: fixed; /* Hace que las celdas se ajusten mejor */
 }
 
 th, td {
-  border: 1px solid #1B4F72;
+  border: 1px solid #0d5c50;
   padding: 8px;
   text-align: center;
   word-wrap: break-word; /* Permite que el contenido largo se divida en líneas */
@@ -34,7 +36,7 @@ th, td {
 
 
   th {
-    background-color: #2E86C1;
+    background-color: #0d5c50;
     color: white;
   }
 

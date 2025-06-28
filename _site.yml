@@ -85,6 +85,8 @@ navbar:
       menu:
         - text: "Ratio"
           href: ratio.html
+        - text: "Retorno"
+          href: ratoo.html
         - text: "Merma"
           href: Merma.html
         - text: "El método del ‘nuevo factor’"
@@ -103,12 +105,14 @@ navbar:
           href: acidos.html
         - text: "Suelos sódicos"
           href: alcalino.html
-    - text: "Índices"
+    - text: "Índices y Factores"
       icon: fa-thin fa-banana
       href: home40.html
       menu:
         - text: "NDVI"
           href: NDVI.html
+        - text: "DPV"
+          href: DPV.html
     - text: "Erick Fernando Cuenca Saquicaray "     
 output:
   html_document:

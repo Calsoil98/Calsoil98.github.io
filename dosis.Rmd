@@ -26,17 +26,17 @@
     border-collapse: collapse;
     margin: 20px auto;
     width: 95%;
-    background-color: #FBFCFC;
+    background-color: rgba(0, 0, 0, 0.1);
   }
 
   .tableizer-table td, .tableizer-table th {
-    border: 1px solid #2C3E50;
+    border: 1px solid #0d5c50;
     padding: 6px;
     text-align: center;
   }
 
   .tableizer-table th {
-    background-color: #2C3E50;
+    background-color: #0d5c50;
     color: #ECF0F1;
     font-weight: bold;
   }

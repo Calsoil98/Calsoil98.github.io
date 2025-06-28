@@ -11,7 +11,7 @@
 
 
 
-<title>domo.knit</title>
+<title>DPVV.knit</title>
 
 <script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -461,112 +461,275 @@ $(document).ready(function () {
 </div>
 
 
-<div id="coca">
-  <div style="text-align:center;">
-    <h3 style="font-family:'Times New Roman';">Densidad de domos</h3>
-    <img src="domo.png" alt="Domo" height="200px" style="margin-bottom:15px;">
-  </div>
+<pre class="r"><code>htmltools::includeHTML(&quot;DPV.html&quot;)</code></pre>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<style type="text/css">
+.inline {
+  background-color: #f7f7f7;
+  border:solid 1px #B0B0B0;
+}
+.error {
+    font-weight: bold;
+    color: #FF0000;
+}
+.warning {
+    font-weight: bold;
+}
+.message {
+    font-style: italic;
+}
+.source, .output, .warning, .error, .message {
+    padding: 0 1em;
+  border:solid 1px #F7F7F7;
+}
+.source {
+  background-color: #f5f5f5;
+}
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.center {
+  text-align: center;
+}
+.hl.num {
+  color: #AF0F91;
+}
+.hl.sng {
+  color: #317ECC;
+}
+.hl.com {
+  color: #AD95AF;
+  font-style: italic;
+}
+.hl.opt {
+  color: #000000;
+}
+.hl.def {
+  color: #585858;
+}
+.hl.kwa {
+  color: #295F94;
+  font-weight: bold;
+}
+.hl.kwb {
+  color: #B05A65;
+}
+.hl.kwc {
+  color: #55aa55;
+}
+.hl.kwd {
+  color: #BC5A65;
+  font-weight: bold;
+}
+</style>
+  <meta charset="UTF-8">
+  <title>DPV: Cálculo y Visualización</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.4.0"></script>
+  <style>
+    body {
+      background-color: #F5F5F5;
+      font-family: "Times New Roman", serif;
+      color: #424949;
+    }
 
-  <form name="MyForm" style="font-family:'Times New Roman'; color:#424949; padding: 10px;">
-    <label><strong>Distancia entre plantas:</strong></label><br>
-    <input type="text" name="numero1" size="20"><br><br>
+    .box {
+      width: 500px;
+      margin: 40px auto;
+      padding: 25px;
+      background-color: #FFFFFF;
+      box-shadow: 0 0 10px #0e6655;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 15px;
+      text-align: center;
+    }
 
-    <label><strong>NPH:</strong></label><br>
-    <input type="text" name="resultado" size="20"><br><br>
+    h2 {
+      color: #0b5345;
+      margin-bottom: 15px;
+    }
 
-    <div style="text-align:center;">
-      <input type="button" value="Calcular" onclick="real()">
-      <input type="reset" value="Eliminar">
-    </div>
-  </form><br>
+    label {
+      display: block;
+      text-align: left;
+      margin-top: 12px;
+      font-weight: bold;
+    }
 
-  <form name="MyForma" style="font-family:'Times New Roman'; color:#424949; padding: 10px;">
-    <label><strong>Distancia entre calles:</strong></label><br>
-    <input type="text" name="numero1" size="20"><br><br>
+    input[type="text"] {
+      width: 90%;
+      padding: 6px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #aaa;
+    }
 
-    <label><strong>NH:</strong></label><br>
-    <input type="text" name="resultado" size="20"><br><br>
+    input[type="button"], input[type="reset"] {
+      margin-top: 20px;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: #0b5345;
+      color: white;
+      cursor: pointer;
+    }
 
-    <div style="text-align:center;">
-      <input type="button" value="Calcular" onclick="densi()">
-      <input type="reset" value="Eliminar">
-    </div>
-  </form><br>
+    input[type="button"]:hover, input[type="reset"]:hover {
+      background-color: #117a65;
+    }
 
-  <form name="MyFormass" style="font-family:'Times New Roman'; color:#424949; padding: 10px;">
-    <label><strong>NPH:</strong></label><br>
-    <input type="text" name="numero1" size="20"><br><br>
+    #grafico {
+      width: 90%;
+      margin: 40px auto;
+    }
+  </style>
+</head>
+<body>
 
-    <label><strong>NH:</strong></label><br>
-    <input type="text" name="numero2" size="20"><br><br>
+<div class="box">
+  <h2>Cálculo de DPV</h2>
+  <p><i></i></p>
 
-    <label><strong>Densidad:</strong></label><br>
-    <input type="text" name="resultado" size="20"><br><br>
+  <form name="DPVForm">
+    <label>Temperatura del aire (°C):</label>
+    <input type="text" name="Ta" placeholder="Ej: 25">
 
-    <div style="text-align:center;">
-      <input type="button" value="Calcular" onclick="resu()">
-      <input type="reset" value="Eliminar">
-    </div>
+    <label>Humedad relativa (%):</label>
+    <input type="text" name="HR" placeholder="Ej: 60">
+
+    <label>DPV (kPa):</label>
+    <input type="text" name="resultado" readonly>
+
+    <input type="button" value="Calcular" onclick="calcularDPV()">
+    <input type="button" value="Agregar al gráfico" onclick="guardarDPV()">
+    <input type="reset" value="Eliminar">
   </form>
 </div>
 
+<!-- Contenedor FLEX para gráfico + leyenda -->
+<div style="display: flex; justify-content: center; align-items: flex-start; gap: 30px; flex-wrap: wrap; max-width: 960px; margin: 0 auto;">
+
+  <!-- Gráfico -->
+  <div id="grafico" style="flex: 1 1 600px; min-width: 300px;">
+    <canvas id="dpvChart" style="height:300px; width: 100%;"></canvas>
+  </div>
+
+  <!-- Leyenda -->
+  <div style="flex: 0 1 260px; background-color: #fff; padding: 15px 20px; border-radius: 10px; box-shadow: 0 0 8px rgba(0,0,0,0.1); font-size: 15px;">
+    <h4 style="margin-top: 0; color: #0b5345;">Zonas de DPV</h4>
+    <p><span style="color: #007bff;">🔵 DPV bajo:</span> &lt; 0.5 kPa<br><small>Estrés biótico:Baja transpiración, Ataque de hongos por alta HR</small></p>
+    <p><span style="color: #28a745;">🟢 DPV óptimo:estoma abierto</span> 0.5 – 1.5 kPa<br><small>Condiciones ideales</small></p>
+    <p><span style="color: #dc3545;">🔴 DPV alto:estoma cerrado</span> &gt; 1.5 kPa<br><small>Estrés abiótico:Baja HR y alta temperatura, estrés hídrico, baja absorcion de nutrientes, incremento de ROS y ABA, incremento de etileno </small></p>
+  </div>
+</div>
+
+
 <script>
-  function real() {
-    var n1 = parseFloat(document.MyForm.numero1.value);
-    document.MyForm.resultado.value = (100 / n1).toFixed(3);
+  Chart.register(window['chartjs-plugin-annotation']);
+
+  let dpvDatos = [];
+  let dpvLabels = [];
+  let contador = 1;
+
+  const ctx = document.getElementById('dpvChart').getContext('2d');
+  const chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: dpvLabels,
+      datasets: [{
+        label: 'DPV (kPa)',
+        data: dpvDatos,
+        borderColor: '#117A65',
+        backgroundColor: 'rgba(17,122,101,0.2)',
+        fill: false,
+        tension: 0.3,
+        pointRadius: 4
+      }]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        y: {
+          min: 0,
+          max: 2,
+          title: {
+            display: true,
+            text: 'DPV (kPa)'
+          }
+        },
+        x: {
+          title: {
+            display: true,
+            text: 'Mediciones'
+          }
+        }
+      },
+      plugins: {
+        annotation: {
+          annotations: {
+            zona_baja: {
+              type: 'box',
+              yMin: 0,
+              yMax: 0.5,
+              backgroundColor: 'rgba(0, 123, 255, 0.1)',
+              borderWidth: 0
+            },
+            zona_optima: {
+              type: 'box',
+              yMin: 0.5,
+              yMax: 1.5,
+              backgroundColor: 'rgba(40, 167, 69, 0.1)',
+              borderWidth: 0
+            },
+            zona_alta: {
+              type: 'box',
+              yMin: 1.5,
+              yMax: 2,
+              backgroundColor: 'rgba(220, 53, 69, 0.1)',
+              borderWidth: 0
+            }
+          }
+        },
+        legend: {
+          display: false
+        }
+      }
+    }
+  });
+
+  function calcularDPV() {
+    let Ta = parseFloat(document.DPVForm.Ta.value);
+    let HR = parseFloat(document.DPVForm.HR.value);
+
+    if (!isNaN(Ta) && !isNaN(HR)) {
+      let es = 0.61078 * Math.exp((17.269 * Ta) / (Ta + 237.3));
+      let dpv = es * (1 - HR / 100);
+      document.DPVForm.resultado.value = dpv.toFixed(3);
+    } else {
+      document.DPVForm.resultado.value = "Error";
+    }
   }
 
-  function densi() {
-    var n1 = parseFloat(document.MyForma.numero1.value);
-    document.MyForma.resultado.value = (100 / n1).toFixed(1);
-  }
-
-  function resu() {
-    var n1 = parseFloat(document.MyFormass.numero1.value);
-    var n2 = parseFloat(document.MyFormass.numero2.value);
-    document.MyFormass.resultado.value = (n1 * n2).toFixed(3);
+  function guardarDPV() {
+    let valor = parseFloat(document.DPVForm.resultado.value);
+    if (!isNaN(valor)) {
+      dpvDatos.push(valor);
+      dpvLabels.push("M" + contador);
+      contador++;
+      chart.update();
+    } else {
+      alert("Primero debes calcular un valor válido.");
+    }
   }
 </script>
 
-<style>
-  body {
-     background-color: #F5F5F5;
-  }
-
-  #coca {
-    width: 600px;
-    margin: auto;
-    background-color: #FFFFFF;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    border-radius: 1em;
-    padding: 20px;
-    margin-top: 40px;
-  }
-
-  input[type="text"] {
-    width: 95%;
-    padding: 6px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-
-  input[type="button"],
-  input[type="reset"] {
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 6px;
-    background-color: #117A65;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-
-  input[type="button"]:hover,
-  input[type="reset"]:hover {
-    background-color: #0e6655;
-  }
-</style>
+</body>
+</html>
 
 
 

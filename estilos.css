@@ -18,7 +18,7 @@ body {
 }
 
 .navbar-brand {
-  color: #E8F6F3 !important;
+  color: #656565 !important;
   font-weight: bold;
   font-size: 22px;
   display: flex;
@@ -31,9 +31,9 @@ body {
   text-decoration: none;
 }
 
-/* Enlaces del menú principal */
+/* Enlaces del menú principal color botones */
 .navbar-nav > li > a {
-  color: #ABEBC6 !important;
+  color: #656565 !important;
   font-weight: 500;
   padding: 10px 14px;
 }

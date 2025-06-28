@@ -45,16 +45,16 @@ fertilizantes </b></CENTER><br> </H5>
 <style type="text/css">
 	table.tableizer-table {
 		font-size: 12px;
-		border: 1px solid #CCC; 
+		border: 1px solid #0d5c50; 
 		font-family: Arial, Helvetica, sans-serif;
 	} 
 	.tableizer-table td {
 		padding: 4px;
 		margin: 3px;
-		border: 1px solid #CCC;
+		border: 1px solid #0d5c50;
 	}
 	.tableizer-table th {
-		background-color: #104E8B; 
+		background-color: #0d5c50; 
 		color: #FFF;
 		font-weight: bold;
 	}

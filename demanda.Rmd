@@ -17,7 +17,7 @@
     margin: 20px auto;
     border-collapse: collapse;
     width: 90%;
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.1);
   }
   th, td {
     border: 1px solid #0d5c50;

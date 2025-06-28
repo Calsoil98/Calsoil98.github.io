@@ -11,7 +11,7 @@
 
 
 
-<title>domo.knit</title>
+<title>ratoo.knit</title>
 
 <script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -461,112 +461,124 @@ $(document).ready(function () {
 </div>
 
 
-<div id="coca">
-  <div style="text-align:center;">
-    <h3 style="font-family:'Times New Roman';">Densidad de domos</h3>
-    <img src="domo.png" alt="Domo" height="200px" style="margin-bottom:15px;">
-  </div>
-
-  <form name="MyForm" style="font-family:'Times New Roman'; color:#424949; padding: 10px;">
-    <label><strong>Distancia entre plantas:</strong></label><br>
-    <input type="text" name="numero1" size="20"><br><br>
-
-    <label><strong>NPH:</strong></label><br>
-    <input type="text" name="resultado" size="20"><br><br>
-
-    <div style="text-align:center;">
-      <input type="button" value="Calcular" onclick="real()">
-      <input type="reset" value="Eliminar">
-    </div>
-  </form><br>
-
-  <form name="MyForma" style="font-family:'Times New Roman'; color:#424949; padding: 10px;">
-    <label><strong>Distancia entre calles:</strong></label><br>
-    <input type="text" name="numero1" size="20"><br><br>
-
-    <label><strong>NH:</strong></label><br>
-    <input type="text" name="resultado" size="20"><br><br>
-
-    <div style="text-align:center;">
-      <input type="button" value="Calcular" onclick="densi()">
-      <input type="reset" value="Eliminar">
-    </div>
-  </form><br>
-
-  <form name="MyFormass" style="font-family:'Times New Roman'; color:#424949; padding: 10px;">
-    <label><strong>NPH:</strong></label><br>
-    <input type="text" name="numero1" size="20"><br><br>
-
-    <label><strong>NH:</strong></label><br>
-    <input type="text" name="numero2" size="20"><br><br>
-
-    <label><strong>Densidad:</strong></label><br>
-    <input type="text" name="resultado" size="20"><br><br>
-
-    <div style="text-align:center;">
-      <input type="button" value="Calcular" onclick="resu()">
-      <input type="reset" value="Eliminar">
-    </div>
-  </form>
-</div>
-
-<script>
-  function real() {
-    var n1 = parseFloat(document.MyForm.numero1.value);
-    document.MyForm.resultado.value = (100 / n1).toFixed(3);
-  }
-
-  function densi() {
-    var n1 = parseFloat(document.MyForma.numero1.value);
-    document.MyForma.resultado.value = (100 / n1).toFixed(1);
-  }
-
-  function resu() {
-    var n1 = parseFloat(document.MyFormass.numero1.value);
-    var n2 = parseFloat(document.MyFormass.numero2.value);
-    document.MyFormass.resultado.value = (n1 * n2).toFixed(3);
-  }
-</script>
-
 <style>
   body {
-     background-color: #F5F5F5;
+    background-color: #F5F5F5;
+    font-family: "Times New Roman", serif;
+    color: #424949;
   }
 
-  #coca {
-    width: 600px;
-    margin: auto;
+  .box {
+    width: 500px;
+    margin: 40px auto;
+    padding: 25px;
     background-color: #FFFFFF;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 10px #0e6655;
     border: 1px solid rgba(0, 0, 0, 0.15);
-    border-radius: 1em;
-    padding: 20px;
-    margin-top: 40px;
+    border-radius: 15px;
+    text-align: center;
+  }
+
+  h2 {
+    color: #0b5345;
+    margin-bottom: 15px;
+  }
+
+  label {
+    display: block;
+    text-align: left;
+    margin-top: 12px;
+    font-weight: bold;
   }
 
   input[type="text"] {
-    width: 95%;
+    width: 90%;
     padding: 6px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
   }
 
-  input[type="button"],
-  input[type="reset"] {
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 6px;
-    background-color: #117A65;
-    color: white;
+  input[type="button"], input[type="reset"] {
+    margin-top: 20px;
+    padding: 8px 16px;
     border: none;
+    border-radius: 5px;
+    background-color: #0b5345;
+    color: white;
     cursor: pointer;
   }
 
-  input[type="button"]:hover,
-  input[type="reset"]:hover {
-    background-color: #0e6655;
+  input[type="button"]:hover, input[type="reset"]:hover {
+    background-color: #117a65;
+  }
+
+  .formula {
+    font-style: italic;
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #145A32;
+    text-align: left;
   }
 </style>
+<!-- Retorno por racimos -->
+<div class="box">
+<h2>
+Retorno por racimos cosechados
+</h2>
+<p class="formula">
+</p>
+<form name="Retorno1">
+<p><label>No. racimos cosechados año/ha:</label>
+<input type="text" name="racimos" placeholder="Ej: 1800"></p>
+<p><label>Número de plantas/ha:</label>
+<input type="text" name="plantas" placeholder="Ej: 1500"></p>
+<p><label>Resultado (retorno):</label>
+<input type="text" name="resultado" readonly></p>
+<input type="button" value="Calcular" onclick="calcularRetorno1()">
+<input type="reset" value="Eliminar">
+</form>
+</div>
+<!-- Retorno por días -->
+<div class="box">
+<h2>
+Retorno por días
+</h2>
+<p class="formula">
+</p>
+<form name="Retorno2">
+<p><label>Días del año:</label>
+<input type="text" name="diasAnio" placeholder="Ej: 365"></p>
+<p><label>Días entre cortes:</label>
+<input type="text" name="diasCorte" placeholder="Ej: 30"></p>
+<p><label>Resultado (retorno):</label>
+<input type="text" name="resultado" readonly></p>
+<input type="button" value="Calcular" onclick="calcularRetorno2()">
+<input type="reset" value="Eliminar">
+</form>
+</div>
+<script>
+  function calcularRetorno1() {
+    var racimos = parseFloat(document.Retorno1.racimos.value);
+    var plantas = parseFloat(document.Retorno1.plantas.value);
+    if (!isNaN(racimos) && !isNaN(plantas) && plantas !== 0) {
+      document.Retorno1.resultado.value = (racimos / plantas).toFixed(3);
+    } else {
+      document.Retorno1.resultado.value = "Error";
+    }
+  }
+
+  function calcularRetorno2() {
+    var diasAnio = parseFloat(document.Retorno2.diasAnio.value);
+    var diasCorte = parseFloat(document.Retorno2.diasCorte.value);
+    if (!isNaN(diasAnio) && !isNaN(diasCorte) && diasCorte !== 0) {
+      document.Retorno2.resultado.value = (diasAnio / diasCorte).toFixed(2);
+    } else {
+      document.Retorno2.resultado.value = "Error";
+    }
+  }
+
+</script>
 
 
 

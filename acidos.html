@@ -391,6 +391,9 @@ $(document).ready(function () {
       <a href="ratio.html">Ratio</a>
     </li>
     <li>
+      <a href="ratoo.html">Retorno</a>
+    </li>
+    <li>
       <a href="Merma.html">Merma</a>
     </li>
     <li>
@@ -428,13 +431,16 @@ $(document).ready(function () {
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="fa fa-thin fa-banana"></span>
      
-    Índices
+    Índices y Factores
      
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
       <a href="NDVI.html">NDVI</a>
+    </li>
+    <li>
+      <a href="DPV.html">DPV</a>
     </li>
   </ul>
 </li>
@@ -457,7 +463,7 @@ $(document).ready(function () {
 
 <style>
   body {
-    background-color: #148F77;
+  background-color: #F5F5F5;
   }
 
 #round {
@@ -465,7 +471,9 @@ $(document).ready(function () {
   margin-top: 40px;
   width: 95%; /* Cambia de 80% a 95% para pantallas pequeñas */
   max-width: 850px;
-  background-color: rgba(209, 242, 235, 0.66);
+  background-color: #FFFFFF;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   padding: 30px;
   box-sizing: border-box; /* Importante para que padding no sume al ancho */
@@ -477,12 +485,12 @@ table {
   width: 100%; /* Hace que la tabla ocupe todo el ancho disponible */
   border-collapse: collapse;
   margin-bottom: 25px;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.1);
   table-layout: fixed; /* Hace que las celdas se ajusten mejor */
 }
 
 th, td {
-  border: 1px solid #1B4F72;
+  border: 1px solid #0d5c50;
   padding: 8px;
   text-align: center;
   word-wrap: break-word; /* Permite que el contenido largo se divida en líneas */
@@ -490,7 +498,7 @@ th, td {
 
 
   th {
-    background-color: #2E86C1;
+    background-color: #0d5c50;
     color: white;
   }
 
