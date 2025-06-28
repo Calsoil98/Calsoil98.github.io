@@ -1,7 +1,7 @@
 <html>
 <style>
 body {
-  background-color: #148F77;
+  background-color:  #F5F5F5;
   }
 </style>
 
@@ -9,9 +9,10 @@ body {
 <center>
 <style type="text/css"> 
 
-#round { width: 800px; height: 700px; 
-         background-color: rgb(209, 242, 235 , 0.66); 
-         border: 1px solid #148F77; 
+#round { width: 800px; height: 600px; 
+         background-color: #FFFFFF;
+         box-shadow: 0 0 10px rgba(0,0,0,0.2);
+         border: 1px solid rgba(0, 0, 0, 0.15);
          border-radius: 1em;} 
 </style> 
 </head>

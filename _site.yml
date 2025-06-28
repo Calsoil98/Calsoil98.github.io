@@ -56,24 +56,26 @@ navbar:
       icon: fa-thin fa-sliders
       href: home22.html
       menu:
+        - text: "Ingreso de datos"
+          href: rem.html
         - text: "DOP suelo"
           href: DOP.html
-        - text: "Conversión de bases(Ca,K,Na,Mg)"
-          href: bases.html
-        - text: "Masa del suelo"
-          href: masa.html
-        - text: "Calculo suministro"
-          href: sumi.html 
         - text: "Demanda del cultivar de banano"
           href: demanda.html 
         - text: "Demanda de ciclo corto y frutales"
           href: demanda2.html
+        - text: "Masa del suelo"
+          href: masa.html
+        - text: "Calculo suministro"
+          href: sumi.html 
         - text: "Dosis"
           href: dosis.html
         - text: "Tabla de índices de fertilizantes "
           href: ferti.html
         - text: "Cálculo de fertilizantes "
           href: fertilizantes.html
+        - text: "Conversión de bases(Ca,K,Na,Mg)"
+          href: bases.html
         - text: "Dris"
           href: Dris1.html
          

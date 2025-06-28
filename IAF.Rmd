@@ -1,6 +1,6 @@
 <style>
 body {
-  background-color: #148F77;
+  background-color: #F5F5F5;
   font-family: "Times New Roman", serif;
   color: #424949;
 }
@@ -9,8 +9,9 @@ body {
   width: 450px;
   margin: 40px auto;
   padding: 30px;
-  background-color: rgba(209, 242, 235, 0.66);
-  border: 2px solid #148F77;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 1em;
   box-shadow: 0 0 10px #0e6655;
 }

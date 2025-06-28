@@ -32,8 +32,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
 
@@ -344,22 +344,22 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
+      <a href="rem.html">Ingreso de datos</a>
+    </li>
+    <li>
       <a href="DOP.html">DOP suelo</a>
-    </li>
-    <li>
-      <a href="bases.html">Conversión de bases(Ca,K,Na,Mg)</a>
-    </li>
-    <li>
-      <a href="masa.html">Masa del suelo</a>
-    </li>
-    <li>
-      <a href="sumi.html">Calculo suministro</a>
     </li>
     <li>
       <a href="demanda.html">Demanda del cultivar de banano</a>
     </li>
     <li>
       <a href="demanda2.html">Demanda de ciclo corto y frutales</a>
+    </li>
+    <li>
+      <a href="masa.html">Masa del suelo</a>
+    </li>
+    <li>
+      <a href="sumi.html">Calculo suministro</a>
     </li>
     <li>
       <a href="dosis.html">Dosis</a>
@@ -369,6 +369,9 @@ $(document).ready(function () {
     </li>
     <li>
       <a href="fertilizantes.html">Cálculo de fertilizantes </a>
+    </li>
+    <li>
+      <a href="bases.html">Conversión de bases(Ca,K,Na,Mg)</a>
     </li>
     <li>
       <a href="Dris1.html">Dris</a>
@@ -425,7 +428,7 @@ $(document).ready(function () {
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="fa fa-thin fa-banana"></span>
      
-    ÍNDICES
+    Índices
      
     <span class="caret"></span>
   </a>
@@ -454,14 +457,15 @@ $(document).ready(function () {
 
 <style>
   body {
-    background-color: #148F77;
+   background-color:  #F5F5F5;
     font-family: Arial, sans-serif;
   }
   #round {
     margin: 30px auto;
     width: 95%;
-    background-color: rgba(209, 242, 235, 0.9);
-    border: 1px solid #148F77;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 20px;
     padding: 20px;
     text-align: center;
@@ -517,26 +521,36 @@ $(document).ready(function () {
 <table>
 <thead><tr><th>Fertilizante</th><th>N</th><th>P₂O₅</th><th>K₂O</th><th>S</th><th>MgO</th><th>CaO</th><th>SO₃</th><th>B</th><th>Mn</th><th>Zn</th><th>Fe</th></tr></thead>
 <tbody>
-<tr><td>Urea</td><td>46</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-<tr><td>Nitrato de amonio</td><td>34</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-<tr><td>Nitrato de potasio</td><td>13.5</td><td>0</td><td>46</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-<tr><td>Sulfato de amonio</td><td>21</td><td>0</td><td>0</td><td>24</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>YARA AMIDAS</td><td>40</td><td>0</td><td>0</td><td>14</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 <tr><td>NovaTec® Solub 45</td><td>45</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 <tr><td>YaraBela NITROMAG</td><td>21</td><td>0</td><td>0</td><td>0</td><td>7</td><td>11</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 <tr><td>YaraBela NITRODOBLE (CAN-27)</td><td>27</td><td>0</td><td>0</td><td>0</td><td>4</td><td>6</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 <tr><td>YaraMila HYDRAN</td><td>19</td><td>4</td><td>19</td><td>0</td><td>3</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td></tr>
-<tr><td>Nitroquim Ne 38 Elite</td><td>38</td><td>0</td><td>0</td><td>0.03</td><td>2</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td></tr>
-<tr><td>Nitrofoska special</td><td>12</td><td>12</td><td>1.7</td><td>0</td><td>2</td><td>0</td><td>8</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
+<tr><td>Nitroextend</td><td>46</td><td>0</td><td>0</td><td>0</td><td>2</td><td>0</td><td>8</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
+<tr><td>Nitrato de amonio</td><td>34</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>Urea</td><td>46</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>Sulfato de amonio</td><td>21</td><td>0</td><td>0</td><td>22</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody></table>
 
 <h4>Fósforo (P)</h4>
 <table>
 <thead><tr><th>Fertilizante</th><th>N</th><th>P₂O₅</th><th>K₂O</th><th>S</th><th>MgO</th><th>CaO</th><th>SO₃</th><th>B</th><th>Mn</th><th>Zn</th><th>Fe</th></tr></thead>
 <tbody>
-<tr><td>Fosf. Monoamónico (MAP)</td><td>12</td><td>60</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>Fosf. Monoamónico (MAP)</td><td>11</td><td>52</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 <tr><td>DAP</td><td>18</td><td>46</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-<tr><td>Fosf. Monopotásico</td><td>0</td><td>0</td><td>50</td><td>18</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-<tr><td>Super Triple</td><td>0</td><td>46</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>Rafos</td><td>12</td><td>24</td><td>12</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+</tbody></table>
+
+<h4>Potasio(K)</h4>
+<table>
+<thead><tr><th>Fertilizante</th><th>N</th><th>P₂O₅</th><th>K₂O</th><th>S</th><th>MgO</th><th>CaO</th><th>SO₃</th><th>B</th><th>Mn</th><th>Zn</th><th>Fe</th></tr></thead>
+<tbody>
+<tr><td>Nitrato de potasio</td><td>13.5</td><td>0</td><td>46</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>Sulfato de potasio</td><td>0</td><td>0</td><td>50</td><td>18</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>Muriato de potasio</td><td>0</td><td>0</td><td>60</td><td>18</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>Abotek</td><td>10</td><td>4</td><td>23</td><td>2</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>YaraMilaComplex</td><td>12</td><td>11</td><td>18</td><td>8</td><td>2.7</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+
 </tbody></table>
 
 <h4>Calcio (Ca)</h4>
@@ -544,8 +558,9 @@ $(document).ready(function () {
 <thead><tr><th>Fertilizante</th><th>N</th><th>P₂O₅</th><th>K₂O</th><th>S</th><th>MgO</th><th>CaO</th><th>SO₃</th><th>B</th><th>Mn</th><th>Zn</th><th>Fe</th></tr></thead>
 <tbody>
 <tr><td>Nitrato de calcio</td><td>15</td><td>0</td><td>0</td><td>0</td><td>0</td><td>26</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>YaraLiva NITRABOR</td><td>15.45</td><td>0</td><td>0</td><td>0</td><td>0</td><td>26</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 <tr><td>Cal agrícola</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>40</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-<tr><td>Yeso agrícola</td><td>0</td><td>0</td><td>0</td><td>18</td><td>0</td><td>32</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>Yeso agrícola</td><td>0</td><td>0</td><td>0</td><td>18</td><td>0</td><td>31</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody></table>
 
 <h4>Azufre (S)</h4>
@@ -553,9 +568,7 @@ $(document).ready(function () {
 <thead><tr><th>Fertilizante</th><th>N</th><th>P₂O₅</th><th>K₂O</th><th>S</th><th>MgO</th><th>CaO</th><th>SO₃</th><th>B</th><th>Mn</th><th>Zn</th><th>Fe</th></tr></thead>
 <tbody>
 <tr><td>Sulfato de amonio ácido</td><td>21</td><td>0</td><td>0</td><td>24</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-<tr><td>Sulfato de potasio</td><td>0</td><td>0</td><td>50</td><td>18</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 <tr><td>Sulfato de calcio</td><td>0</td><td>0</td><td>0</td><td>18</td><td>0</td><td>23</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-<tr><td>Super triple</td><td>0</td><td>46</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody></table>
   </table>
 
@@ -573,19 +586,6 @@ $(document).ready(function () {
     </form>
   </div>
 
-  <div class="form-section">
-    <h3>Calculadora 2: Calcular dosis desde elemento requerido</h3>
-    <form name="MyForma">
-      <p>Ingrese porcentaje del elemento (%):<br>
-      <input type="text" name="numero1"></p>
-      <p>Ingrese el resultado de (kg/elemento):<br>
-      <input type="text" name="numero2"></p>
-      <p>Resultado (kg de fertilizante a aplicar):<br>
-      <input type="text" name="resultado" readonly></p>
-      <input type="button" value="Calcular" onclick="fer()">
-      <input type="reset" value="Eliminar">
-    </form>
-  </div>
 
 </div>
 
@@ -600,15 +600,7 @@ $(document).ready(function () {
     document.MyForm.resultado.value = ((100*n2)/n1).toFixed(3);
   }
 
-  function fer() {
-    var n1 = parseFloat(document.MyForma.numero1.value);
-    var n2 = parseFloat(document.MyForma.numero2.value);
-    if (isNaN(n1) || isNaN(n2) || n1 === 0) {
-      alert("Por favor ingrese valores válidos y un porcentaje diferente de cero.");
-      return;
-    }
-    document.MyForma.resultado.value = ((n1*n2)/100).toFixed(3);
-  }
+
 </script>
 
 

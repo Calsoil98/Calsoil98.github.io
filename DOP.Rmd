@@ -9,25 +9,27 @@ output:
 /* Este estilo afecta directamente al título del documento */
 h1.title {
   text-align: center;
-  color: rgba(255, 255, 255, 0.7);
+  color: #656565;
   font-family: "Times New Roman", serif;
 }
 </style>
 
-<h3 style="text-align: center; color: rgba(255, 255, 255, 0.7); font-family: 'Times New Roman', serif;">
+<h3 style="text-align: center; color: #656565; font-family: 'Times New Roman', serif;">
   Entrada de Datos de Nutrientes (mg/kg)
 </h3>
 
 <style>
   body {
-    background-color:  #148F77;
+    background-color:  #F5F5F5;
     font-family: 'Times New Roman', serif;
   }
 
   .contenedor-centro {
     width: 1000px;
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border: 1px solid rgba(0, 0, 0, 0.15);
     padding: 20px;
     border-radius: 15px;
   }

@@ -1,12 +1,14 @@
 <style>
   body {
-    background-color: #0f9d8d;
+    background-color:  #F5F5F5;
     font-family: Arial, sans-serif;
   }
   #round {
     margin: 30px auto;
     width: 90%;
-    background-color: #d0f0eb;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 20px;
     padding: 20px;
     text-align: center;

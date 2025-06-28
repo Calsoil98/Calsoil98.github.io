@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CalSoil - Calculadora de laboratorio</title>
+  <style>
+    /* Fondo */
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('1.png');   
+      background-size: cover;
+      background-position: center;
+      font-family: Arial, sans-serif;
+      background-attachment: fixed;
+      color: #FFFFFF;
+      height: 100vh;
+      text-align: center;
+    }
+
+    /* Contenedor principal */
+    .content {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px;
+    }
+
+    /* Logo más grande con efecto "latido" */
+    .logo {
+      margin-top: 100px;
+      height: 250px;
+      animation: latido 1.5s infinite ease-in-out;
+    }
+
+    @keyframes latido {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.08);
+      }
+    }
+
+    /* Texto descriptivo */
+    h3 {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 2.5rem;
+      color: #F0F3F4;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      width: 80%;
+      text-align: justify;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #F0F3F4;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Logo CalSoil -->
+  <div class="content">
+    <img src="34.png" alt="Logo CalSoil" class="logo" />
+  </div>
+
+  <!-- Texto de bienvenida -->
+  <div class="content">
+    <h3>
+      Bienvenidos a la calculadora CalSoil de laboratorio y de requerimientos, una herramienta que le ayudará a realizar ecuaciones y a determinar las necesidades de sus cultivos.
+    </h3>
+  </div>
+
+</body>
+</html>

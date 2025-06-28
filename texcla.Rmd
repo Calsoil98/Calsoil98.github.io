@@ -1,93 +1,125 @@
-
-<style>
-  body {
-    background-color: #148F77;
-    font-family: 'Georgia', serif;
-  }
-  .contenedor {
-    max-width: 520px;
-    background-color: #A3E4D7;
-    padding: 30px;
-    margin: auto;
-    margin-top: 40px;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    text-align: center;
-  }
-  h2 {
-    color: #17202A;
-  }
-  label {
-    display: block;
-    margin-top: 15px;
-    font-weight: bold;
-    color: #1B2631;
-    text-align: left;
-  }
-  input {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-  }
-  button {
-    margin-top: 20px;
-    padding: 10px 15px;
-    background-color: #117A65;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    width: 100%;
-  }
-  #resultado {
-    margin-top: 15px;
-    font-size: 18px;
-    color: #154360;
-  }
-  img {
-    border-radius: 10px;
-    margin-bottom: 20px;
-    max-width: 100%;
-  }
-</style>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase Textural</title>
+  <style>
+    body {
+      background-color: #F5F5F5;
+      font-family: 'Georgia', serif;
+    }
+    .contenedor {
+      max-width: 520px;
+      padding: 30px;
+      margin: auto;
+      margin-top: 40px;
+      border-radius: 15px;
+      background-color: #FFFFFF;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      text-align: center;
+    }
+    h2 {
+      color: #17202A;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #1B2631;
+      text-align: left;
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 15px;
+      background-color: #117A65;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+    }
+    #resultado {
+      margin-top: 15px;
+      font-size: 18px;
+      color: #154360;
+    }
+    img {
+      border-radius: 10px;
+      margin-bottom: 20px;
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
 
 <div class="contenedor">
   <h2>Clase textural</h2>
   <img src="text.png" alt="Triángulo textural" height="350px">
 
-  <label for="valor1">Arena (%):</label>
-  <input type="number" id="valor1" placeholder="">
+  <label for="valor1">Arena:</label>
+  <input type="number" id="valor1" placeholder="Arena (%)">
 
-  <label for="valor2">Limo (%):</label>
-  <input type="number" id="valor2" placeholder="">
-
-  <label for="valor3">Arcilla (%):</label>
-  <input type="number" id="valor3" placeholder="">
+  <label for="valor2">Limo:</label>
+  <input type="number" id="valor2" placeholder="Limo (%)">
+  
+  <label for="valor3">Arcilla:</label>
+  <input type="number" id="valor3" placeholder="Arcilla (%)">
 
   <button onclick="calcular()">Calcular</button>
 
-  <p id="resultado">Textura: </p>
+  <p>Textura: <span id="resultado"></span></p>
 </div>
 
 <script>
   function calcular() {
+    // Obtener los valores de los campos de entrada
     var arena = parseFloat(document.getElementById('valor1').value);
     var limo = parseFloat(document.getElementById('valor2').value);
     var arcilla = parseFloat(document.getElementById('valor3').value);
+
     var resultado = "";
 
+    // Realizar las condiciones
     if (0 < arena && arena <= 20 && 80 <= limo && limo <= 100 && 0 < arcilla && arcilla <= 12) {
       resultado = 'Limosa';
     } else if (0 <= arena && arena <= 50 && 50 <= limo && limo <= 87 && 0 <= arcilla && arcilla <= 27) {
       resultado = 'Franca Limosa';
     } else if (23 <= arena && arena <= 52 && 32 <= limo && limo <= 52 && 7 <= arcilla && arcilla <= 27) {
       resultado = 'Franca';
+    } else if (43 <= arena && arena <= 85 && 0 <= limo && limo <= 50 && 0 <= arcilla && arcilla <= 20) {
+      resultado = 'Franca arenosa';
+    } else if (70 <= arena && arena <= 90 && 0 <= limo && limo <= 50 && 0 <= arcilla && arcilla <= 15) {
+      resultado = 'Areno francosa';
+    } else if (85 <= arena && arena <= 100 && 0 <= limo && limo <= 15 && 0 <= arcilla && arcilla <= 10) {
+      resultado = 'Arenosa';
+    } else if (0 <= arena && arena <= 20 && 40 <= limo && limo <= 73 && 27 <= arcilla && arcilla <= 40) {
+      resultado = 'Franco arcillo limosa';
+    } else if (20 <= arena && arena <= 45 && 15 <= limo && limo <= 53 && 27 <= arcilla && arcilla <= 40) {
+      resultado = 'Franco arcillosa';
+    } else if (45 <= arena && arena <= 80 && 0 <= limo && limo <= 28 && 20 <= arcilla && arcilla <= 35) {
+      resultado = 'Franco arcilloso arenoso';  
+    } else if (0 <= arena && arena <= 20 && 40 <= limo && limo <= 60 && 40 <= arcilla && arcilla <= 60) {
+      resultado = 'Arcillo limosa'; 
+    } else if (0 <= arena && arena <= 45 && 0 <= limo && limo <= 40 && 40 <= arcilla && arcilla <= 100) {
+      resultado = 'Arcilloso'; 
+    } else if (45 <= arena && arena <= 67 && 0 <= limo && limo <= 20 && 35 <= arcilla && arcilla <= 55) {
+      resultado = 'Arcillo arenosa'; 
     } else {
       resultado = 'Datos incorrectos';
     }
 
-    document.getElementById('resultado').innerHTML = 'Textura: ' + resultado;
+    // Mostrar el resultado en la página
+    document.getElementById('resultado').innerHTML = resultado;
   }
 </script>
+
+</body>
+</html>

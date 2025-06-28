@@ -3,14 +3,14 @@
 --------------------------- */
 body {
   font-family: "Segoe UI", "Roboto", sans-serif;
-  background-color: #F9FDFB;
+  background-color: #F5F5F5;
 }
 
 /* --------------------------
    Navbar principal
 --------------------------- */
 .navbar {
-  background-color: #145A32 !important;  /* Verde oscuro */
+  background-color: #FFFFFF !important;  /* Verde oscuro */
   padding-top: 4px;
   padding-bottom: 4px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
@@ -80,7 +80,7 @@ body {
 --------------------------- */
 .btn-calsoil {
   background-color: #28B463;
-  color: white;
+  color: #656565;
   border: none;
   padding: 10px 16px;
   border-radius: 8px;
@@ -101,7 +101,7 @@ body {
 --------------------------- */
 .nutrient-btn {
     background-color: #28B463;  /* Verde para los botones de nutrientes */
-    color: white;
+    color: #656565;
     padding: 20px 40px;  /* Aumentar el tamaño de los botones */
     margin: 15px;  /* Más espacio entre los botones */
     border: none;
@@ -132,7 +132,7 @@ body {
    Barra de navegación principal
 --------------------------- */
 #navbar {
-    background-color: #145A32 !important;  /* Verde oscuro */
+    background-color: #FFFFFF !important;  /* Verde oscuro */
     padding: 10px;
     border-radius: 6px;  /* Sin borde redondeado para evitar efectos no deseados */
     box-shadow: none;  /* Eliminar sombra */

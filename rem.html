@@ -11,7 +11,7 @@
 
 
 
-<title>home2.knit</title>
+<title>rem.knit</title>
 
 <script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -455,7 +455,279 @@ $(document).ready(function () {
 </div>
 
 
+<pre class="r"><code>htmltools::includeHTML(&quot;ingreso.html&quot;)</code></pre>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomendación de Fertilizantes</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+    
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f8f8;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+        .form-container {
+            width: 45%;
+            padding-right: 20px;
+            box-sizing: border-box;
+        }
+        .graph-container {
+            width: 45%;
+            padding-left: 20px;
+            box-sizing: border-box;
+        }
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        td {
+            padding: 5px;
+            text-align: right;
+        }
+        label {
+            text-align: left;
+            display: inline-block;
+            width: 70%; /* Ajusta el porcentaje según sea necesario */
+        }
+        input[type="number"] {
+            width: 100%;
+            text-align: right; /* Alineación a la derecha */
+        }
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #resultados {
+            margin-top: 20px;
+        }
+        #grafico {
+            margin-top: 20px;
+        }
+        .form-container h3 {
+            text-align: center;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Recomendación de Fertilizantes</h1>
+    <p>.</p>
 
+    <div class="container">
+        <!-- Formulario de ingreso de datos -->
+        <div class="form-container">
+            <h3>Ingreso de Datos de Nutrientes</h3>
+            <table>
+                <tr>
+                    <td><label for="nitrógeno">Nitrógeno (N) (mg/kg):</label></td>
+                    <td><input type="number" id="nitrógeno" name="nitrógeno" value="47.5"></td>
+                </tr>
+                <tr>
+                    <td><label for="fosforo">Fósforo (P) (mg/kg):</label></td>
+                    <td><input type="number" id="fosforo" name="fosforo" value="32.5"></td>
+                </tr>
+                <tr>
+                    <td><label for="potasio">Potasio (K) (mg/kg):</label></td>
+                    <td><input type="number" id="potasio" name="potasio" value="230"></td>
+                </tr>
+                <tr>
+                    <td><label for="calcio">Calcio (Ca) (mg/kg):</label></td>
+                    <td><input type="number" id="calcio" name="calcio" value="900"></td>
+                </tr>
+                <tr>
+                    <td><label for="magnesio">Magnesio (Mg) (mg/kg):</label></td>
+                    <td><input type="number" id="magnesio" name="magnesio" value="97.5"></td>
+                </tr>
+                <tr>
+                    <td><label for="azufre">Azufre (SO4-S) (mg/kg):</label></td>
+                    <td><input type="number" id="azufre" name="azufre" value="20.0"></td>
+                </tr>
+                <tr>
+                    <td><label for="zinc">Zinc (Zn) (mg/kg):</label></td>
+                    <td><input type="number" id="zinc" name="zinc" value="3.6"></td>
+                </tr>
+                <tr>
+                    <td><label for="boro">Boro (B) (mg/kg):</label></td>
+                    <td><input type="number" id="boro" name="boro" value="0.375"></td>
+                </tr>
+                <tr>
+                    <td><label for="hierro">Hierro (Fe) (mg/kg):</label></td>
+                    <td><input type="number" id="hierro" name="hierro" value="35"></td>
+                </tr>
+                <tr>
+                    <td><label for="manganeso">Manganeso (Mn) (mg/kg):</label></td>
+                    <td><input type="number" id="manganeso" name="manganeso" value="18"></td>
+                </tr>
+                <tr>
+                    <td><label for="cobre">Cobre (Cu) (mg/kg):</label></td>
+                    <td><input type="number" id="cobre" name="cobre" value="2.5"></td>
+                </tr>
+                <tr>
+                    <td><label for="cloruros">Cloruros (CT) (mg/kg):</label></td>
+                    <td><input type="number" id="cloruros" name="cloruros" value="210"></td>
+                </tr>
+            </table>
+
+            <h3>Ingreso de Parámetros Físico-Químicos</h3>
+            <table>
+                <tr>
+                    <td><label for="Materia orgánica">Materia orgánica:</label></td>
+                    <td><input type="number" id="Materia orgánica" name="Materia orgánica" value="7.5"></td>
+                </tr>
+                <tr>
+                    <td><label for="Saturación de bases">% Saturación de bases</label></td>
+                    <td><input type="number" id="Saturación de bases" name="Saturación de bases" value="65"></td>
+                </tr>
+                <tr>
+                    <td><label for="CIC">CIC</label></td>
+                    <td><input type="number" id="CIC" name="CIC" value="15"></td>
+                </tr>
+                <tr>
+                    <td><label for="CE">CE</label></td>
+                    <td><input type="number" id="CE" name="CE" value="0.5"></td>
+                </tr>
+                <tr>
+                    <td><label for="pH">pH</label></td>
+                    <td><input type="number" id="pH" name="pH" value="6.25"></td>
+                </tr>
+            </table>
+
+            <button type="button" onclick="calcularTodo()">Calcular Todo</button>
+        </div>
+
+        <!-- Contenedor para el gráfico -->
+        <div class="graph-container">
+            <canvas id="grafico_nutrientes" width="425" height="400"></canvas>
+            <canvas id="grafico_fisicoquimicos" width="425" height="250"></canvas>
+        </div>
+    </div>
+
+    <div id="resultados" style="margin-top: 20px;"></div>
+
+    <script>
+        const nivelesOptimos = {
+            nitrógeno: 47.5,
+            fosforo: 32.5,
+            potasio: 230,
+            calcio: 900,
+            magnesio: 97.5,
+            azufre: 20.0,
+            zinc: 3.6,
+            boro: 0.375,
+            hierro: 35,
+            manganeso: 18,
+            cobre: 2.5,
+            cloruros: 210,
+            Materia_orgánica: 7.5,
+            Saturación_de_bases: 65,
+            CIC: 15,
+            CE: 0.5,
+            pH: 6.25
+        };
+
+        const ctxNutrientes = document.getElementById('grafico_nutrientes').getContext('2d');
+        const ctxFisicoquimicos = document.getElementById('grafico_fisicoquimicos').getContext('2d');
+
+        const chartNutrientes = new Chart(ctxNutrientes, {
+            type: 'bar',
+            data: {
+                labels: ['Nitrógeno', 'Fósforo', 'Potasio', 'Calcio', 'Magnesio', 'Azufre', 'Zinc', 'Boro', 'Hierro', 'Manganeso', 'Cobre', 'Cloruros'],
+                datasets: [{
+                    label: 'Valor Ingresado',
+                    data: [],
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }, {
+                    label: 'Valor Óptimo',
+                    data: Object.values(nivelesOptimos).slice(0, 12),
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        });
+
+        const chartFisicoquimicos = new Chart(ctxFisicoquimicos, {
+            type: 'bar',
+            data: {
+                labels: ['Materia orgánica', 'Saturación de bases', 'CIC', 'CE', 'pH'],
+                datasets: [{
+                    label: 'Valor Ingresado',
+                    data: [],
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }, {
+                    label: 'Valor Óptimo',
+                    data: Object.values(nivelesOptimos).slice(12),
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        });
+
+        function calcularTodo() {
+            const formData = {
+                nitrógeno: parseFloat(document.getElementById('nitrógeno').value),
+                fosforo: parseFloat(document.getElementById('fosforo').value),
+                potasio: parseFloat(document.getElementById('potasio').value),
+                calcio: parseFloat(document.getElementById('calcio').value),
+                magnesio: parseFloat(document.getElementById('magnesio').value),
+                azufre: parseFloat(document.getElementById('azufre').value),
+                zinc: parseFloat(document.getElementById('zinc').value),
+                boro: parseFloat(document.getElementById('boro').value),
+                hierro: parseFloat(document.getElementById('hierro').value),
+                manganeso: parseFloat(document.getElementById('manganeso').value),
+                cobre: parseFloat(document.getElementById('cobre').value),
+                cloruros: parseFloat(document.getElementById('cloruros').value),
+                Materia_orgánica: parseFloat(document.getElementById('Materia orgánica').value),
+                Saturación_de_bases: parseFloat(document.getElementById('Saturación de bases').value),
+                CE: parseFloat(document.getElementById('CE').value),
+                CIC: parseFloat(document.getElementById('CIC').value),
+                pH: parseFloat(document.getElementById('pH').value)
+            };
+
+            chartNutrientes.data.datasets[0].data = Object.values(formData).slice(0, 12);
+            chartFisicoquimicos.data.datasets[0].data = Object.values(formData).slice(12);
+
+            chartNutrientes.update();
+            chartFisicoquimicos.update();
+        }
+    </script>
+</body>
+</html>
 
 
 

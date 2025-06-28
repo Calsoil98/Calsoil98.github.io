@@ -32,8 +32,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
 
@@ -344,22 +344,22 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
+      <a href="rem.html">Ingreso de datos</a>
+    </li>
+    <li>
       <a href="DOP.html">DOP suelo</a>
-    </li>
-    <li>
-      <a href="bases.html">Conversión de bases(Ca,K,Na,Mg)</a>
-    </li>
-    <li>
-      <a href="masa.html">Masa del suelo</a>
-    </li>
-    <li>
-      <a href="sumi.html">Calculo suministro</a>
     </li>
     <li>
       <a href="demanda.html">Demanda del cultivar de banano</a>
     </li>
     <li>
       <a href="demanda2.html">Demanda de ciclo corto y frutales</a>
+    </li>
+    <li>
+      <a href="masa.html">Masa del suelo</a>
+    </li>
+    <li>
+      <a href="sumi.html">Calculo suministro</a>
     </li>
     <li>
       <a href="dosis.html">Dosis</a>
@@ -369,6 +369,9 @@ $(document).ready(function () {
     </li>
     <li>
       <a href="fertilizantes.html">Cálculo de fertilizantes </a>
+    </li>
+    <li>
+      <a href="bases.html">Conversión de bases(Ca,K,Na,Mg)</a>
     </li>
     <li>
       <a href="Dris1.html">Dris</a>
@@ -425,7 +428,7 @@ $(document).ready(function () {
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="fa fa-thin fa-banana"></span>
      
-    ÍNDICES
+    Índices
      
     <span class="caret"></span>
   </a>
@@ -452,51 +455,148 @@ $(document).ready(function () {
 </div>
 
 
-<html>
-<style>
-body{
-    margin: 0;
-    padding: 0;
-    background: url(1.png);   
-    background-size: cover;
-    background-position: center;
-    font-family: sans-serif;
-    background--attachment: fixed;
+<pre class="r"><code>htmltools::includeHTML(&quot;inicio.html&quot;)</code></pre>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<style type="text/css">
+.inline {
+  background-color: #f7f7f7;
+  border:solid 1px #B0B0B0;
+}
+.error {
+    font-weight: bold;
+    color: #FF0000;
+}
+.warning {
+    font-weight: bold;
+}
+.message {
+    font-style: italic;
+}
+.source, .output, .warning, .error, .message {
+    padding: 0 1em;
+  border:solid 1px #F7F7F7;
+}
+.source {
+  background-color: #f5f5f5;
+}
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.center {
+  text-align: center;
+}
+.hl.num {
+  color: #AF0F91;
+}
+.hl.sng {
+  color: #317ECC;
+}
+.hl.com {
+  color: #AD95AF;
+  font-style: italic;
+}
+.hl.opt {
+  color: #000000;
+}
+.hl.def {
+  color: #585858;
+}
+.hl.kwa {
+  color: #295F94;
+  font-weight: bold;
+}
+.hl.kwb {
+  color: #B05A65;
+}
+.hl.kwc {
+  color: #55aa55;
+}
+.hl.kwd {
+  color: #BC5A65;
+  font-weight: bold;
 }
 </style>
-<p><br> <br> <br> <br></p>
-<center>
-<img src="34.png" height="170" />
-</center>
-<p><br> <br> <br> <br></p>
-<html lang="es">
-<FONT FACE="times new roman">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: justify;
-            margin: 20px; /* Añade un margen para mejorar la apariencia */
-        }
-    </style>
-<title>
-Tu Página con Texto Justificado
-</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CalSoil - Calculadora de laboratorio</title>
+  <style>
+    /* Fondo */
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('1.png');   
+      background-size: cover;
+      background-position: center;
+      font-family: Arial, sans-serif;
+      background-attachment: fixed;
+      color: #FFFFFF;
+      height: 100vh;
+      text-align: center;
+    }
+
+    /* Contenedor principal */
+    .content {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px;
+    }
+
+    /* Logo más grande con efecto "latido" */
+    .logo {
+      margin-top: 100px;
+      height: 250px;
+      animation: latido 1.5s infinite ease-in-out;
+    }
+
+    @keyframes latido {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.08);
+      }
+    }
+
+    /* Texto descriptivo */
+    h3 {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 2.5rem;
+      color: #F0F3F4;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      width: 80%;
+      text-align: justify;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #F0F3F4;
+    }
+  </style>
 </head>
 <body>
-<H3>
-<font color="#F0F3F4">
-<p>
-Bienvenidos a la calculadora CalSoil de laboratorio y de requerimientos,
-una herramienta que le ayudará a realizar ecuaciones y a determinar las
-necesidades de sus cultivos.
-</p>
-<br>
-</H3>
+
+  <!-- Logo CalSoil -->
+  <div class="content">
+    <img src="34.png" alt="Logo CalSoil" class="logo" />
+  </div>
+
+  <!-- Texto de bienvenida -->
+  <div class="content">
+    <h3>
+      Bienvenidos a la calculadora CalSoil de laboratorio y de requerimientos, una herramienta que le ayudará a realizar ecuaciones y a determinar las necesidades de sus cultivos.
+    </h3>
+  </div>
+
 </body>
-</html>
 </html>
 
 

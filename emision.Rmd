@@ -1,15 +1,16 @@
 
 <style>
   body {
-    background-color: #148F77;
+   background-color: #F5F5F5;
     font-family: Arial, sans-serif;
   }
   #round {
     margin: 30px auto;
     width: 1000px;
     height: 725px;
-    background-color: rgba(209, 242, 235, 0.66);
-    border: 1px solid #148F77;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 20px;
     padding: 20px;
     text-align: center;
@@ -55,7 +56,6 @@
 
 ![Estados de desarrollo de la hoja de acuerdo a Brun.](Estados.png){height=300px}
 
-![Número de hojas por Ignacio Jiménez Cadavid](candela.png){height=300px}
 
 </div>
 </body>
